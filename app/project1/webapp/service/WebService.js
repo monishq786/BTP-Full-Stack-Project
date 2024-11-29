@@ -11,6 +11,14 @@ sap.ui.define([
             }
             return this.odata(configObject);
         },
+        postEmployee: function (oData) {
+            const configObject = {
+                method: "POST",
+                url: '/odata/v4/employee/Employees',
+                data: oData
+            }
+            return this.odata(configObject);
+        },
     });
     return new WebService();
 });

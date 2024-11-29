@@ -23,7 +23,7 @@
         <footer>
             <Toolbar class="d-flex justify-content-center">
                 <ToolbarSpacer />
-                <Button type="Emphasized" text="{i18n>save}" press="" />
+                <Button type="Emphasized" text="{i18n>save}" press="onSave" />
                 <Button type="Reject" text="{i18n>cancel}" press="" />
             </Toolbar>
         </footer>
