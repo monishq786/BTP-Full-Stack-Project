@@ -19,6 +19,14 @@ sap.ui.define([
             }
             return this.odata(configObject);
         },
+        updateEmployee: function (oData, id) {
+            const configObject = {
+                method: "PATCH",
+                url: `/odata/v4/employee/Employees(${id})`,
+                data: oData
+            }
+            return this.odata(configObject);
+        },
     });
     return new WebService();
 });

@@ -58,7 +58,7 @@ sap.ui.define([
             var oModel = that.getView().getModel("EmployeeMasterModel");
             var aData = oModel.getData();
             var oRouter = UIComponent.getRouterFor(this);
-            var sData = aData.value[iIndex].UserID;
+            var sData = aData.value[iIndex].ID;
             oRouter.navTo("RouteEmpMasterAddEdit", {
                 data: encodeURIComponent(sData),
                 type: 'edit'
