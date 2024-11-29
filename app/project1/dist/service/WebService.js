@@ -1,0 +1,2 @@
+sap.ui.define(["./CoreService"],function(e){"use strict";var t=e.extend("project1.service.WebService",{getEmployeeMasterAPI:function(){const e={method:"GET",url:"/odata/v4/employee/Employees"};return this.odata(e)},postEmployee:function(e){const t={method:"POST",url:"/odata/v4/employee/Employees",data:e};return this.odata(t)},updateEmployee:function(e,t){const o={method:"PATCH",url:`/odata/v4/employee/Employees(${t})`,data:e};return this.odata(o)}});return new t});
+//# sourceMappingURL=WebService.js.map

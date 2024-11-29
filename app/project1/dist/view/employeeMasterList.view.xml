@@ -1,0 +1,49 @@
+<mvc:XMLView xmlns:mvc="sap.ui.core.mvc" controllerName="project1.controller.employeeMasterList"
+  xmlns="sap.m"
+  xmlns:core="sap.ui.core"
+  xmlns:commons="sap.suite.ui.commons">
+
+  <Page id="empPage" title="{i18n>employeeTitle}" showNavButton="true" navButtonPress=".onNavBack">
+    <FlexBox justifyContent="End" class="sapUiSmallMargin">
+      <Button id="addBtn" text="Add Employee" type="Emphasized" press=".onRouterClick"></Button>
+    </FlexBox>
+
+    <ScrollContainer width="100%" horizontal="false" vertical="true" focusable="true" class="scroll-container-height">
+
+      <Table id="cop_cadTable" width="auto" growing="true" growingThreshold="10" items="{path:'EmployeeMasterModel>/value'}" class="sapUiSizeCompact myCustomListClass textAlignCenter" inset="true" sticky="ColumnHeaders,HeaderToolbar" showSeparators="All" showNoData="true">
+        <columns>
+          <Column width="10%">
+            <Text text="Id" />
+          </Column>
+          <Column width="10%">
+            <Text text="Name" />
+          </Column>
+          <Column width="5%">
+            <Text text="Age" />
+          </Column>
+          <Column width="5%">
+            <Text text="Salary" />
+          </Column>
+          <Column width="5%">
+            <Text text="Action" />
+          </Column>
+        </columns>
+        <items>
+          <ColumnListItem vAlign="Middle">
+            <cells>
+              <Text text="{EmployeeMasterModel>ID}" wrapping="false" />
+              <Text text="{EmployeeMasterModel>Name}" wrapping="false" />
+              <Text text="{EmployeeMasterModel>Age}" wrapping="false" />
+              <Text text="{EmployeeMasterModel>Salary}" wrapping="false" />
+              <HBox>
+                <items>
+                  <Button id="arrowBtn" icon="sap-icon://navigation-right-arrow" width="25px" class="customIconColor" visible="true" press="onAction" />
+                </items>
+              </HBox>
+            </cells>
+          </ColumnListItem>
+        </items>
+      </Table>
+    </ScrollContainer>
+  </Page>
+</mvc:XMLView>
