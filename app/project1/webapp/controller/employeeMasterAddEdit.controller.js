@@ -8,7 +8,7 @@ sap.ui.define([
 ], function (Controller, UIComponent, MessageToast, WebService, JSONModel) {
     "use strict";
     let that;
-    return Controller.extend("project1.controller.employeeMasterAdd", {
+    return Controller.extend("project1.controller.employeeMasterAddEdit", {
         onInit: function () {
             that = this;
             var oRouter = UIComponent.getRouterFor(this);
@@ -36,7 +36,7 @@ sap.ui.define([
             }
             WebService.postEmployee(body).then(function (response) {
                 if (response.code === 200 || response.code === 201) {
-                    MessageToast.show("Employee Created Successfully For " + response.data.CrfReqNo);
+                    MessageToast.show("Employee Created Successfully");
                     setTimeout(function () {
                         that.onNavBack();
                     }.bind(this), 500);
@@ -47,6 +47,10 @@ sap.ui.define([
             }).catch(function (error) {
                 MessageToast.show("Error: " + error.message);
             });
+        },
+        onNavBack:function(){
+            const oRouter = this.getOwnerComponent().getRouter();
+            oRouter.navTo("RouteEmpMaster", {}, true);
         }
     })
 })

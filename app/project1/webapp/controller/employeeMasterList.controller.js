@@ -43,7 +43,7 @@ sap.ui.define([
         },
 
         onRouterClick: function () {
-            this.getRouter().navTo("RouteEmpMasterAdd", {
+            this.getRouter().navTo("RouteEmpMasterAddEdit", {
                 data: encodeURIComponent(0),
                 type: 'add'
             });
@@ -51,6 +51,18 @@ sap.ui.define([
         navBack: function () {
             const oRouter = this.getOwnerComponent().getRouter();
             oRouter.navTo("RouteEmpMaster", {}, true);
+        },
+        onAction: function (oEvent) {
+            var sPath = oEvent.getSource().getBindingContext("EmployeeMasterModel").getPath();
+            var iIndex = parseInt(sPath.split("/")[2]);
+            var oModel = that.getView().getModel("EmployeeMasterModel");
+            var aData = oModel.getData();
+            var oRouter = UIComponent.getRouterFor(this);
+            var sData = aData.value[iIndex].UserID;
+            oRouter.navTo("RouteEmpMasterAddEdit", {
+                data: encodeURIComponent(sData),
+                type: 'edit'
+            });
         },
     })
 }) 

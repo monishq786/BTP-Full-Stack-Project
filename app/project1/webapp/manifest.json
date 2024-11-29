@@ -112,17 +112,17 @@
           ]
         },
         {
-          "name": "RouteEmpMasterAdd",
-          "pattern": "PatternEmpMasterAdd",
+          "name": "RouteEmpMasterAddEdit",
+          "pattern": "PatternEmpMasterAddEdit/{data}/{type}",
           "target": [
-            "TargetEmpMasterAdd"
+            "TargetEmpMasterAddEdit"
           ]
         }
       ],
       "targets": {
-        "TargetEmpMasterAdd": {
-          "viewId": "employeeMasterAdd",
-          "viewName": "employeeMasterAdd",
+        "TargetEmpMasterAddEdit": {
+          "viewId": "employeeMasterAddEdit",
+          "viewName": "employeeMasterAddEdit",
           "viewType": "XML",
           "transition": "slide",
           "clearControlAggregation": false

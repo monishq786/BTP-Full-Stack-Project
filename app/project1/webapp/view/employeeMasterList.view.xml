@@ -5,7 +5,7 @@
 
   <Page id="empPage" title="{i18n>employeeTitle}" showNavButton="true" navButtonPress=".onNavBack">
     <FlexBox justifyContent="End" class="sapUiSmallMargin">
-      <Button id="addBtn" text="Add Employee" type="Emphasized" press="onRouterClick"></Button>
+      <Button id="addBtn" text="Add Employee" type="Emphasized" press=".onRouterClick"></Button>
     </FlexBox>
 
     <ScrollContainer width="100%" horizontal="false" vertical="true" focusable="true" class="scroll-container-height">

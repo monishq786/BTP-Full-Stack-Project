@@ -1,22 +1,22 @@
-<mvc:XMLView controllerName="project1.controller.employeeMasterAdd"
+<mvc:XMLView controllerName="project1.controller.employeeMasterAddEdit"
     xmlns:f="sap.ui.layout.form"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m"
     xmlns:core="sap.ui.core" class="d-flex justify-content-center">
-    <Page id="menumasterf" title="{i18n>employeeAdd}" showNavButton="true" navButtonPress="onPressOfEntryFormCancelButton">
+    <Page id="menumasterf" title="{i18n>employeeAdd}" showNavButton="true" navButtonPress="onNavBack">
         <VBox>
             <f:SimpleForm editable="true" layout="ResponsiveGridLayout" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0">
                 <f:content>
                     <Label id="idlbl" text="{i18n>id}" required="true" />
-                    <Input id="id" value="" required="true" enabled="true" />
+                    <Input id="id" value="{EmployeeMasterModel>/ID}" required="true" enabled="true" />
                     <Label id="namelbl" text="{i18n>name}" required="true" />
-                    <Input id="name" value="" required="true" enabled="true" />
+                    <Input id="name" value="{EmployeeMasterModel>/Name}" required="true" enabled="true" />
 
                     <Label id="agelbl" text="{i18n>age}" required="true" />
-                    <Input id="age" value="" required="true" enabled="true" />
+                    <Input id="age" value="{EmployeeMasterModel>/Age}" required="true" enabled="true" />
                     
                     <Label id="salarylbl" text="{i18n>salary}" required="true" />
-                    <Input id="salary" value="" required="true" enabled="true" />
+                    <Input id="salary" value="{EmployeeMasterModel>/Salary}" required="true" enabled="true" />
                 </f:content>
             </f:SimpleForm>
         </VBox>
@@ -24,7 +24,7 @@
             <Toolbar class="d-flex justify-content-center">
                 <ToolbarSpacer />
                 <Button type="Emphasized" text="{i18n>save}" press="onSave" />
-                <Button type="Reject" text="{i18n>cancel}" press="" />
+                <Button type="Reject" text="{i18n>cancel}" press="onNavBack" />
             </Toolbar>
         </footer>
     </Page>
