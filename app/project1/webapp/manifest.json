@@ -55,7 +55,8 @@
         "sap.ui.generic.app": {},
         "sap.ui.table": {},
         "sap.ushell": {},
-        "sap.uxap": {}
+        "sap.uxap": {},
+        "sap.viz": {}
       }
     },
     "contentDensities": {
@@ -85,6 +86,7 @@
           "uri": "css/style.css"
         }
       ]
+     
     },
     "routing": {
       "config": {
@@ -109,6 +111,13 @@
           "pattern": "RouteEmpMaster",
           "target": [
             "TargetEmpMaster"
+          ]
+        },
+        {
+          "name": "RouteDashBoard",
+          "pattern": "RouteDashBoard",
+          "target": [
+            "TargetDashBoard"
           ]
         },
         {
@@ -148,6 +157,13 @@
           "transition": "slide",
           "clearControlAggregation": false,
           "viewPath": "landingview"
+        },
+        "TargetDashBoard": {
+          "viewId": "dashboard",
+          "viewName": "dashboard",
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false
         },
         "TargetFiori": {
           "id": "Fiori",

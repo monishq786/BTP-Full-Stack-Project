@@ -11,12 +11,8 @@ sap.ui.define([
     let id;
     let screenType = 'Add';
     return Controller.extend("project1.controller.employeeMasterAddEdit", {
+
         
-        onRouteMatched: function (oEvent) {
-            let sData = decodeURIComponent(oEvent.getParameter("arguments").data);
-            screenType = decodeURIComponent(oEvent.getParameter("arguments").type);
-            id = sData;
-        },
 
         onInit: function () {
             that = this;
@@ -33,6 +29,12 @@ sap.ui.define([
             var oModel = new sap.ui.model.json.JSONModel(oPath);
             this.getView().setModel(oModel, "EmployeeMasterModel");
 
+        },
+
+        onRouteMatched: function (oEvent) {
+            let sData = decodeURIComponent(oEvent.getParameter("arguments").data);
+            screenType = decodeURIComponent(oEvent.getParameter("arguments").type);
+            id = sData;
         },
 
         onSave: function () {

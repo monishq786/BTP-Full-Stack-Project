@@ -1,0 +1,8 @@
+{
+	"SalesData": [
+	   { "Category": "Electronics", "Revenue": 150 },
+	   { "Category": "Furniture", "Revenue": 200 },
+	   { "Category": "Groceries", "Revenue": 100 },
+	   { "Category": "Clothing", "Revenue": 80 }
+	]
+ }

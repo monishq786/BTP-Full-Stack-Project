@@ -10,7 +10,7 @@
 
         </tnt:header>
         <tnt:mainContents>
-            <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="DashBoard" subheader="Employee" press="press" url="https://www.sap.com/">
+            <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="DashBoard" subheader="Employee" press="goToDashBoard" url="https://www.sap.com/">
                 <TileContent>
                     <ImageContent src="sap-icon://bbyd-dashboard" />
                 </TileContent>

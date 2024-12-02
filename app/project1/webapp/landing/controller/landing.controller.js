@@ -33,6 +33,10 @@ sap.ui.define([
         goToEmployee:function(){
             const oRouter = this.getOwnerComponent().getRouter();
             oRouter.navTo("RouteEmpMaster", {}, true);
+        },
+        goToDashBoard:function(){
+            const oRouter = this.getOwnerComponent().getRouter();
+            oRouter.navTo("RouteDashBoard", {}, true);
         }
 
 
