@@ -58,11 +58,11 @@
                 </VBox>
 
             </HBox>
-            <HBox>
+            <HBox alignItems="Center" justifyContent="SpaceBetween" width="100%">
                 <VBox width="45%" justifyContent="Center">
                     <f:Card class="sapUiMediumMargin" width="500px">
                         <f:content>
-                            <viz:VizFrame id="idVizFrame2" uiConfig="{applicationSet:'fiori'}" height="400px" width="100%" vizType="area">
+                            <viz:VizFrame id="idVizFrame2" uiConfig="{applicationSet:'fiori'}" height="400px" width="100%" vizType="bar">
                                 <viz:dataset>
                                     <viz.data:FlattenedDataset xmlns:viz.data="sap.viz.ui5.data" data="{/SalesData}">
                                         <viz.data:dimensions>
@@ -74,8 +74,31 @@
                                     </viz.data:FlattenedDataset>
                                 </viz:dataset>
                                 <viz:feeds>
-                                    <viz.feeds:FeedItem uid="size" type="Measure" values="Revenue" />
-                                    <viz.feeds:FeedItem uid="color" type="Dimension" values="Category" />
+                                    <viz.feeds:FeedItem uid="valueAxis" type="Measure" values="Revenue" />
+                                    <viz.feeds:FeedItem uid="categoryAxis" type="Dimension" values="Category" />
+                                </viz:feeds>
+                            </viz:VizFrame>
+                        </f:content>
+
+                    </f:Card>
+                </VBox>
+                <VBox width="45%" justifyContent="Center">
+                    <f:Card class="sapUiMediumMargin" width="500px">
+                        <f:content>
+                            <viz:VizFrame id="idVizFrame3" uiConfig="{applicationSet:'fiori'}" height="400px" width="100%" vizType="area">
+                                <viz:dataset>
+                                    <viz.data:FlattenedDataset xmlns:viz.data="sap.viz.ui5.data" data="{/SalesData}">
+                                        <viz.data:dimensions>
+                                            <viz.data:DimensionDefinition name="Category" value="{Category}" />
+                                        </viz.data:dimensions>
+                                        <viz.data:measures>
+                                            <viz.data:MeasureDefinition name="Revenue" value="{Revenue}" />
+                                        </viz.data:measures>
+                                    </viz.data:FlattenedDataset>
+                                </viz:dataset>
+                                <viz:feeds>
+                                    <viz.feeds:FeedItem uid="valueAxis" type="Measure" values="Revenue" />
+                                    <viz.feeds:FeedItem uid="categoryAxis" type="Dimension" values="Category" />
                                 </viz:feeds>
                             </viz:VizFrame>
                         </f:content>
