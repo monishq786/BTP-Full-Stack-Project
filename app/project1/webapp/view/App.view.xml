@@ -1,7 +1,39 @@
 <mvc:View controllerName="project1.controller.App"
-    displayBlock="true"
-    xmlns:mvc="sap.ui.core.mvc"
-    xmlns="sap.m">
-    <App id="app">
-    </App>
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:f="sap.f"
+    xmlns:cor="sap.ui.core"
+    xmlns:tnt="sap.tnt"
+>
+    <tnt:ToolPage>
+        <!-- ShellBar at the top -->
+        <tnt:header>
+            <f:ShellBar
+                id="appShellBar"
+                title="UI Learning App"
+                secondTitle="Welcome Monish"
+                showMenuButton="true"
+                menuButtonPressed="true"
+                showNotifications="true"
+                notificationsPressed="true"
+                visible="true"
+                notificationsNumber="2"
+            >
+                <f:profile>
+                    <Avatar
+                        src="sap-icon://log"
+                        press=""
+                        visible="true"
+                    />
+                </f:profile>
+            </f:ShellBar>
+        </tnt:header>
+
+        <!-- Main Content -->
+        <tnt:mainContents>
+            <App id="app" />
+        </tnt:mainContents>
+    </tnt:ToolPage>
+
 </mvc:View>

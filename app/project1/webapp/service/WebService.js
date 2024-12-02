@@ -14,7 +14,7 @@ sap.ui.define([
         postEmployee: function (oData) {
             const configObject = {
                 method: "POST",
-                url: '/odata/v4/employee/Employees',
+                url: '/odata/v4/employee/Employees?$orderby=ID desc',
                 data: oData
             }
             return this.odata(configObject);

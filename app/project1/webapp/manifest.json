@@ -106,7 +106,7 @@
         },
         {
           "name": "RouteEmpMaster",
-          "pattern": "",
+          "pattern": "RouteEmpMaster",
           "target": [
             "TargetEmpMaster"
           ]
@@ -116,6 +116,13 @@
           "pattern": "PatternEmpMasterAddEdit/{data}/{type}",
           "target": [
             "TargetEmpMasterAddEdit"
+          ]
+        },
+        {
+          "name": "RouteLanding",
+          "pattern": "",
+          "target": [
+            "TargetLanding"
           ]
         }
       ],
@@ -133,6 +140,14 @@
           "viewType": "XML",
           "transition": "slide",
           "clearControlAggregation": false
+        },
+        "TargetLanding": {
+          "viewId": "landing",
+          "viewName": "landing",
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewPath": "landingview"
         },
         "TargetFiori": {
           "id": "Fiori",
