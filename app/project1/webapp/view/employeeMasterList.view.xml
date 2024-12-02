@@ -3,7 +3,7 @@
   xmlns:core="sap.ui.core"
   xmlns:commons="sap.suite.ui.commons">
 
-  <Page id="empPage" title="{i18n>employeeTitle}" showNavButton="true" navButtonPress=".onNavBack">
+  <Page id="empPage" title="{i18n>employeeTitle}" showNavButton="true" navButtonPress=".navBack">
     <FlexBox justifyContent="End" class="sapUiSmallMargin">
       <Button id="addBtn" text="Add Employee" type="Emphasized" press=".onRouterClick"></Button>
     </FlexBox>

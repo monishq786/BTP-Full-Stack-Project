@@ -12,13 +12,13 @@
         <tnt:mainContents>
             <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="DashBoard" subheader="Employee" press="press" url="https://www.sap.com/">
                 <TileContent>
-                    <ImageContent src="" />
+                    <ImageContent src="sap-icon://bbyd-dashboard" />
                 </TileContent>
             </GenericTile>
 
             <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Employees" subheader="Master Data" press="goToEmployee" url="https://www.sap.com/">
                 <TileContent>
-                    <ImageContent src="" />
+                    <ImageContent src="sap-icon://employee" />
                 </TileContent>
             </GenericTile>
         </tnt:mainContents>
