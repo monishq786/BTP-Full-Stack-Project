@@ -25,6 +25,9 @@
             <Text text="Salary" />
           </Column>
           <Column width="5%">
+            <Text text="Remove" />
+          </Column>
+          <Column width="5%">
             <Text text="Action" />
           </Column>
         </columns>
@@ -35,6 +38,11 @@
               <Text text="{EmployeeMasterModel>Name}" wrapping="false" />
               <Text text="{EmployeeMasterModel>Age}" wrapping="false" />
               <Text text="{EmployeeMasterModel>Salary}" wrapping="false" />
+              <HBox >
+                <items>
+                  <Button id="deleteBtn" icon="sap-icon://delete" width="25px" class="customIconColor" visible="true" press="onDelete" />
+                </items>
+              </HBox>
               <HBox>
                 <items>
                   <Button id="arrowBtn" icon="sap-icon://navigation-right-arrow" width="25px" class="customIconColor" visible="true" press="onAction" />

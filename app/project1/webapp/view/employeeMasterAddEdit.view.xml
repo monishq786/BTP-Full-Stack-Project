@@ -8,16 +8,16 @@
             <f:SimpleForm editable="true" layout="ResponsiveGridLayout" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0">
                 <f:content>
                     <Label id="idlbl" text="{i18n>id}" required="true" />
-                    <Input id="id" value="{EmployeeMasterModel>/ID}" required="true" enabled="true" type="Number"/>
+                    <Input id="idInput" value="{EmployeeMasterModel>/ID}" required="true" enabled="true" type="Number"/>
                     
-                    <Label id="namelbl" text="{i18n>name}" required="true" />
-                    <Input id="name" value="{EmployeeMasterModel>/Name}" required="true" enabled="true" type="Text"/>
+                    <Label id="namelbl" text="{i18n>name}" />
+                    <Input id="name" value="{EmployeeMasterModel>/Name}" enabled="true" type="Text"/>
 
-                    <Label id="agelbl" text="{i18n>age}" required="true" />
-                    <Input id="age" value="{EmployeeMasterModel>/Age}" required="true" enabled="true" type="Number"/>
+                    <Label id="agelbl" text="{i18n>age}" />
+                    <Input id="age" value="{EmployeeMasterModel>/Age}"  enabled="true" type="Number"/>
                     
-                    <Label id="salarylbl" text="{i18n>salary}" required="true" />
-                    <Input id="salary" value="{EmployeeMasterModel>/Salary}" required="true" enabled="true" type="Number"/>
+                    <Label id="salarylbl" text="{i18n>salary}" />
+                    <Input id="salary" value="{EmployeeMasterModel>/Salary}" enabled="true" type="Number"/>
                 </f:content>
             </f:SimpleForm>
         </VBox>

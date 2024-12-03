@@ -48,6 +48,13 @@ sap.ui.define([
             }
             return this.odata(configObject);
         },
+        deleteEmpList:function(id){
+            const configObject = {
+                method: "DELETE",
+                url: `/odata/v4/employee/Employees/${id}`
+            }
+            return this.odata(configObject);
+        }
     });
     return new WebService();
 });

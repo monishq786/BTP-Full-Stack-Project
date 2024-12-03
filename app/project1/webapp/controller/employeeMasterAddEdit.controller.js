@@ -27,9 +27,11 @@ sap.ui.define([
                 let oView = this.getView();
                 oView.byId('btnSave').setVisible(false);
                 oView.byId('btnUpdate').setVisible(true);
+                oView.byId('idInput').setEnabled(false);
                 this.onEdit();
             } else {
                 let oView = this.getView();
+                oView.byId('idInput').setEnabled(true);
                 oView.byId('btnSave').setVisible(true);
                 oView.byId('btnUpdate').setVisible(false);
             }

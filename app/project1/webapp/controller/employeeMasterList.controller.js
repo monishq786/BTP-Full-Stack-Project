@@ -62,5 +62,22 @@ sap.ui.define([
                 screenType: 'edit'
             });
         },
+        onDelete:function(oEvent){
+            var sPath = oEvent.getSource().getBindingContext("EmployeeMasterModel").getPath();
+            var iIndex = parseInt(sPath.split("/")[2]);
+            var oModel = that.getView().getModel("EmployeeMasterModel");
+            var aData = oModel.getData();
+            WebService.deleteEmpList(aData.value[iIndex].ID).then(function (response) {
+                if (response.code == 200) {
+                    var oModel = that.getView().getModel("EmployeeMasterModel");
+                    if (response.data.value.length > 0) {
+                        oModel.setData(response.data);
+                    }
+                    that.getView().setModel(oModel, "EmployeeMasterModel");
+                    this.empList();
+                }
+                console.log(response);
+            })
+        }
     })
 }) 
