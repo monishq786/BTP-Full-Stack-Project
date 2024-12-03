@@ -8,7 +8,7 @@ sap.ui.define([
     'use strict';
     return Controller.extend("project1.controller.employeeMasterList", {
         onRouteMatched: function (oEvent) {
-
+            this.empList();
         },
         onInit: function () {
             that = this
@@ -22,7 +22,7 @@ sap.ui.define([
             var oModel = new sap.ui.model.json.JSONModel(oPath);
             this.getView().setModel(oModel, "EmployeeMasterModel");
 
-            this.empList();
+           
         },
 
         empList: function () {
@@ -45,7 +45,7 @@ sap.ui.define([
         onRouterClick: function () {
             this.getRouter().navTo("RouteEmpMasterAddEdit", {
                 id: encodeURIComponent(0),
-                screenType: 'add'
+                screenType: 'Add'
             });
         },
         navBack: function () {

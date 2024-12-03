@@ -8,17 +8,22 @@ sap.ui.define([
 ], function (Controller, UIComponent, MessageToast, WebService, JSONModel) {
     let that;
     let id;
-    let screenType = 'Add';
+    let screenType='Add';
     "use strict";
 
     return Controller.extend("project1.controller.employeeMasterAddEdit", {
 
         onRouteMatched: function (oEvent) {
             let oArguments = oEvent.getParameter("arguments");
-            let id = decodeURIComponent(oArguments.id);
-            let screenType = decodeURIComponent(oArguments.screenType);
-
-            if (screenType == 'edit') {
+            this.id = decodeURIComponent(oArguments.id);
+            this.screenType = decodeURIComponent(oArguments.screenType);
+            var oPath = jQuery.sap.getModulePath(
+                "project1",
+                "/model/employeeMaster.json"
+            );
+            var oModel = new sap.ui.model.json.JSONModel(oPath);
+            this.getView().setModel(oModel, "EmployeeMasterModel");
+            if (this.screenType == 'edit') {
                 let oView = this.getView();
                 oView.byId('btnSave').setVisible(false);
                 oView.byId('btnUpdate').setVisible(true);
@@ -28,33 +33,22 @@ sap.ui.define([
                 oView.byId('btnSave').setVisible(true);
                 oView.byId('btnUpdate').setVisible(false);
             }
+          
         },
 
         onInit: function () {
             that = this;
             var oRouter = UIComponent.getRouterFor(this);
             oRouter.getRoute("RouteEmpMasterAddEdit").attachMatched(this.onRouteMatched, this)
-
-            var oPath = jQuery.sap.getModulePath(
-                "project1",
-                "/model/employeeMaster.json"
-            );
-            var oModel = new sap.ui.model.json.JSONModel(oPath);
-            this.getView().setModel(oModel, "EmployeeMasterModel");
-
-
-
         },
 
         onEdit: function () {
-            let oModel = this.getView().getModel("EmployeeMasterModel");
-            let oData = oModel.getData();
-            WebService.getViewEmployeeAPI(oData.ID).then(function (response) {
+            // let oModel = this.getView().getModel("EmployeeMasterModel");
+            // let oData = oModel.getData();
+            WebService.getViewEmployeeAPI(this.id).then(function (response) {
                 if (response.code == 200) {
                     var oModel = that.getView().getModel("EmployeeMasterModel");
-                    if (response.data.value.length > 0) {
-                        oModel.setData(response.data);
-                    }
+                    oModel.setData(response.data);
                     that.getView().setModel(oModel, "EmployeeMasterModel");
                 }
                 console.log(response);
@@ -70,7 +64,7 @@ sap.ui.define([
                 "Age": oData.Age,
                 "Salary": oData.Salary
             }
-            if (screenType = 'Add') {
+            if (that.screenType == 'Add') {
                 WebService.postEmployee(body).then(function (response) {
                     if (response.code === 200 || response.code === 201) {
                         MessageToast.show("Employee Created Successfully");
@@ -85,7 +79,7 @@ sap.ui.define([
                     MessageToast.show("Error: " + error.message);
                 });
             } else {
-                WebService.updateEmployee(body, id).then(function (response) {
+                WebService.updateEmployee(body, this.id).then(function (response) {
                     if (response.code === 200 || response.code === 201) {
                         MessageToast.show("Employee Updated Successfully");
                         setTimeout(function () {

@@ -8,6 +8,9 @@ sap.ui.define([
    "use strict";
 
    return Controller.extend("project1.controller.dashboard", {
+      onRouteMatched: function (oEvent) {
+         
+     },
       onInit: function () {
          that = this
          // Create JSON Model
@@ -17,8 +20,6 @@ sap.ui.define([
          );
          let oModel = new sap.ui.model.json.JSONModel(oPath);
          this.getView().setModel(oModel, "dashBoardModel");
-         // let oModel = new JSONModel();
-         // oModel.loadData("model/dashBoard.json");
          this.getView().setModel(oModel);
          this.dashboardList();
       },
