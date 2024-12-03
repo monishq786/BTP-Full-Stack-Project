@@ -24,7 +24,7 @@ Content-Type: application/json
 
 ### Employees
 # @name Employees_PATCH
-PATCH {{server}}/odata/v4/employee/Employees/64009
+PATCH {{server}}/odata/v4/employee/Employees/7687
 Content-Type: application/json
 {{auth}}
 
@@ -32,12 +32,12 @@ Content-Type: application/json
   "ID": 649009,
   "Name": "Name-64009",
   "Age": 37,
-  "Salary": 6904533.15
+  "Salary": 69049.15
 }
 
 
 ### Employees
 # @name Employees_DELETE
-DELETE {{server}}/odata/v4/employee/Employees/64009
+DELETE {{server}}/odata/v4/employee/Employees/7687
 Content-Type: application/json
 {{auth}}

@@ -21,6 +21,16 @@
                     <ImageContent src="sap-icon://employee" />
                 </TileContent>
             </GenericTile>
+             <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Users" subheader="Master Data" press="goToUser" url="https://www.sap.com/">
+                <TileContent>
+                    <ImageContent src="sap-icon://employee" />
+                </TileContent>
+            </GenericTile>
+              <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Customer" subheader="Master Data" press="goToUser" url="https://www.sap.com/">
+                <TileContent>
+                    <ImageContent src="sap-icon://employee" />
+                </TileContent>
+            </GenericTile>
         </tnt:mainContents>
     </tnt:ToolPage>
 

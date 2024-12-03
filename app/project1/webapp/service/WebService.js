@@ -27,6 +27,13 @@ sap.ui.define([
             }
             return this.odata(configObject);
         },
+        getDashBoardAPI: function () {
+            const configObject = {
+                method: "GET",
+                url: '/odata/v4/employee/Employees'
+            }
+            return this.odata(configObject);
+        },
     });
     return new WebService();
 });
