@@ -1,0 +1,135 @@
+@server = http://localhost:4004
+@auth = Authorization: Basic alice:
+
+
+### Employees
+# @name Employees_GET
+GET {{server}}/odata/v4/employee/Employees
+{{auth}}
+
+
+### Employees
+# @name Employees_POST
+POST {{server}}/odata/v4/employee/Employees
+Content-Type: application/json
+{{auth}}
+
+{
+  "ID": 5410031,
+  "Name": "Name-5410031",
+  "Age": 7,
+  "Salary": 15162606.25
+}
+
+
+### Employees
+# @name Employees_PATCH
+PATCH {{server}}/odata/v4/employee/Employees/5410031
+Content-Type: application/json
+{{auth}}
+
+{
+  "ID": 5410031,
+  "Name": "Name-5410031",
+  "Age": 7,
+  "Salary": 15162606.25
+}
+
+
+### Employees
+# @name Employees_DELETE
+DELETE {{server}}/odata/v4/employee/Employees/5410031
+Content-Type: application/json
+{{auth}}
+
+
+### MUser
+# @name MUser_GET
+GET {{server}}/odata/v4/employee/MUser
+{{auth}}
+
+
+### MUser
+# @name MUser_POST
+POST {{server}}/odata/v4/employee/MUser
+Content-Type: application/json
+{{auth}}
+
+{
+  "UserID": "11445564-30a5-42b5-802e-cf52f738347d",
+  "UserName": "UserName-11445564",
+  "UserCode": 7,
+  "UserDepartment": {
+    "UserDepartmentID": "31469712-55e0-45ee-a406-049340a0b938"
+  }
+}
+
+
+### MUser
+# @name MUser_PATCH
+PATCH {{server}}/odata/v4/employee/MUser/11445564-30a5-42b5-802e-cf52f738347d
+Content-Type: application/json
+{{auth}}
+
+{
+  "UserID": "11445564-30a5-42b5-802e-cf52f738347d",
+  "UserName": "UserName-11445564",
+  "UserCode": 7,
+  "UserDepartment": {
+    "UserDepartmentID": "31469712-55e0-45ee-a406-049340a0b938"
+  }
+}
+
+
+### MUser
+# @name MUser_DELETE
+DELETE {{server}}/odata/v4/employee/MUser/11445564-30a5-42b5-802e-cf52f738347d
+Content-Type: application/json
+{{auth}}
+
+
+### MDepartment
+# @name MDepartment_GET
+GET {{server}}/odata/v4/employee/MDepartment
+{{auth}}
+
+
+### MDepartment
+# @name MDepartment_POST
+POST {{server}}/odata/v4/employee/MDepartment
+Content-Type: application/json
+{{auth}}
+
+{
+  "UserDepartmentID": "31469712-55e0-45ee-a406-049340a0b938",
+  "DepartmentName": "DepartmentName-31469712",
+  "DepartmentCode": "DepartmentCode-31469712",
+  "createdAt": "2000-08-09T00:00:00.000Z",
+  "createdBy": "createdBy.iqi6o@example.com",
+  "modifiedAt": "2009-01-03T00:00:00.000Z",
+  "modifiedBy": "modifiedBy.iqi6o@example.com"
+}
+
+
+### MDepartment
+# @name MDepartment_PATCH
+PATCH {{server}}/odata/v4/employee/MDepartment/31469712-55e0-45ee-a406-049340a0b938
+Content-Type: application/json
+{{auth}}
+
+{
+  "UserDepartmentID": "31469712-55e0-45ee-a406-049340a0b938",
+  "DepartmentName": "DepartmentName-31469712",
+  "DepartmentCode": "DepartmentCode-31469712",
+  "createdAt": "2000-08-09T00:00:00.000Z",
+  "createdBy": "createdBy.iqi6o@example.com",
+  "modifiedAt": "2009-01-03T00:00:00.000Z",
+  "modifiedBy": "modifiedBy.iqi6o@example.com"
+}
+
+
+### MDepartment
+# @name MDepartment_DELETE
+DELETE {{server}}/odata/v4/employee/MDepartment/31469712-55e0-45ee-a406-049340a0b938
+Content-Type: application/json
+{{auth}}

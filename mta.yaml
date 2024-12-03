@@ -51,7 +51,7 @@ modules:
       buildpack: nodejs_buildpack
     requires:
       - name: FullStackProject-db
- 
+
   - name: FullStackProjectproject1
     type: html5
     path: app/project1
@@ -63,6 +63,21 @@ modules:
         - npm run build
       supported-platforms:
         []
+
+  - name: FullStackProject-app-deployer
+    type: com.sap.application.content
+    path: gen
+    requires:
+      - name: FullStackProject-html5-repo-host
+        parameters:
+          content-target: true
+    build-parameters:
+      build-result: app/
+      requires:
+        - name: FullStackProjectproject1
+          artifacts:
+            - project1.zip
+          target-path: app/
 
 resources:
   - name: FullStackProject-db

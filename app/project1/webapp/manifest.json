@@ -122,7 +122,7 @@
         },
         {
           "name": "RouteEmpMasterAddEdit",
-          "pattern": "PatternEmpMasterAddEdit/{data}/{type}",
+          "pattern": "RouteEmpMasterAddEdit/{id}/{screenType}",
           "target": [
             "TargetEmpMasterAddEdit"
           ]

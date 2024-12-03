@@ -1,8 +1,7 @@
-namespace my.namespace;
-
-using { my.namespace as ns } from '../db/employee';
+using {db} from '../db/employee';
 
 service EmployeeService {
-    entity Employees as projection on ns.Employee;
-    
+    entity Employees as projection on db.Employee;
+    entity MUser     as projection on db.User;
+    entity MDepartment     as projection on db.UserDepartment;
 }

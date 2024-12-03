@@ -11,6 +11,13 @@ sap.ui.define([
             }
             return this.odata(configObject);
         },
+        getViewEmployeeAPI: function (id) {
+            const configObject = {
+                method: "GET",
+                url: `/odata/v4/employee/Employees/${id}`
+            }
+            return this.odata(configObject);
+        },
         postEmployee: function (oData) {
             const configObject = {
                 method: "POST",
@@ -31,6 +38,13 @@ sap.ui.define([
             const configObject = {
                 method: "GET",
                 url: '/odata/v4/employee/Employees'
+            }
+            return this.odata(configObject);
+        },
+        getUserListAPI: function () {
+            const configObject = {
+                method: "GET",
+                url: '/odata/v4/employee/MUser'
             }
             return this.odata(configObject);
         },

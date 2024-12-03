@@ -6,7 +6,7 @@ sap.ui.define([
 ], function (Controller, JSONModel, WebService, UIComponent) {
     let that;
     'use strict';
-    return Controller.extend("project1.controller.employeeMasterList", {
+    return Controller.extend("project1.controller.userListView", {
         onRouteMatched: function (oEvent) {
 
         },
@@ -22,11 +22,11 @@ sap.ui.define([
             var oModel = new sap.ui.model.json.JSONModel(oPath);
             this.getView().setModel(oModel, "EmployeeMasterModel");
 
-            this.empList();
+            this.userList();
         },
 
-        empList: function () {
-            WebService.getEmployeeMasterAPI().then(function (response) {
+        userList: function () {
+            WebService.getUserListAPI().then(function (response) {
                 if (response.code == 200) {
                     var oModel = that.getView().getModel("EmployeeMasterModel");
                     if (response.data.value.length > 0) {
@@ -44,8 +44,8 @@ sap.ui.define([
 
         onRouterClick: function () {
             this.getRouter().navTo("RouteEmpMasterAddEdit", {
-                id: encodeURIComponent(0),
-                screenType: 'add'
+                data: encodeURIComponent(0),
+                type: 'add'
             });
         },
         navBack: function () {
@@ -57,9 +57,11 @@ sap.ui.define([
             var iIndex = parseInt(sPath.split("/")[2]);
             var oModel = that.getView().getModel("EmployeeMasterModel");
             var aData = oModel.getData();
-            this.getRouter().navTo("RouteEmpMasterAddEdit", {
-                id: encodeURIComponent(aData.value[iIndex].ID),
-                screenType: 'edit'
+            var oRouter = UIComponent.getRouterFor(this);
+            var sData = aData.value[iIndex].ID;
+            oRouter.navTo("RouteEmpMasterAddEdit", {
+                data: encodeURIComponent(sData),
+                type: 'edit'
             });
         },
     })

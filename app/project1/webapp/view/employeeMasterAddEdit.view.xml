@@ -23,8 +23,9 @@
         <footer>
             <Toolbar class="d-flex justify-content-center">
                 <ToolbarSpacer />
-                <Button type="Emphasized" text="{i18n>save}" press="onSave" />
-                <Button type="Reject" text="{i18n>cancel}" press="onNavBack" />
+                <Button id="btnSave" type="Emphasized" text="{i18n>save}" press="onSave" />
+                <Button id="btnUpdate" type="Emphasized" text="{i18n>update}" press="onSave" />
+                <Button id="btnCancel" type="Reject" text="{i18n>cancel}" press="onNavBack" />
             </Toolbar>
         </footer>
     </Page>

@@ -6,22 +6,35 @@ sap.ui.define([
     "sap/ui/model/json/JSONModel",
 
 ], function (Controller, UIComponent, MessageToast, WebService, JSONModel) {
-    "use strict";
     let that;
     let id;
     let screenType = 'Add';
+    "use strict";
+
     return Controller.extend("project1.controller.employeeMasterAddEdit", {
 
-        
+        onRouteMatched: function (oEvent) {
+            let oArguments = oEvent.getParameter("arguments");
+            let id = decodeURIComponent(oArguments.id);
+            let screenType = decodeURIComponent(oArguments.screenType);
+
+            if (screenType == 'edit') {
+                let oView = this.getView();
+                oView.byId('btnSave').setVisible(false);
+                oView.byId('btnUpdate').setVisible(true);
+                this.onEdit();
+            } else {
+                let oView = this.getView();
+                oView.byId('btnSave').setVisible(true);
+                oView.byId('btnUpdate').setVisible(false);
+            }
+        },
 
         onInit: function () {
             that = this;
             var oRouter = UIComponent.getRouterFor(this);
-            oRouter.getRoute("RouteEmpMaster").attachMatched(this.onRouteMatched, this)
+            oRouter.getRoute("RouteEmpMasterAddEdit").attachMatched(this.onRouteMatched, this)
 
-            // var obji18n = this.getOwnerComponent().getModel('i18n').getResourceBundle();
-            // var value = obji18n.getText('pageTitle');
-            // this.getView().byId('page').setTitle(value);
             var oPath = jQuery.sap.getModulePath(
                 "project1",
                 "/model/employeeMaster.json"
@@ -29,12 +42,23 @@ sap.ui.define([
             var oModel = new sap.ui.model.json.JSONModel(oPath);
             this.getView().setModel(oModel, "EmployeeMasterModel");
 
+
+
         },
 
-        onRouteMatched: function (oEvent) {
-            let sData = decodeURIComponent(oEvent.getParameter("arguments").data);
-            screenType = decodeURIComponent(oEvent.getParameter("arguments").type);
-            id = sData;
+        onEdit: function () {
+            let oModel = this.getView().getModel("EmployeeMasterModel");
+            let oData = oModel.getData();
+            WebService.getViewEmployeeAPI(oData.ID).then(function (response) {
+                if (response.code == 200) {
+                    var oModel = that.getView().getModel("EmployeeMasterModel");
+                    if (response.data.value.length > 0) {
+                        oModel.setData(response.data);
+                    }
+                    that.getView().setModel(oModel, "EmployeeMasterModel");
+                }
+                console.log(response);
+            })
         },
 
         onSave: function () {
