@@ -1,0 +1,42 @@
+<mvc:XMLView xmlns:mvc="sap.ui.core.mvc" controllerName="project1.controller.deptListView"
+  xmlns="sap.m"
+  xmlns:core="sap.ui.core"
+  xmlns:commons="sap.suite.ui.commons">
+
+  <Page id="deptPage" title="Department" showNavButton="true" navButtonPress=".navBack">
+    <FlexBox justifyContent="End" class="sapUiSmallMargin">
+      <Button id="deptAddBtn" text="Add Department" type="Emphasized" press=".onRouterClick"></Button>
+    </FlexBox>
+
+    <ScrollContainer width="100%" horizontal="false" vertical="true" focusable="true" class="scroll-container-height">
+
+      <Table id="deptTable" width="auto" growing="true" growingThreshold="10" items="{path:'DeptMasterModel>/value'}" class="sapUiSizeCompact myCustomListClass textAlignCenter" inset="true" sticky="ColumnHeaders,HeaderToolbar" showSeparators="All" showNoData="true">
+        <columns>
+          <Column width="10%">
+            <Text text="Dept Code" />
+          </Column>
+          <Column width="10%">
+            <Text text="Dept Name" />
+          </Column>
+          <Column width="5%">
+            <Text text="Action" />
+          </Column>
+        </columns>
+        <items>
+          <ColumnListItem vAlign="Middle">
+            <cells>
+              <Text text="{DeptMasterModel>DepartmentCode}" wrapping="false" />
+              <Text text="{DeptMasterModel>DepartmentName}" wrapping="false" />
+             
+              <HBox>
+                <items>
+                  <Button id="deptEditBtn" icon="sap-icon://navigation-right-arrow" width="25px" class="customIconColor" visible="true" press="onAction" />
+                </items>
+              </HBox>
+            </cells>
+          </ColumnListItem>
+        </items>
+      </Table>
+    </ScrollContainer>
+  </Page>
+</mvc:XMLView>

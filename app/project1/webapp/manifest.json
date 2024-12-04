@@ -114,6 +114,20 @@
           ]
         },
         {
+          "name": "RouteUserMaster",
+          "pattern": "RouteUserMaster",
+          "target": [
+            "TargetUserMaster"
+          ]
+        },
+        {
+          "name": "RouteDeptMaster",
+          "pattern": "RouteDeptMaster",
+          "target": [
+            "TargetDeptMaster"
+          ]
+        },
+        {
           "name": "RouteDashBoard",
           "pattern": "RouteDashBoard",
           "target": [
@@ -121,10 +135,24 @@
           ]
         },
         {
+          "name": "RouteDeptMasterAddEdit",
+          "pattern": "RouteDeptMasterAddEdit/{id}/{screenType}",
+          "target": [
+            "TargetDeptMasterAddEdit"
+          ]
+        },
+        {
           "name": "RouteEmpMasterAddEdit",
           "pattern": "RouteEmpMasterAddEdit/{id}/{screenType}",
           "target": [
             "TargetEmpMasterAddEdit"
+          ]
+        },
+        {
+          "name": "RouteUserMasterAddEdit",
+          "pattern": "RouteUserMasterAddEdit/{id}/{screenType}",
+          "target": [
+            "TargetUserMasterAddEdit"
           ]
         },
         {
@@ -143,9 +171,37 @@
           "transition": "slide",
           "clearControlAggregation": false
         },
+        "TargetUserMasterAddEdit": {
+          "viewId": "userAddEdit",
+          "viewName": "userAddEdit",
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false
+        },
+        "TargetDeptMasterAddEdit": {
+          "viewId": "deptMasterAddEdit",
+          "viewName": "deptMasterAddEdit",
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false
+        },
         "TargetEmpMaster": {
           "viewId": "employeeMasterList",
           "viewName": "employeeMasterList",
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false
+        },
+        "TargetUserMaster": {
+          "viewId": "userListView",
+          "viewName": "userListView",
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false
+        },
+        "TargetDeptMaster": {
+          "viewId": "deptListView",
+          "viewName": "deptListView",
           "viewType": "XML",
           "transition": "slide",
           "clearControlAggregation": false

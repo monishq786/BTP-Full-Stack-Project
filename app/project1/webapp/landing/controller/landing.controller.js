@@ -37,7 +37,18 @@ sap.ui.define([
         goToDashBoard:function(){
             const oRouter = this.getOwnerComponent().getRouter();
             oRouter.navTo("RouteDashBoard", {}, true);
+        },
+
+        goToDept:function(){
+            const oRouter = this.getOwnerComponent().getRouter();
+            oRouter.navTo("RouteDeptMaster", {}, true);
+        },
+
+        goToUser:function(){
+            const oRouter = this.getOwnerComponent().getRouter();
+            oRouter.navTo("RouteUserMaster", {}, true);
         }
+
 
 
 

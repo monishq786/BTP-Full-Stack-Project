@@ -34,6 +34,37 @@ sap.ui.define([
             }
             return this.odata(configObject);
         },
+        
+        getDeptMasterAPI: function () {
+            const configObject = {
+                method: "GET",
+                url: '/odata/v4/employee/MDepartment'
+            }
+            return this.odata(configObject);
+        },
+        getViewDeptAPI: function (id) {
+            const configObject = {
+                method: "GET",
+                url: `/odata/v4/employee/MDepartment/${id}`
+            }
+            return this.odata(configObject);
+        },
+        postDept: function (oData) {
+            const configObject = {
+                method: "POST",
+                url: '/odata/v4/employee/MDepartment?$orderby=ID desc',
+                data: oData
+            }
+            return this.odata(configObject);
+        },
+        updateDept: function (oData, id) {
+            const configObject = {
+                method: "PATCH",
+                url: `/odata/v4/employee/MDepartment(${id})`,
+                data: oData
+            }
+            return this.odata(configObject);
+        },
         getDashBoardAPI: function () {
             const configObject = {
                 method: "GET",
