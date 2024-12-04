@@ -15,16 +15,16 @@
             </f:ShellBar>
         </tnt:header>
         <tnt:sideContent>
-            <tnt:SideNavigation id="sideNavigation" selectedKey="walked" expanded="false">
+            <tnt:SideNavigation id="sideNavigation" selectedKey="dashboard" itemSelect=".onNavItemSelect" expanded="false">
 			<tnt:NavigationList>
-				<tnt:NavigationListItem text="Dash Board" icon="sap-icon://bbyd-dashboard" />
+				<tnt:NavigationListItem text="Dash Board" icon="sap-icon://bbyd-dashboard" key="DashBoard"/>
 				<tnt:NavigationListGroup text="New">
 					<tnt:NavigationListItem text="Building" icon="sap-icon://building" />
 					<tnt:NavigationListItem text="Masters" icon="sap-icon://mileage">
-						<tnt:NavigationListItem text="User Master" id="user" />
-						<tnt:NavigationListItem text="Department Master" id="dept" />
-						<tnt:NavigationListItem text="Employee Master" id="emp" />
-						<tnt:NavigationListItem text="Customer Master" id="customer" />
+						<tnt:NavigationListItem text="User Master" key="User"/>
+						<tnt:NavigationListItem text="Department Master" key="Department" />
+						<tnt:NavigationListItem text="Employee Master" key="Employee" />
+						<tnt:NavigationListItem text="Customer Master" key="Customer" />
 					</tnt:NavigationListItem>
 				</tnt:NavigationListGroup>
 				<tnt:NavigationListItem text="Transport" icon="sap-icon://passenger-train" />
