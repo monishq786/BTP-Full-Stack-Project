@@ -60,7 +60,7 @@ sap.ui.define([
             var oModel = that.getView().getModel("DeptMasterModel");
             var aData = oModel.getData();
             this.getRouter().navTo("RouteDeptMasterAddEdit", {
-                id: encodeURIComponent(aData.value[iIndex].ID),
+                id: encodeURIComponent(aData.value[iIndex].UserDepartmentID),
                 screenType: 'edit'
             });
         },

@@ -22,7 +22,7 @@ sap.ui.define([
             var oModel = new sap.ui.model.json.JSONModel(oPath);
             this.getView().setModel(oModel, "EmployeeMasterModel");
 
-           
+
         },
 
         empList: function () {
@@ -62,20 +62,13 @@ sap.ui.define([
                 screenType: 'edit'
             });
         },
-        onDelete:function(oEvent){
+        onDelete: async function (oEvent) {
             var sPath = oEvent.getSource().getBindingContext("EmployeeMasterModel").getPath();
             var iIndex = parseInt(sPath.split("/")[2]);
             var oModel = that.getView().getModel("EmployeeMasterModel");
             var aData = oModel.getData();
-            WebService.deleteEmpList(aData.value[iIndex].ID).then(function (response) {
-                if (response.code == 200) {
-                    var oModel = that.getView().getModel("EmployeeMasterModel");
-                    if (response.data.value.length > 0) {
-                        oModel.setData(response.data);
-                    }
-                    that.getView().setModel(oModel, "EmployeeMasterModel");
-                    this.empList();
-                }
+           await WebService.deleteEmpList(aData.value[iIndex].ID).then(function (response) {
+                that.empList();
                 console.log(response);
             })
         }

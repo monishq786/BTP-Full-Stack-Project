@@ -8,12 +8,12 @@ sap.ui.define([
     'use strict';
     return Controller.extend("project1.controller.userListView", {
         onRouteMatched: function (oEvent) {
-
+            this.userList();
         },
         onInit: function () {
             that = this
             var oRouter = UIComponent.getRouterFor(this);
-            oRouter.getRoute("RouteEmpMaster").attachMatched(this.onRouteMatched, this)
+            oRouter.getRoute("RouteUserMaster").attachMatched(this.onRouteMatched, this)
 
             var oPath = jQuery.sap.getModulePath(
                 "project1",
@@ -22,7 +22,7 @@ sap.ui.define([
             var oModel = new sap.ui.model.json.JSONModel(oPath);
             this.getView().setModel(oModel, "UserMasterModel");
 
-            this.userList();
+           
         },
 
         userList: function () {
@@ -43,9 +43,9 @@ sap.ui.define([
         },
 
         onRouterClick: function () {
-            this.getRouter().navTo("TargetUserMasterAddEdit", {
+            this.getRouter().navTo("RouteUserMasterAddEdit", {
                 data: encodeURIComponent(0),
-                type: 'add'
+                type: 'Add'
             });
         },
         navBack: function () {
@@ -58,8 +58,8 @@ sap.ui.define([
             var oModel = that.getView().getModel("UserMasterModel");
             var aData = oModel.getData();
             var oRouter = UIComponent.getRouterFor(this);
-            var sData = aData.value[iIndex].UserID;
-            oRouter.navTo("TargetUserMasterAddEdit", {
+            var sData = aData.value[iIndex].UserCode;
+            oRouter.navTo("RouteUserMasterAddEdit", {
                 data: encodeURIComponent(sData),
                 type: 'edit'
             });

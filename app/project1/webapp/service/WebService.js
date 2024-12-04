@@ -42,6 +42,7 @@ sap.ui.define([
             }
             return this.odata(configObject);
         },
+
         getViewDeptAPI: function (id) {
             const configObject = {
                 method: "GET",
@@ -49,14 +50,16 @@ sap.ui.define([
             }
             return this.odata(configObject);
         },
+
         postDept: function (oData) {
             const configObject = {
                 method: "POST",
-                url: '/odata/v4/employee/MDepartment?$orderby=ID desc',
+                url: '/odata/v4/employee/MDepartment',
                 data: oData
             }
             return this.odata(configObject);
         },
+
         updateDept: function (oData, id) {
             const configObject = {
                 method: "PATCH",
@@ -65,6 +68,7 @@ sap.ui.define([
             }
             return this.odata(configObject);
         },
+
         getDashBoardAPI: function () {
             const configObject = {
                 method: "GET",
@@ -72,6 +76,7 @@ sap.ui.define([
             }
             return this.odata(configObject);
         },
+
         getUserListAPI: function () {
             const configObject = {
                 method: "GET",
@@ -79,6 +84,33 @@ sap.ui.define([
             }
             return this.odata(configObject);
         },
+
+        getViewUserAPI: function (id) {
+            const configObject = {
+                method: "GET",
+                url: `/odata/v4/employee/MUser/${id}`
+            }
+            return this.odata(configObject);
+        },
+
+        postUser: function (oData) {
+            const configObject = {
+                method: "POST",
+                url: '/odata/v4/employee/MUser',
+                data: oData
+            }
+            return this.odata(configObject);
+        },
+
+        updateUser: function (oData, id) {
+            const configObject = {
+                method: "PATCH",
+                url: `/odata/v4/employee/MUser(${id})`,
+                data: oData
+            }
+            return this.odata(configObject);
+        },
+
         deleteEmpList:function(id){
             const configObject = {
                 method: "DELETE",
@@ -86,6 +118,7 @@ sap.ui.define([
             }
             return this.odata(configObject);
         }
+        
     });
     return new WebService();
 });
