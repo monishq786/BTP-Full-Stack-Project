@@ -4,32 +4,33 @@
     xmlns="sap.m"
     xmlns:f="sap.f"
     xmlns:cor="sap.ui.core"
-    xmlns:tnt="sap.tnt"
->
-    <tnt:ToolPage>
+    xmlns:tnt="sap.tnt">
+    <tnt:ToolPage id="appNew" class="sapUiDemoToolPage">
         <!-- ShellBar at the top -->
         <tnt:header>
-            <f:ShellBar
-                id="appShellBar"
-                title="UI Learning App"
-                secondTitle="Welcome Monish"
-                showMenuButton="true"
-                menuButtonPressed="true"
-                showNotifications="true"
-                notificationsPressed="true"
-                visible="true"
-                notificationsNumber="2"
-            >
+            <f:ShellBar id="appShellBar" title="UI Learning App" secondTitle="Welcome Monish" showMenuButton="true" showNotifications="true" notificationsPressed="true" visible="true" notificationsNumber="2" menuButtonPressed="onMenuButtonPress">
                 <f:profile>
-                    <Avatar
-                        src="sap-icon://log"
-                        press=""
-                        visible="true"
-                    />
+                    <Avatar src="sap-icon://log" press="" visible="true" />
                 </f:profile>
             </f:ShellBar>
         </tnt:header>
-
+        <tnt:sideContent>
+            <tnt:SideNavigation id="sideNavigation" selectedKey="walked" expanded="false">
+			<tnt:NavigationList>
+				<tnt:NavigationListItem text="Dash Board" icon="sap-icon://bbyd-dashboard" />
+				<tnt:NavigationListGroup text="New">
+					<tnt:NavigationListItem text="Building" icon="sap-icon://building" />
+					<tnt:NavigationListItem text="Masters" icon="sap-icon://mileage">
+						<tnt:NavigationListItem text="User Master" id="user" />
+						<tnt:NavigationListItem text="Department Master" id="dept" />
+						<tnt:NavigationListItem text="Employee Master" id="emp" />
+						<tnt:NavigationListItem text="Customer Master" id="customer" />
+					</tnt:NavigationListItem>
+				</tnt:NavigationListGroup>
+				<tnt:NavigationListItem text="Transport" icon="sap-icon://passenger-train" />
+			</tnt:NavigationList>
+		</tnt:SideNavigation>
+        </tnt:sideContent>
         <!-- Main Content -->
         <tnt:mainContents>
             <App id="app" />

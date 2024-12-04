@@ -4,12 +4,17 @@ sap.ui.define([
   "use strict";
 
   return Controller.extend("project1.controller.Fiori", {
-      onInit() {
-      },
-      onMenuButtonPress: function () {
-        const viewModel = this.getView().getModel('shellBarModel');
-        const { sideExpanded } = viewModel.getData();
-        viewModel.setProperty(`/sideExpanded`, !sideExpanded);
-      },
+    onInit() {
+    },
+
+    onMenuButtonPress: function () {
+      const oSideNavigation = this.byId("sideNavigation"),
+        bExpanded = oSideNavigation.getExpanded();
+
+      oSideNavigation.setExpanded(!bExpanded);
+    },
+    getBundleText: function (sI18nKey, aPlaceholderValues) {
+      return this.getBundleTextByModel(sI18nKey, this.getOwnerComponent().getModel("i18n"), aPlaceholderValues);
+    },
   });
 });

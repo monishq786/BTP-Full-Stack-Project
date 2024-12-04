@@ -148,13 +148,7 @@
             "TargetEmpMasterAddEdit"
           ]
         },
-        {
-          "name": "RouteUserMasterAddEdit",
-          "pattern": "RouteUserMasterAddEdit/{id}/{screenType}",
-          "target": [
-            "TargetUserMasterAddEdit"
-          ]
-        },
+        
         {
           "name": "RouteLanding",
           "pattern": "",
@@ -171,13 +165,7 @@
           "transition": "slide",
           "clearControlAggregation": false
         },
-        "TargetUserMasterAddEdit": {
-          "viewId": "userAddEdit",
-          "viewName": "userAddEdit",
-          "viewType": "XML",
-          "transition": "slide",
-          "clearControlAggregation": false
-        },
+        
         "TargetDeptMasterAddEdit": {
           "viewId": "deptMasterAddEdit",
           "viewName": "deptMasterAddEdit",
