@@ -51,7 +51,7 @@ sap.ui.define([
 
         navBack: function () {
             const oRouter = this.getOwnerComponent().getRouter();
-            oRouter.navTo("RouteLanding", {}, true);
+            oRouter.navTo("RouteDashBoard", {}, true);
         },
 
         onAction: function (oEvent) {

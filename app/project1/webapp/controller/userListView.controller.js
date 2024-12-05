@@ -50,7 +50,7 @@ sap.ui.define([
         },
         navBack: function () {
             const oRouter = this.getOwnerComponent().getRouter();
-            oRouter.navTo("RouteLanding", {}, true);
+            oRouter.navTo("RouteDashBoard", {}, true);
         },
         onAction: function (oEvent) {
             var sPath = oEvent.getSource().getBindingContext("UserMasterModel").getPath();
@@ -58,9 +58,8 @@ sap.ui.define([
             var oModel = that.getView().getModel("UserMasterModel");
             var aData = oModel.getData();
             var oRouter = UIComponent.getRouterFor(this);
-            var sData = aData.value[iIndex].UserCode;
             oRouter.navTo("RouteUserMasterAddEdit", {
-                data: encodeURIComponent(sData),
+                data: encodeURIComponent(aData.value[iIndex].UserID),
                 type: 'edit'
             });
         },
