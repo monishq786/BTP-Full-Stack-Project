@@ -129,7 +129,7 @@
         },
         {
           "name": "RouteDashBoard",
-          "pattern": "RouteDashBoard",
+          "pattern": "",
           "target": [
             "TargetDashBoard"
           ]
@@ -151,7 +151,7 @@
         
         {
           "name": "RouteLanding",
-          "pattern": "",
+          "pattern": "RouteLanding",
           "target": [
             "TargetLanding"
           ]

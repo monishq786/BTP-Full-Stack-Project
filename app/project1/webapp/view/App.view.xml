@@ -1,11 +1,11 @@
 <mvc:View controllerName="project1.controller.App"
     xmlns:html="http://www.w3.org/1999/xhtml"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-    xmlns="sap.m"
+xmlns="sap.m"
     xmlns:f="sap.f"
     xmlns:cor="sap.ui.core"
     xmlns:tnt="sap.tnt">
-    <tnt:ToolPage id="appNew" class="sapUiDemoToolPage">
+    <tnt:ToolPage id="appNew" class="sapUiDemoToolPage" sideExpanded="false">
         <!-- ShellBar at the top -->
         <tnt:header>
             <f:ShellBar id="appShellBar" title="UI Learning App" secondTitle="Welcome Monish" showMenuButton="true" showNotifications="true" notificationsPressed="true" visible="true" notificationsNumber="2" menuButtonPressed="onMenuButtonPress">

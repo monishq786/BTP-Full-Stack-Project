@@ -1,18 +1,21 @@
 sap.ui.define([
    "sap/ui/core/mvc/Controller",
    "sap/ui/model/json/JSONModel",
-   "../service/WebService"
+   "../service/WebService",
+   "sap/ui/core/UIComponent",
 
-], function (Controller, JSONModel, WebService) {
+], function (Controller, JSONModel, WebService,UIComponent) {
    let that;
    "use strict";
 
    return Controller.extend("project1.controller.dashboard", {
       onRouteMatched: function (oEvent) {
-         
-     },
+         this.dashboardList();
+      },
       onInit: function () {
          that = this
+         var oRouter = UIComponent.getRouterFor(this);
+         oRouter.getRoute("RouteDashBoard").attachMatched(this.onRouteMatched, this)
          // Create JSON Model
          let oPath = jQuery.sap.getModulePath(
             "project1",
@@ -21,7 +24,7 @@ sap.ui.define([
          let oModel = new sap.ui.model.json.JSONModel(oPath);
          this.getView().setModel(oModel, "dashBoardModel");
          this.getView().setModel(oModel);
-         this.dashboardList();
+
       },
       navBack: function () {
          const oRouter = this.getOwnerComponent().getRouter();
