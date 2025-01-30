@@ -67,7 +67,8 @@
       "i18n": {
         "type": "sap.ui.model.resource.ResourceModel",
         "settings": {
-          "bundleName": "project1.i18n.i18n"
+          "bundleName": "project1.i18n.i18n",
+          "theme": "sap_fiori_3_blue"
         }
       },
       "": {
@@ -129,9 +130,16 @@
         },
         {
           "name": "RouteDashBoard",
-          "pattern": "",
+          "pattern": "RouteDashBoard",
           "target": [
             "TargetDashBoard"
+          ]
+        },
+        {
+          "name": "RouteHome",
+          "pattern": "",
+          "target": [
+            "TargetHome"
           ]
         },
         {
@@ -219,6 +227,13 @@
         "TargetDashBoard": {
           "viewId": "dashboard",
           "viewName": "dashboard",
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false
+        },
+        "TargetHome": {
+          "viewId": "home",
+          "viewName": "home",
           "viewType": "XML",
           "transition": "slide",
           "clearControlAggregation": false
