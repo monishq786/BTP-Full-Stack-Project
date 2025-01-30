@@ -18,16 +18,17 @@
                 <tnt:NavigationList>
                     <!-- <tnt:NavigationListItem text="Dash Board" icon="sap-icon://bbyd-dashboard" key="DashBoard"/> -->
                     <tnt:NavigationListItem text="Home" icon="sap-icon://home" key="Home"/>
-                    <tnt:NavigationListGroup text="New">
-                        <tnt:NavigationListItem text="Building" icon="sap-icon://building" />
-                        <tnt:NavigationListItem text="Masters" icon="sap-icon://mileage">
+                    <!-- <tnt:NavigationListGroup text="New"> -->
+                        <tnt:NavigationListItem text="Search" icon="sap-icon://search" />
+                        <tnt:NavigationListItem text="Service Tests" icon="sap-icon://inspection">
                             <tnt:NavigationListItem text="User Master" key="User"/>
                             <tnt:NavigationListItem text="Department Master" key="Department" />
                             <tnt:NavigationListItem text="Employee Master" key="Employee" />
                             <tnt:NavigationListItem text="Customer Master" key="Customer" />
                         </tnt:NavigationListItem>
-                    </tnt:NavigationListGroup>
-                    <tnt:NavigationListItem text="Transport" icon="sap-icon://passenger-train" />
+                    <!-- </tnt:NavigationListGroup> -->
+                    <tnt:NavigationListItem text="Open Service Request" icon="sap-icon://detail-view" />
+                    <tnt:NavigationListItem text="Pending payment" icon="sap-icon://simple-payment" />
                 </tnt:NavigationList>
             </tnt:SideNavigation>
         </tnt:sideContent>        <!-- Main Content -->
