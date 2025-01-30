@@ -130,14 +130,14 @@
         },
         {
           "name": "RouteDashBoard",
-          "pattern": "RouteDashBoard",
+          "pattern": "",
           "target": [
             "TargetDashBoard"
           ]
         },
         {
           "name": "RouteHome",
-          "pattern": "",
+          "pattern": "RouteHome",
           "target": [
             "TargetHome"
           ]
