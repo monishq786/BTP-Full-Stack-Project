@@ -130,7 +130,7 @@
         },
         {
           "name": "RouteDashBoard",
-          "pattern": "",
+          "pattern": "RouteDashBoard",
           "target": [
             "TargetDashBoard"
           ]
@@ -166,11 +166,12 @@
         
         {
           "name": "RouteLanding",
-          "pattern": "RouteLanding",
+          "pattern": "",
           "target": [
             "TargetLanding"
           ]
         }
+        
       ],
       "targets": {
         "TargetEmpMasterAddEdit": {

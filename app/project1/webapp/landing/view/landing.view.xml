@@ -10,23 +10,23 @@
 
         </tnt:header>
         <tnt:mainContents>
-            <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="DashBoard" subheader="Employee" press="goToDashBoard" url="https://www.sap.com/">
+            <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Search Vehicle" subheader="Employee" press="" url="https://www.sap.com/">
                 <TileContent>
-                    <ImageContent src="sap-icon://bbyd-dashboard" />
+                    <ImageContent src="sap-icon://search" />
                 </TileContent>
             </GenericTile>
 
-            <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Employees" subheader="Master Data" press="goToEmployee" url="https://www.sap.com/">
+            <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Open Service Request" subheader="Master Data" press="" url="https://www.sap.com/">
                 <TileContent>
-                    <ImageContent src="sap-icon://employee" />
+                    <ImageContent src="sap-icon://detail-view" />
                 </TileContent>
             </GenericTile>
-             <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Users" subheader="Master Data" press="goToUser" url="https://www.sap.com/">
+             <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Visual Test" subheader="Master Data" press="" url="https://www.sap.com/">
                 <TileContent>
-                    <ImageContent src="sap-icon://employee" />
+                    <ImageContent src="sap-icon://inspection" />
                 </TileContent>
             </GenericTile>
-             <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Department" subheader="Master Data" press="goToDept" url="https://www.sap.com/">
+             <!-- <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Department" subheader="Master Data" press="goToDept" url="https://www.sap.com/">
                 <TileContent>
                     <ImageContent src="sap-icon://employee" />
                 </TileContent>
@@ -40,7 +40,7 @@
                 <TileContent>
                     <ImageContent src="sap-icon://employee" />
                 </TileContent>
-            </GenericTile>
+            </GenericTile> -->
             
         </tnt:mainContents>
     </tnt:ToolPage>

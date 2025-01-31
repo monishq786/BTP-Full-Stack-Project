@@ -21,10 +21,10 @@
                     <!-- <tnt:NavigationListGroup text="New"> -->
                         <tnt:NavigationListItem text="Search" icon="sap-icon://search" />
                         <tnt:NavigationListItem text="Service Tests" icon="sap-icon://inspection">
-                            <tnt:NavigationListItem text="User Master" key="User"/>
-                            <tnt:NavigationListItem text="Department Master" key="Department" />
+                            <tnt:NavigationListItem text="Visual Test" key="Visual"/>
+                            <!-- <tnt:NavigationListItem text="Department Master" key="Department" />
                             <tnt:NavigationListItem text="Employee Master" key="Employee" />
-                            <tnt:NavigationListItem text="Customer Master" key="Customer" />
+                            <tnt:NavigationListItem text="Customer Master" key="Customer" /> -->
                         </tnt:NavigationListItem>
                     <!-- </tnt:NavigationListGroup> -->
                     <tnt:NavigationListItem text="Open Service Request" icon="sap-icon://detail-view" />
