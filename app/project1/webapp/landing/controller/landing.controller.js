@@ -47,6 +47,10 @@ sap.ui.define([
         goToUser:function(){
             const oRouter = this.getOwnerComponent().getRouter();
             oRouter.navTo("RouteUserMaster", {}, true);
+        },
+        onPressADMobility:function(){
+            const oRouter = this.getOwnerComponent().getRouter();
+            oRouter.navTo("RouteADMobility", {}, true);
         }
 
 

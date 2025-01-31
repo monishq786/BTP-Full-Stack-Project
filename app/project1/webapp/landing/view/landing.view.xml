@@ -10,18 +10,18 @@
 
         </tnt:header>
         <tnt:mainContents>
-            <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Search Vehicle" subheader="Employee" press="" url="https://www.sap.com/">
+            <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Search Vehicle" subheader="" press="onPressADMobility" url="https://www.sap.com/">
                 <TileContent>
                     <ImageContent src="sap-icon://search" />
                 </TileContent>
             </GenericTile>
 
-            <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Open Service Request" subheader="Master Data" press="" url="https://www.sap.com/">
+            <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Open Service Request" subheader="" press="" url="https://www.sap.com/">
                 <TileContent>
                     <ImageContent src="sap-icon://detail-view" />
                 </TileContent>
             </GenericTile>
-             <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Visual Test" subheader="Master Data" press="" url="https://www.sap.com/">
+             <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Visual Test" subheader="" press="" url="https://www.sap.com/">
                 <TileContent>
                     <ImageContent src="sap-icon://inspection" />
                 </TileContent>

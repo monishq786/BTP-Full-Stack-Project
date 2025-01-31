@@ -3,7 +3,7 @@
     xmlns:core="sap.ui.core"
     xmlns="sap.m">
 
-    <Page id="page" title="{i18n>title}">
+    <Page id="cameraPage" title="{i18n>title}">
         <content>
             <VBox fitContainer="true" alignItems="Center">
 

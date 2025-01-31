@@ -170,6 +170,13 @@
           "target": [
             "TargetLanding"
           ]
+        },
+        {
+          "name": "RouteADMobility",
+          "pattern": "RouteADMobility",
+          "target": [
+            "TargetADMobility"
+          ]
         }
         
       ],
@@ -228,6 +235,13 @@
         "TargetDashBoard": {
           "viewId": "dashboard",
           "viewName": "dashboard",
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false
+        },
+        "TargetADMobility": {
+          "viewId": "admobility",
+          "viewName": "admobility",
           "viewType": "XML",
           "transition": "slide",
           "clearControlAggregation": false

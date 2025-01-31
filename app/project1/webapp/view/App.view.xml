@@ -7,7 +7,7 @@
     xmlns:tnt="sap.tnt">
     <tnt:ToolPage id="appNew" class="sapUiDemoToolPage" sideExpanded="false">        <!-- ShellBar at the top -->
         <tnt:header>
-            <f:ShellBar id="appShellBar" title="ADNOC" secondTitle="Welcome to Vehical Inspection" showMenuButton="true" showNotifications="true" notificationsPressed="true" visible="true" notificationsNumber="2" menuButtonPressed="onMenuButtonPress">
+            <f:ShellBar homeIcon="./images/adnoclogo.jpg" id="appShellBar" title="ADNOC" secondTitle="Welcome to Vehical Inspection" showMenuButton="true" showNotifications="false" notificationsPressed="false" visible="true" notificationsNumber="2" menuButtonPressed="onMenuButtonPress">
                 <f:profile>
                     <Avatar src="sap-icon://log" press="" visible="true" />
                 </f:profile>

@@ -1,0 +1,8 @@
+<mvc:View controllerName="project1.controller.admobility"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m">
+    <Page id="adMobilityPage" title="AD Mobility" showNavButton="true" navButtonPress="backToLanding">
+
+    </Page>
+</mvc:View>
