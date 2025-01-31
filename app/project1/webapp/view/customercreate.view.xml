@@ -1,0 +1,72 @@
+<mvc:View controllerName="project1.controller.customercreate"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+    xmlns:f="sap.ui.layout.form"
+    xmlns="sap.m">
+
+    <Page id="customerPage" title="Customer Creation" showNavButton="true" navButtonPress="backToLanding">
+        <HBox justifyContent="Center" width="100%">
+            <VBox width="48%">
+                <f:SimpleForm editable="true" layout="ResponsiveGridLayout" columnsXL="2" columnsL="2" columnsM="2" singleContainerFullSize="false" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="5" adjustLabelSpan="false" emptySpanXL="1" emptySpanL="1" emptySpanM="1" emptySpanS="0">
+                   
+                    <f:content>
+                        <!-- First Column -->
+                         <Label id="cus" text="Customer Information" />
+                        <Label id="firstNameLbl" text="First Name" />
+                        <Input id="firstName" value="" enabled="true" type="Text"/>
+
+                        <Label id="lastNamelbl" text="Last Name" />
+                        <Input id="lastName" value="" enabled="true" type="Text"/>
+
+                        <Label id="searchTLbl" text="Search Team" />
+                        <Input id="searchTeam" value="" enabled="true" type="Text"/>
+
+                        <!-- Second Column -->
+                        <Label id="empIDlbl" text="Employee ID" />
+                        <Input id="empID" value="" enabled="true" type="Text"/>
+
+                        <Label id="mobNolbl" text="Mobile No" />
+                        <Input id="mobNo" value="" enabled="true" type="Number"/>
+
+                    </f:content>
+
+
+                </f:SimpleForm>
+            </VBox>
+            <VBox width="48%">
+                <f:SimpleForm editable="true" layout="ResponsiveGridLayout" columnsXL="2" columnsL="2" columnsM="2" singleContainerFullSize="false" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="5" adjustLabelSpan="false" emptySpanXL="1" emptySpanL="1" emptySpanM="1" emptySpanS="0">
+                    <f:content>
+                        <!-- First Column -->
+                        <Label id="emailLbl" text="Email" />
+                        <Input id="email" value="" enabled="true" type="Text"/>
+                        
+                        <Label id="emirateLbl" text="Emirates" />
+                        <Input id="emirate" value="" enabled="true" type="Text"/>
+                        
+                        <Label id="addressLbl" text="Address" />
+                        <TextArea id="address" value="" enabled="true" rows="2"/>
+
+                        <Label id="cityLbl" text="City" />
+                        <Input id="city" value="" enabled="true" type="Text"/>
+
+                         <Label id="countryLbl" text="Country" />
+                        <Input id="country" value="" enabled="true" type="Text"/>
+
+                    </f:content>
+
+
+                </f:SimpleForm>
+            </VBox>
+        </HBox>
+
+        <footer>
+            <Toolbar class="d-flex justify-content-center">
+                <ToolbarSpacer />
+                <Button id="btnCreate" type="Default" text="Create" press="" />
+                <Button id="btnReset" type="Emphasized" text="Reset" press="" />
+                <Button id="btnExit" type="Reject" text="Exit" press="" />
+            </Toolbar>
+        </footer>
+    </Page>
+
+</mvc:View>

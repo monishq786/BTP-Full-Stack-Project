@@ -1,0 +1,10 @@
+<mvc:View controllerName="project1.controller.serviceTest"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m">
+
+    <Page id="serviceTestPage" title="Service Test" showNavButton="true" navButtonPress="backToLanding">
+       
+    </Page>
+
+</mvc:View>

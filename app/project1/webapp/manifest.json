@@ -177,6 +177,20 @@
           "target": [
             "TargetADMobility"
           ]
+        },
+        {
+          "name": "RouteServiceTest",
+          "pattern": "RouteServiceTest",
+          "target": [
+            "TargetServiceTest"
+          ]
+        },
+        {
+          "name": "RouteCustomerCreate",
+          "pattern": "RouteCustomerCreate",
+          "target": [
+            "TargetCustomerCreate"
+          ]
         }
         
       ],
@@ -249,6 +263,20 @@
         "TargetHome": {
           "viewId": "home",
           "viewName": "home",
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false
+        },
+        "TargetServiceTest": {
+          "viewId": "serviceTest",
+          "viewName": "serviceTest",
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false
+        },
+        "TargetCustomerCreate": {
+          "viewId": "customercreate",
+          "viewName": "customercreate",
           "viewType": "XML",
           "transition": "slide",
           "clearControlAggregation": false

@@ -21,27 +21,16 @@
                     <ImageContent src="sap-icon://detail-view" />
                 </TileContent>
             </GenericTile>
-             <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Visual Test" subheader="" press="" url="https://www.sap.com/">
+             <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Visual Test" subheader="" press="onPressVisualTest" url="https://www.sap.com/">
                 <TileContent>
                     <ImageContent src="sap-icon://inspection" />
                 </TileContent>
             </GenericTile>
-             <!-- <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Department" subheader="Master Data" press="goToDept" url="https://www.sap.com/">
+            <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Customer Creation" subheader="" press="onPressCustomerCreation" url="https://www.sap.com/">
                 <TileContent>
-                    <ImageContent src="sap-icon://employee" />
+                    <ImageContent src="sap-icon://customer" />
                 </TileContent>
             </GenericTile>
-             <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Configuration" subheader="Master Data" press="" url="https://www.sap.com/">
-                <TileContent>
-                    <ImageContent src="sap-icon://employee" />
-                </TileContent>
-            </GenericTile>
-              <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Customer" subheader="Master Data" press="goToUser" url="https://www.sap.com/">
-                <TileContent>
-                    <ImageContent src="sap-icon://employee" />
-                </TileContent>
-            </GenericTile> -->
-            
         </tnt:mainContents>
     </tnt:ToolPage>
 
