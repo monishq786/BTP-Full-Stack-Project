@@ -7,7 +7,7 @@
     xmlns:core="sap.ui.core" controllerName="project1.controller.salesorder" height="100%">
 
     <m:Page id="salesOrderPage" title="Sales Order" showNavButton="true" navButtonPress="backToLanding">
-        
+
         <ObjectPageLayout id="ObjectPageLayout" showTitleInHeaderContent="true" upperCaseAnchorBar="false">
             <headerTitle>
                 <ObjectPageDynamicHeaderTitle>
@@ -81,55 +81,57 @@
             <sections >
                 <ObjectPageSection titleUppercase="false" id="orderDetailsSection" title="Items">
 
-                    <subSections >
+                <ObjectPageSubSection showTitle="false">
 
-                        <ObjectPageSubSection showTitle="false">
+                            <m:HBox width="50%" justifyContent="SpaceBetween">
 
-                            <m:HBox class="sapUiTinyMargin" width="100%">
-                                <m:VBox width="50%">
-                                    <m:HBox >
-                                        <m:Text text="279000291"/>
+                                <!-- Left Section - 50% Width -->
+                                <m:VBox width="48%" class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
+                                    <m:HBox class="sapUiTinyMarginBottom">
+                                        <m:Label text="Order No:" class="sapUiTinyMarginEnd"/>
+                                        <m:Text text="2790000291" class="sapUiSmallMarginBegin"/>
                                     </m:HBox>
-                                    <m:HBox>
-                                        <m:Text text="Re-New"/>
+
+                                    <m:HBox class="sapUiTinyMarginBottom">
+                                        <m:Label text="Test Type:" class="sapUiTinyMarginEnd"/>
+                                        <m:Text text="Re-New" class="sapUiSmallMarginBegin"/>
                                     </m:HBox>
-                                    <m:HBox>
-                                        <m:Label text="Net:" design="Bold"/>
-                                        <m:Text text="165" />
-                                        <m:Label text="Vat:" design="Bold" class="sapUiSmallMarginBegin"/>
-                                        <m:Text text="15" />
-                                        <m:Label text="Total:" design="Bold" class="sapUiSmallMarginBegin"/>
-                                        <m:Text text="185" />
+
+                                    <m:HBox class="sapUiTinyMarginBottom">
+                                        <m:Label text="Net:" class="sapUiTinyMarginEnd"/>
+                                        <m:Text text="160.25 AED" class="sapUiSmallMarginBegin"/>
                                     </m:HBox>
-                                    <m:HBox>
-                                        <m:Text text="Quantity"/>
+
+                                    <m:HBox class="sapUiTinyMarginBottom">
+                                        <m:Label text="Vat:" class="sapUiTinyMarginEnd"/>
+                                        <m:Text text="10.25 AED" class="sapUiSmallMarginBegin"/>
+                                    </m:HBox>
+
+                                    <m:HBox class="sapUiTinyMarginBottom">
+                                        <m:Label text="Total:" class="sapUiTinyMarginEnd"/>
+                                        <m:Text text="170.50 AED" class="sapUiSmallMarginBegin"/>
                                     </m:HBox>
                                 </m:VBox>
-                                <m:VBox width="50%">
-                                    <m:HBox justifyContent="End">
-                                        <m:Label text="Item:" design="Bold"/>
-                                        <m:Text text="10" />
+
+                                <!-- Right Section - 50% Width -->
+                                <m:VBox width="48%" class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
+                                    <m:HBox class="sapUiTinyMarginBottom">
+                                        <m:Label text="Item:" class="sapUiTinyMarginEnd"/>
+                                        <m:Text text="10" class="sapUiSmallMarginBegin"/>
+                                    </m:HBox>
+                                    <m:HBox class="sapUiTinyMarginBottom">
+                                        <m:Button icon="sap-icon://delete" width="25px" visible="true" press="" class="sapUiSmallMarginBegin sapUiTinyMarginEnd"/>
                                     </m:HBox>
                                 </m:VBox>
 
                             </m:HBox>
                         </ObjectPageSubSection>
-                    </subSections>
                 </ObjectPageSection>
             </sections>
-
-            <footer>
-                <m:Toolbar class="d-flex justify-content-center">
-                    <m:ToolbarSpacer />
-                    <m:Button id="btnSave1" type="Emphasized" text="Save" press="" />
-                    <m:Button id="btnExitSO" type="Emphasized" text="Exit" press="" />
-                </m:Toolbar>
-            </footer>
-
         </ObjectPageLayout>
 
         <m:footer>
-            <m:Toolbar class="sapUiResponsiveMargin d-flex justify-content-end" design="Transparent">
+            <m:Toolbar class="d-flex justify-content-center" design="Transparent" >
                 <m:ToolbarSpacer/>
                 <m:Button type="Emphasized" text="Save" press="onSavePress" />
                 <m:Button type="Emphasized" text="Exit" press="onExitPress" />
