@@ -7,14 +7,14 @@
     xmlns:tnt="sap.tnt">
     <tnt:ToolPage id="appNew" class="sapUiDemoToolPage" sideExpanded="false">        <!-- ShellBar at the top -->
         <tnt:header>
-            <f:ShellBar homeIcon="./images/adnoclogo.jpg" id="appShellBar" title="ADNOC" secondTitle="Welcome to Vehical Inspection" showMenuButton="true" showNotifications="false" notificationsPressed="false" visible="true" notificationsNumber="2" menuButtonPressed="onMenuButtonPress">
+            <f:ShellBar homeIcon="./images/adnoclogo.jpg" id="appShellBar" title="ADNOC" secondTitle="Welcome to Vehical Inspection" showMenuButton="{= ${shellBarModel>/menu} === true}" showNotifications="false" notificationsPressed="false" visible="true" notificationsNumber="2" menuButtonPressed="onMenuButtonPress">
                 <f:profile>
-                    <Avatar src="sap-icon://log" press="" visible="true" />
+                    <Avatar src="sap-icon://log" press="onPressLogOut" visible="{= ${shellBarModel>/logout} === true}" />
                 </f:profile>
             </f:ShellBar>
         </tnt:header>
-        <tnt:sideContent>
-            <tnt:SideNavigation id="sideNavigation" selectedKey="home" itemSelect=".onNavItemSelect" expanded="false">
+        <tnt:sideContent >
+            <tnt:SideNavigation visible="{= ${shellBarModel>/logout} === true}" id="sideNavigation" selectedKey="home" itemSelect=".onNavItemSelect" expanded="false">
                 <tnt:NavigationList>
                     <tnt:NavigationListItem text="Home" icon="sap-icon://home" key="Home"/>
                     <tnt:NavigationListItem text="Search" icon="sap-icon://search" key="Search"/>

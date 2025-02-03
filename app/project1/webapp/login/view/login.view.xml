@@ -1,0 +1,40 @@
+<mvc:View xmlns:form="sap.ui.layout.form" controllerName="logincontroller.login"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core" displayBlock="true" height="100%"
+    xmlns:f="sap.f"
+    xmlns:card="sap.f.cards">
+    <Page title="Login" showHeader="false">
+        <VBox alignContent="Center" alignItems="Center" justifyContent="Center" class="sapUiSmallMargin">
+            <f:Card width="100%" class="sapUiResponsiveMargin">
+                <f:content>
+                    <VBox width="100%" class="sapUiSmallMargin">
+                        <!-- Logo -->
+                        <HBox alignItems="Center" justifyContent="Center" class="sapUiSmallMargin">
+                            <Image src="./images/loginLogo.jpg" id="imgLogoctrl" width="120px" height="80px" />
+                        </HBox>
+
+                        <!-- Title -->
+                        <Title text="Sign in with your email address" class="sapUiSmallMargin" textAlign="Center" />
+                        
+                        <VBox class="sapUiSmallMargin">
+                            <Input id="usernameInput" type="Email" value="" liveChange=".onUsernameChange" placeholder="Email Address" width="100%"  />
+                            <Input id="passwordInput" type="Password" value="" liveChange=".onPasswordChange" placeholder="Password" width="100%" />
+                        </VBox>
+
+                        <!-- Forgot Password -->
+                        <Link text="Forgot password?" textAlign="Center" width="100%" class="sapUiSmallMargin" />
+
+                        <!-- Sign In Button -->
+                        <VBox justifyContent="End" class="sapUiSmallMargin">
+                            <FlexBox justifyContent="Start">
+                                <Button text="Sign in" press=".onPressLogin" type="Emphasized" width="15vw" class="sapUiSmallMarginTop sapUiMediumMarginBottom" />
+                            </FlexBox>
+                        </VBox>
+                    </VBox>
+                </f:content>
+            </f:Card>
+        </VBox>
+    </Page>
+
+</mvc:View>

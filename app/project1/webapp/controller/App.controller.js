@@ -5,6 +5,9 @@ sap.ui.define([
 
   return Controller.extend("project1.controller.App", {
     onInit() {
+      let oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+      oRouter.attachRouteMatched(this.onRouteMatched, this);
+      this.loadStaticDropdownModel();
     },
 
     onMenuButtonPress: function () {
@@ -40,6 +43,97 @@ sap.ui.define([
         console.error("No navigation path found for key:", sKey);
       }
     },
+    onPressLogOut: function () {
+      const oRouter = this.getOwnerComponent().getRouter();
+      oRouter.navTo("RouteLogin");
+
+    },
+
+    loadStaticDropdownModel: function () {
+      try {
+        const oViewModel = new sap.ui.model.json.JSONModel({
+          menu: false,
+          notification: false,
+          logout: false,
+          sideExpanded: false,
+          badge: "2"
+        });
+        this.getView().setModel(oViewModel, 'shellBarModel');
+        console.log("Static Dropdown Model initialized:", oViewModel.getData());
+      } catch (error) {
+        console.error("Error initializing dropdown model:", error);
+      }
+    },
+
+    onRouteMatched: function (oEvent) {
+      try {
+        const sRouteName = oEvent.getParameter('name');
+        const sHash = window.location.hash;
+        console.log({ sHash, sRouteName });
+        if (sRouteName === 'RouteLogin') {
+          this.handleRouteLoginMenu();
+        } else if (sRouteName === 'RouteLanding') {
+          this.handleRouteLandingMenu();
+        } else {
+          this.handleNotificationAndLogout();
+        }
+
+      } catch (error) {
+        console.log('onRouteMatched Error :', error);
+      }
+    },
+    handleRouteLoginMenu: function () {
+      try {
+        const viewModel = this.getView().getModel('shellBarModel');
+        viewModel.setProperty(`/menu`, false);
+        viewModel.setProperty(`/notification`, false);
+        viewModel.setProperty(`/logout`, false);
+        viewModel.setProperty(`/badge`, "0");
+        viewModel.refresh();
+      } catch (error) {
+        console.log('handleRouteLoginMenu Error :', error);
+      }
+    },
+
+    handleRouteLoginMenu: function () {
+      try {
+        const viewModel = this.getView().getModel('shellBarModel');
+        viewModel.setProperty(`/menu`, false);
+        viewModel.setProperty(`/notification`, false);
+        viewModel.setProperty(`/logout`, false);
+        viewModel.setProperty(`/badge`, "0");
+        viewModel.refresh();
+      } catch (error) {
+        console.log('handleRouteLoginMenu Error :', error);
+      }
+    },
+
+    handleRouteLandingMenu: async function () {
+      try {
+        let viewModel = this.getView().getModel('shellBarModel');
+        viewModel.setProperty('/menu', true);
+        viewModel.setProperty('/notification', true);
+        viewModel.setProperty('/logout', true);
+        viewModel.setProperty(`/badge`, "0");
+        viewModel.refresh();
+      } catch (error) {
+        console.log('handleRouteLandingMenu Error :', error);
+      }
+    },
+
+    handleNotificationAndLogout: function () {
+      try {
+        const viewModel = this.getView().getModel('shellBarModel');
+        viewModel.setProperty(`/menu`, false);
+        viewModel.setProperty(`/notification`, true);
+        viewModel.setProperty(`/logout`, true);
+        viewModel.setProperty(`/badge`, "0");
+        viewModel.refresh();
+      } catch (error) {
+        console.log('handleNotificationAndLogout Error :', error);
+      }
+    }
+
 
     // onPressADMobility: function () {
     //   const oRouter = this.getOwnerComponent().getRouter();
