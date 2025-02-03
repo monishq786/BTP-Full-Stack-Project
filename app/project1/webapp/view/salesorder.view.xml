@@ -1,117 +1,142 @@
-<mvc:View controllerName="project1.controller.salesorder"
-    xmlns:mvc="sap.ui.core.mvc"
-    xmlns:core="sap.ui.core"
-    xmlns:f="sap.f"
+<mvc:View xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.uxap"
+    xmlns:m="sap.m"
     xmlns:card="sap.f.cards"
-    xmlns:w="sap.ui.integration.widgets"
-    xmlns="sap.m">
-    <Page id="salesOrderPage" title="Sales Order" showNavButton="true" navButtonPress="backToLanding">
-        <VBox width="100%" class="sapUiTinyMargin sapUiSmallMarginEnd">
-            <f:Card >
-                <f:header>
-                    <card:Header title="Mohammad Azar" subtitle="" />
-                </f:header>
-                <f:content>
-                    <HBox class="sapUiTinyMargin" width="100%">
-                        <VBox width="50%">
-                            <HBox >
-                                <Label text="Plate Detail:" design="Bold"/>
-                                <ToolbarSpacer />
-                                <Text text="54321/S" />
-                            </HBox>
+    xmlns:f="sap.f"
+    xmlns:forms="sap.ui.layout.form"
+    xmlns:core="sap.ui.core" controllerName="project1.controller.salesorder" height="100%">
 
-                            <HBox >
-                                <Label text="Emirates:" design="Bold"/>
-                                <ToolbarSpacer />
-                                <Text text="Abu Dhabi" />
-                            </HBox>
+    <m:Page id="salesOrderPage" title="Sales Order" showNavButton="true" navButtonPress="backToLanding">
+        
+        <ObjectPageLayout id="ObjectPageLayout" showTitleInHeaderContent="true" upperCaseAnchorBar="false">
+            <headerTitle>
+                <ObjectPageDynamicHeaderTitle>
+                    <expandedHeading>
+                        <m:Title text="Mohammed Azar" wrapping="true" />
+                    </expandedHeading>
 
-                            <HBox>
-                                <Label text="Model:" design="Bold"/>
-                                <ToolbarSpacer />
-                                <Text text="BMW X5" />
-                            </HBox>
-                            <VBox width="50%">
-                                <MessageStrip text="MAHA File is not Updated" type="Warning" showIcon="true" showCloseButton="false" class="">
-                                </MessageStrip>
-                            </VBox>
-                        </VBox>
-                        <VBox width="50%">
-                            <HBox justifyContent="End" class="sapUiTinyMargin">
-                                <Label text="Total:" design="Bold"/>
-                                <ToolbarSpacer />
-                                <Text text="173.25 AED" />
-                            </HBox>
+                    <snappedHeading>
+                        <m:HBox>
+                            <m:VBox>
+                                <m:Avatar src="./images/adnoclogo.jpg" class="sapUiSmallMarginEnd" />
+                            </m:VBox>
 
-                            <HBox justifyContent="End" class="sapUiTinyMargin">
-                                <Label text="Vat:" design="Bold"/>
-                                <ToolbarSpacer />
-                                <Text text="8.25 AED" />
-                            </HBox>
+                            <m:VBox>
+                                <m:Title text="Mohammed Azar" wrapping="true"/>
+                            </m:VBox>
+                        </m:HBox>
+                    </snappedHeading>
 
-                        </VBox>
+                    <snappedTitleOnMobile>
+                        <m:Title text="Mohammed Azar"/>
+                    </snappedTitleOnMobile>
 
-                    </HBox>
-                </f:content>
-            </f:Card>
-        </VBox>
-        <HBox width="100%">
-            <VBox width="48%" class="sapUiTinyMargin" justifyContent="Start">
-                <Label text="Items" design="Bold"/>
-            </VBox>
-            <VBox width="48%">
-                <HBox width="100%" justifyContent="End">
-                    <Input value="" enabled="true" type="Text" placeholder="Enter Mobile No" class=""/>
-                    <Button icon="sap-icon://add-equipment" width="25px" visible="true" press="" class="sapUiSmallMarginBegin"/>
-                </HBox>
+                </ObjectPageDynamicHeaderTitle>
+            </headerTitle>
 
-            </VBox>
-        </HBox>
+            <headerContent>
+                <m:FlexBox wrap="Wrap" fitContainer="true">
+                    <m:Avatar src="./images/adnoclogo.jpg" class="sapUiMediumMarginEnd" displaySize="L"/>
 
-        <VBox width="45%" class="sapUiTinyMargin">
-            <f:Card >
-                <f:content>
-                    <HBox class="sapUiTinyMargin" width="100%">
-                        <VBox width="50%">
-                            <HBox >
-                                <Text text="279000291"/>
+                    <m:HBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
+                        <m:VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
+                            <m:Title text="Plate Detail" class="sapUiTinyMarginBottom" />
+                            <m:ObjectStatus text="54321/S" icon="sap-icon://car-rental" class="sapMObjectStatusLarge"/>
+                        </m:VBox>
 
-                            </HBox>
-                            <HBox>
-                                <Text text="Re-New"/>
-                            </HBox>
-                            <HBox>
-                                <Label text="Net:" design="Bold"/>
-                                <Text text="165" />
-                                <Label text="Vat:" design="Bold" class="sapUiSmallMarginBegin"/>
-                                <Text text="15" />
-                                <Label text="Total:" design="Bold"  class="sapUiSmallMarginBegin"/>
-                                <Text text="185" />
-                            </HBox>
-                            <HBox>
-                                <Text text="Quantity"/>
-                            </HBox>
-                        </VBox>
-                        <VBox width="50%">
-                            <HBox justifyContent="End">
-                                <Label text="Item:" design="Bold"/>
-                                <ToolbarSpacer />
-                                <Text text="10" />
-                            </HBox>
-                        </VBox>
+                        <m:VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
+                            <m:Title text="Emirates" class="sapUiTinyMarginBottom" />
+                            <m:ObjectStatus text="Abu Dhabi" state="Success" class="sapMObjectStatusLarge"/>
+                        </m:VBox>
 
-                    </HBox>
-                </f:content>
-            </f:Card>
-        </VBox>
+                        <m:VBox class="sapUiLargeMarginEnd">
+                            <m:Title text="Model" class="sapUiTinyMarginBottom" />
+                            <m:ObjectStatus text="BMW X5" class="sapMObjectStatusLarge"/>
+                        </m:VBox>
+                    </m:HBox>
 
+                    <m:VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
+                        <m:Title text="Payment Information" class="sapUiTinyMarginBottom" />
 
-        <footer>
-            <Toolbar class="d-flex justify-content-center">
-                <ToolbarSpacer />
-                <Button id="btnSave1" type="Emphasized" text="Save" press="" />
-                <Button id="btnExitSO" type="Emphasized" text="Exit" press="" />
-            </Toolbar>
-        </footer>
-    </Page>
+                        <m:HBox class="sapUiTinyMarginBottom">
+                            <m:Label text="Total:" class="sapUiTinyMarginEnd"/>
+                            <m:Text text="173.25 AED" class="sapUiSmallMarginBegin"/>
+                        </m:HBox>
+
+                        <m:HBox class="sapUiTinyMarginBottom">
+                            <m:Label text="Vat:" class="sapUiTinyMarginEnd"/>
+                            <m:Text text="8.25 AED" class="sapUiSmallMarginBegin"/>
+                        </m:HBox>
+                    </m:VBox>
+
+                    <m:VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
+                        <m:Title text="Status" class="sapUiTinyMarginBottom" />
+                        <m:MessageStrip text="MAHA File is not Updated" type="Warning" showIcon="true" showCloseButton="false" class="">
+                        </m:MessageStrip>
+                    </m:VBox>
+                </m:FlexBox>
+
+            </headerContent>
+
+            <sections >
+                <ObjectPageSection titleUppercase="false" id="orderDetailsSection" title="Items">
+
+                    <subSections >
+
+                        <ObjectPageSubSection showTitle="false">
+
+                            <m:HBox class="sapUiTinyMargin" width="100%">
+                                <m:VBox width="50%">
+                                    <m:HBox >
+                                        <m:Text text="279000291"/>
+                                    </m:HBox>
+                                    <m:HBox>
+                                        <m:Text text="Re-New"/>
+                                    </m:HBox>
+                                    <m:HBox>
+                                        <m:Label text="Net:" design="Bold"/>
+                                        <m:Text text="165" />
+                                        <m:Label text="Vat:" design="Bold" class="sapUiSmallMarginBegin"/>
+                                        <m:Text text="15" />
+                                        <m:Label text="Total:" design="Bold" class="sapUiSmallMarginBegin"/>
+                                        <m:Text text="185" />
+                                    </m:HBox>
+                                    <m:HBox>
+                                        <m:Text text="Quantity"/>
+                                    </m:HBox>
+                                </m:VBox>
+                                <m:VBox width="50%">
+                                    <m:HBox justifyContent="End">
+                                        <m:Label text="Item:" design="Bold"/>
+                                        <m:Text text="10" />
+                                    </m:HBox>
+                                </m:VBox>
+
+                            </m:HBox>
+                        </ObjectPageSubSection>
+                    </subSections>
+                </ObjectPageSection>
+            </sections>
+
+            <footer>
+                <m:Toolbar class="d-flex justify-content-center">
+                    <m:ToolbarSpacer />
+                    <m:Button id="btnSave1" type="Emphasized" text="Save" press="" />
+                    <m:Button id="btnExitSO" type="Emphasized" text="Exit" press="" />
+                </m:Toolbar>
+            </footer>
+
+        </ObjectPageLayout>
+
+        <m:footer>
+            <m:Toolbar class="sapUiResponsiveMargin d-flex justify-content-end" design="Transparent">
+                <m:ToolbarSpacer/>
+                <m:Button type="Emphasized" text="Save" press="onSavePress" />
+                <m:Button type="Emphasized" text="Exit" press="onExitPress" />
+                <m:ToolbarSpacer/>
+            </m:Toolbar>
+        </m:footer>
+
+    </m:Page>
+
 </mvc:View>
