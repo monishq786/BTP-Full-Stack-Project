@@ -31,6 +31,11 @@
                     <ImageContent src="sap-icon://customer" />
                 </TileContent>
             </GenericTile>
+            <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Sales Order" subheader="" press="onPressSalesOrder" url="https://www.sap.com/">
+                <TileContent>
+                    <ImageContent src="sap-icon://customer" />
+                </TileContent>
+            </GenericTile>
         </tnt:mainContents>
     </tnt:ToolPage>
 

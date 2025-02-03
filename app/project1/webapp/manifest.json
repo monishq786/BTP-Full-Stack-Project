@@ -191,6 +191,13 @@
           "target": [
             "TargetCustomerCreate"
           ]
+        },
+        {
+          "name": "RouteSalesOrder",
+          "pattern": "RouteSalesOrder",
+          "target": [
+            "TargetSalesOrder"
+          ]
         }
         
       ],
@@ -277,6 +284,13 @@
         "TargetCustomerCreate": {
           "viewId": "customercreate",
           "viewName": "customercreate",
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false
+        },
+        "TargetSalesOrder": {
+          "viewId": "salesorder",
+          "viewName": "salesorder",
           "viewType": "XML",
           "transition": "slide",
           "clearControlAggregation": false

@@ -59,7 +59,13 @@ sap.ui.define([
         onPressCustomerCreation:function(){
             const oRouter = this.getOwnerComponent().getRouter();
             oRouter.navTo("RouteCustomerCreate", {}, true);
+        },
+
+        onPressSalesOrder:function(){
+            const oRouter = this.getOwnerComponent().getRouter();
+            oRouter.navTo("RouteSalesOrder", {}, true);
         }
+
 
 
 

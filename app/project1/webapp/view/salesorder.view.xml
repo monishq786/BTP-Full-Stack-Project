@@ -1,0 +1,58 @@
+<mvc:View controllerName="project1.controller.salesorder"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+    xmlns:f="sap.f"
+    xmlns:card="sap.f.cards"
+    xmlns:w="sap.ui.integration.widgets"
+    xmlns="sap.m">
+    <Page id="salesOrderPage" title="Sales Order" showNavButton="true" navButtonPress="backToLanding">
+        <HBox justifyContent="Center" width="100%">
+            <VBox width="100%" class="sapUiMediumMargin">
+                <f:Card >
+                    <f:header>
+                        <card:Header title="Mohammad Azar" subtitle="" />
+                    </f:header>
+                    <f:content>
+                        <VBox class="sapUiTinyMargin">
+                            <HBox justifyContent="SpaceBetween">
+                                <Text id="plateDetailLbl" text="Plate Detail:" />
+                                <ToolbarSpacer />
+                                <Text id="plateDetail" text="54321/S" />
+                            </HBox>
+
+                            <HBox class="sapUiSmallMarginBegin">
+                                <Text text="Emirates:" />
+                                <ToolbarSpacer />
+                                <Text text="Abu Dhabi" />
+                            </HBox>
+
+                            <HBox class="sapUiSmallMarginBegin">
+                                <Text text="Model:" />
+                                <ToolbarSpacer />
+                                <Text text="BMW X5" />
+                            </HBox>
+                            <ToolbarSpacer />
+                            <VBox>
+                                <MessageStrip text="Maha File not Updated" type="Warning" showIcon="true" showCloseButton="false" class="sapUiMediumMarginBottom">
+                                </MessageStrip>
+                            </VBox>
+
+                        </VBox>
+
+                    </f:content>
+                </f:Card>
+            </VBox>
+            <!-- <VBox width="48%">
+
+            </VBox> -->
+        </HBox>
+
+        <footer>
+            <Toolbar class="d-flex justify-content-center">
+                <ToolbarSpacer />
+                <Button id="btnSave1" type="Emphasized" text="Save" press="" />
+                <Button id="btnExitSO" type="Emphasized" text="Exit" press="" />
+            </Toolbar>
+        </footer>
+    </Page>
+</mvc:View>
