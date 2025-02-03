@@ -1,19 +1,37 @@
 sap.ui.define([
     'sap/ui/model/json/JSONModel',
     "sap/ui/core/mvc/Controller",
-], function (JSONModel,Controller) {
+], function (JSONModel, Controller) {
     'use strict';
     return Controller.extend('landingcontroller.landing', {
         onInit: function () {
         },
+        onBeforeShow: function () {
+            let oObjectPageLayout = this.byId('goalsSection');
+            let oSection = this.byId('goalsSection');
+            oObjectPageLayout.setSelectedSection(oSection);
+        },
 
         initialize: async function () {
+            //this.getAllTiels();
 
         },
 
-        onBeforeShow: async function () {
-            await this.initialize();
+        getAllTiels: function () {
+            // Define tile data
+            let oTileData = {
+                tiles: [
+                    { title: "Search Vehicle", icon: "sap-icon://search", press: "onPressSearchVehicle" },
+                    { title: "Open Service Request", icon: "sap-icon://detail-view", press: "onPressServiceRequest" },
+                    { title: "Visual Test", icon: "sap-icon://inspection", press: "onPressVisualTest" },
+                    { title: "Customer Creation", icon: "sap-icon://customer", press: "onPressCustomerCreation" },
+                    { title: "Sales Order", icon: "sap-icon://customer", press: "onPressSalesOrder" }
+                ]
+            };
 
+            // Set model
+            let oModel = new JSONModel(oTileData);
+            this.getView().setModel(oModel, "tileModel");
         },
 
         onMenuButtonPress: function () {
@@ -30,38 +48,40 @@ sap.ui.define([
             return sap.ui.core.UIComponent.getRouterFor(this);
         },
 
-        goToEmployee:function(){
+        goToEmployee: function () {
             const oRouter = this.getOwnerComponent().getRouter();
             oRouter.navTo("RouteEmpMaster", {}, true);
         },
-        goToDashBoard:function(){
+        goToDashBoard: function () {
             const oRouter = this.getOwnerComponent().getRouter();
             oRouter.navTo("RouteDashBoard", {}, true);
         },
 
-        goToDept:function(){
+        goToDept: function () {
             const oRouter = this.getOwnerComponent().getRouter();
             oRouter.navTo("RouteDeptMaster", {}, true);
         },
 
-        goToUser:function(){
+        goToUser: function () {
             const oRouter = this.getOwnerComponent().getRouter();
             oRouter.navTo("RouteUserMaster", {}, true);
         },
-        onPressADMobility:function(){
+
+        onPressADMobility: function () {
             const oRouter = this.getOwnerComponent().getRouter();
             oRouter.navTo("RouteADMobility", {}, true);
         },
-        onPressVisualTest:function(){
+        
+        onPressVisualTest: function () {
             const oRouter = this.getOwnerComponent().getRouter();
             oRouter.navTo("RouteServiceTest", {}, true);
         },
-        onPressCustomerCreation:function(){
+        onPressCustomerCreation: function () {
             const oRouter = this.getOwnerComponent().getRouter();
             oRouter.navTo("RouteCustomerCreate", {}, true);
         },
 
-        onPressSalesOrder:function(){
+        onPressSalesOrder: function () {
             const oRouter = this.getOwnerComponent().getRouter();
             oRouter.navTo("RouteSalesOrder", {}, true);
         }

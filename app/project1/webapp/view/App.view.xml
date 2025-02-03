@@ -14,24 +14,19 @@
             </f:ShellBar>
         </tnt:header>
         <tnt:sideContent>
-            <tnt:SideNavigation id="sideNavigation" selectedKey="dashboard" itemSelect=".onNavItemSelect" expanded="false">
+            <tnt:SideNavigation id="sideNavigation" selectedKey="home" itemSelect=".onNavItemSelect" expanded="false">
                 <tnt:NavigationList>
-                    <!-- <tnt:NavigationListItem text="Dash Board" icon="sap-icon://bbyd-dashboard" key="DashBoard"/> -->
                     <tnt:NavigationListItem text="Home" icon="sap-icon://home" key="Home"/>
-                    <!-- <tnt:NavigationListGroup text="New"> -->
-                        <tnt:NavigationListItem text="Search" icon="sap-icon://search" />
-                        <tnt:NavigationListItem text="Service Tests" icon="sap-icon://inspection">
-                            <tnt:NavigationListItem text="Visual Test" key="Visual"/>
-                            <!-- <tnt:NavigationListItem text="Department Master" key="Department" />
-                            <tnt:NavigationListItem text="Employee Master" key="Employee" />
-                            <tnt:NavigationListItem text="Customer Master" key="Customer" /> -->
-                        </tnt:NavigationListItem>
-                    <!-- </tnt:NavigationListGroup> -->
-                    <tnt:NavigationListItem text="Open Service Request" icon="sap-icon://detail-view" />
-                    <tnt:NavigationListItem text="Pending payment" icon="sap-icon://simple-payment" />
+                    <tnt:NavigationListItem text="Search" icon="sap-icon://search" key="Search"/>
+                    <tnt:NavigationListItem text="Service Tests" icon="sap-icon://inspection" >
+                        <tnt:NavigationListItem text="Visual Test" key="Visual"/>
+                    </tnt:NavigationListItem>
+                    <tnt:NavigationListItem text="Open Service Request" icon="sap-icon://detail-view" key="Open Service Request"/>
+                    <tnt:NavigationListItem text="Sales Order" icon="sap-icon://simple-payment" key="Sales Order"/>
+                    <tnt:NavigationListItem text="Pending payment" icon="sap-icon://simple-payment" key="Pending payment"/>
                 </tnt:NavigationList>
             </tnt:SideNavigation>
-        </tnt:sideContent>        <!-- Main Content -->
+        </tnt:sideContent>
         <tnt:mainContents>
             <App id="app" />
         </tnt:mainContents>

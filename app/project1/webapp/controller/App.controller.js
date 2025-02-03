@@ -22,11 +22,12 @@ sap.ui.define([
 
       // Hardcoded tile data
       const aTiles = [
-        { key: "DashBoard", menuPath: "RouteDashBoard"},
-        { key: "Department", menuPath: "RouteDeptMaster"},
-        { key: "User", menuPath: "RouteUserMaster"},
-        { key: "Employee", menuPath: "RouteEmpMaster"},
-        { key: "Customer", menuPath: "path3"}
+        { key: "Home", menuPath: "RouteLanding" },
+        { key: "Search", menuPath: "RouteADMobility" },
+        { key: "Visual", menuPath: "RouteServiceTest" },
+        { key: "Open Service Request", menuPath: "RouteCustomerCreate" },
+        { key: "PendingPayment", menuPath: "path3" },
+        { key: "Sales Order", menuPath: "RouteSalesOrder" }
       ];
 
       // Find the tile with the matching key
@@ -38,7 +39,26 @@ sap.ui.define([
       } else {
         console.error("No navigation path found for key:", sKey);
       }
-    }
+    },
+
+    // onPressADMobility: function () {
+    //   const oRouter = this.getOwnerComponent().getRouter();
+    //   oRouter.navTo("RouteADMobility", {}, true);
+    // },
+
+    // onPressVisualTest: function () {
+    //   const oRouter = this.getOwnerComponent().getRouter();
+    //   oRouter.navTo("RouteServiceTest", {}, true);
+    // },
+    // onPressCustomerCreation: function () {
+    //   const oRouter = this.getOwnerComponent().getRouter();
+    //   oRouter.navTo("RouteCustomerCreate", {}, true);
+    // },
+
+    // onPressSalesOrder: function () {
+    //   const oRouter = this.getOwnerComponent().getRouter();
+    //   oRouter.navTo("RouteSalesOrder", {}, true);
+    // }
 
   });
 });
