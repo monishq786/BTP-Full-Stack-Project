@@ -1,0 +1,310 @@
+{
+  "_version": "1.65.0",
+  "sap.app": {
+    "id": "project1",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.15.6",
+      "toolsId": "7ccaf82a-5d54-429b-9dcb-afb0b5cc8d80"
+    },
+    "dataSources": {
+      "mainService": {
+        "uri": "/odata/v4/employee/",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "odataVersion": "4.0"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": false,
+    "dependencies": {
+      "minUI5Version": "1.130.2",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.f": {},
+        "sap.suite.ui.generic.template": {},
+        "sap.ui.comp": {},
+        "sap.ui.generic.app": {},
+        "sap.ui.table": {},
+        "sap.ushell": {},
+        "sap.uxap": {},
+        "sap.viz": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "project1.i18n.i18n",
+          "theme": "sap_fiori_3_blue"
+        }
+      },
+      "": {
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {
+          "operationMode": "Server",
+          "autoExpandSelect": true,
+          "earlyRequests": true
+        }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+     
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "transition": "slide",
+        "type": "View",
+        "viewType": "XML",
+        "path": "project1.view"
+      },
+      "routes": [
+        {
+          "name": "RouteFiori",
+          "pattern": "PatternFiori",
+          "target": [
+            "TargetFiori"
+          ]
+        },
+        {
+          "name": "RouteEmpMaster",
+          "pattern": "RouteEmpMaster",
+          "target": [
+            "TargetEmpMaster"
+          ]
+        },
+        {
+          "name": "RouteUserMaster",
+          "pattern": "RouteUserMaster",
+          "target": [
+            "TargetUserMaster"
+          ]
+        },
+        {
+          "name": "RouteDeptMaster",
+          "pattern": "RouteDeptMaster",
+          "target": [
+            "TargetDeptMaster"
+          ]
+        },
+        {
+          "name": "RouteDashBoard",
+          "pattern": "RouteDashBoard",
+          "target": [
+            "TargetDashBoard"
+          ]
+        },
+        {
+          "name": "RouteHome",
+          "pattern": "RouteHome",
+          "target": [
+            "TargetHome"
+          ]
+        },
+        {
+          "name": "RouteDeptMasterAddEdit",
+          "pattern": "RouteDeptMasterAddEdit/{id}/{screenType}",
+          "target": [
+            "TargetDeptMasterAddEdit"
+          ]
+        },
+        {
+          "name": "RouteEmpMasterAddEdit",
+          "pattern": "RouteEmpMasterAddEdit/{id}/{screenType}",
+          "target": [
+            "TargetEmpMasterAddEdit"
+          ]
+        },
+        {
+          "name": "RouteUserMasterAddEdit",
+          "pattern": "RouteUserMasterAddEdit/{id}/{screenType}",
+          "target": [
+            "TargetUserMasterAddEdit"
+          ]
+        },
+        
+        {
+          "name": "RouteLanding",
+          "pattern": "",
+          "target": [
+            "TargetLanding"
+          ]
+        },
+        {
+          "name": "RouteADMobility",
+          "pattern": "RouteADMobility",
+          "target": [
+            "TargetADMobility"
+          ]
+        },
+        {
+          "name": "RouteServiceTest",
+          "pattern": "RouteServiceTest",
+          "target": [
+            "TargetServiceTest"
+          ]
+        },
+        {
+          "name": "RouteCustomerCreate",
+          "pattern": "RouteCustomerCreate",
+          "target": [
+            "TargetCustomerCreate"
+          ]
+        },
+        {
+          "name": "RouteSalesOrder",
+          "pattern": "RouteSalesOrder",
+          "target": [
+            "TargetSalesOrder"
+          ]
+        }
+        
+      ],
+      "targets": {
+        "TargetEmpMasterAddEdit": {
+          "viewId": "employeeMasterAddEdit",
+          "viewName": "employeeMasterAddEdit",
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false
+        },
+        "TargetUserMasterAddEdit": {
+          "viewId": "userAddEdit",
+          "viewName": "userAddEdit",
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false
+        },
+        
+        "TargetDeptMasterAddEdit": {
+          "viewId": "deptMasterAddEdit",
+          "viewName": "deptMasterAddEdit",
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false
+        },
+        "TargetEmpMaster": {
+          "viewId": "employeeMasterList",
+          "viewName": "employeeMasterList",
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false
+        },
+        "TargetUserMaster": {
+          "viewId": "userListView",
+          "viewName": "userListView",
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false
+        },
+        "TargetDeptMaster": {
+          "viewId": "deptListView",
+          "viewName": "deptListView",
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false
+        },
+        "TargetLanding": {
+          "viewId": "landing",
+          "viewName": "landing",
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewPath": "landingview"
+        },
+        "TargetDashBoard": {
+          "viewId": "dashboard",
+          "viewName": "dashboard",
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false
+        },
+        "TargetADMobility": {
+          "viewId": "admobility",
+          "viewName": "admobility",
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false
+        },
+        "TargetHome": {
+          "viewId": "home",
+          "viewName": "home",
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false
+        },
+        "TargetServiceTest": {
+          "viewId": "serviceTest",
+          "viewName": "serviceTest",
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false
+        },
+        "TargetCustomerCreate": {
+          "viewId": "customercreate",
+          "viewName": "customercreate",
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false
+        },
+        "TargetSalesOrder": {
+          "viewId": "salesorder",
+          "viewName": "salesorder",
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false
+        },
+        "TargetFiori": {
+          "id": "Fiori",
+          "name": "Fiori"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "project1.view.App",
+      "type": "XML",
+      "id": "App"
+    }
+  }
+}

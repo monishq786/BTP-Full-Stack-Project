@@ -1,0 +1,28 @@
+<mvc:XMLView controllerName="project1.controller.deptMasterAddEdit"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core" class="d-flex justify-content-center">
+    <Page id="deptRef" title="Department Master" showNavButton="true" navButtonPress="onNavBack">
+        <VBox>
+            <f:SimpleForm editable="true" layout="ResponsiveGridLayout" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0">
+                <f:content>
+                
+                    <Label id="deptCodelbl" text="Dept Code" />
+                    <Input id="deptCode" value="{DeptMasterModel>/DepartmentCode}"  enabled="true" type="Text"/>
+                    
+                    <Label id="deptNamelbl" text="Dept Name" />
+                    <Input id="deptName" value="{DeptMasterModel>/DepartmentName}" enabled="true" type="Text"/>
+                </f:content>
+            </f:SimpleForm>
+        </VBox>
+        <footer>
+            <Toolbar class="d-flex justify-content-center">
+                <ToolbarSpacer />
+                <Button id="deptBtnSave" type="Emphasized" text="{i18n>save}" press="onSave" />
+                <Button id="deptBtnUpdate" type="Emphasized" text="{i18n>update}" press="onSave" />
+                <Button id="deptBtnCancel" type="Reject" text="{i18n>cancel}" press="onNavBack" />
+            </Toolbar>
+        </footer>
+    </Page>
+</mvc:XMLView>

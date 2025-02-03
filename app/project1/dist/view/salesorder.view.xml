@@ -1,0 +1,145 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc"
+    xmlns:uxap="sap.uxap"
+    xmlns="sap.m"
+    xmlns:card="sap.f.cards"
+    xmlns:f="sap.f"
+    xmlns:forms="sap.ui.layout.form"
+    xmlns:core="sap.ui.core" controllerName="project1.controller.salesorder" height="100%">
+
+    <Page id="salesOrderPage" title="Sales Order" showNavButton="true" navButtonPress="backToLanding">
+
+        <uxap:ObjectPageLayout id="ObjectPageLayout" showTitleInHeaderContent="true" upperCaseAnchorBar="false">
+            <uxap:headerTitle>
+                <uxap:ObjectPageDynamicHeaderTitle>
+                    <uxap:expandedHeading>
+                        <Title text="Mohammed Azar" wrapping="true" />
+                    </uxap:expandedHeading>
+
+                    <uxap:snappedHeading>
+                        <HBox>
+                            <VBox>
+                                <Avatar src="./images/adnoclogo.jpg" class="sapUiSmallMarginEnd" />
+                            </VBox>
+
+                            <VBox>
+                                <Title text="Mohammed Azar" wrapping="true"/>
+                            </VBox>
+                        </HBox>
+                    </uxap:snappedHeading>
+
+                    <uxap:snappedTitleOnMobile>
+                        <Title text="Mohammed Azar"/>
+                    </uxap:snappedTitleOnMobile>
+
+                </uxap:ObjectPageDynamicHeaderTitle>
+            </uxap:headerTitle>
+
+            <uxap:headerContent>
+                <FlexBox wrap="Wrap" fitContainer="true">
+                    <Avatar src="./images/adnoclogo.jpg" class="sapUiMediumMarginEnd" displaySize="L"/>
+
+                    <HBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
+                        <VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
+                            <Title text="Plate Detail" class="sapUiTinyMarginBottom" />
+                            <ObjectStatus text="54321/S" icon="sap-icon://car-rental" class="sapMObjectStatusLarge"/>
+                        </VBox>
+
+                        <VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
+                            <Title text="Emirates" class="sapUiTinyMarginBottom" />
+                            <ObjectStatus text="Abu Dhabi" state="Success" class="sapMObjectStatusLarge"/>
+                        </VBox>
+
+                        <VBox class="sapUiLargeMarginEnd">
+                            <Title text="Model" class="sapUiTinyMarginBottom" />
+                            <ObjectStatus text="BMW X5" class="sapMObjectStatusLarge"/>
+                        </VBox>
+                    </HBox>
+
+                    <VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
+                        <Title text="Payment Information" class="sapUiTinyMarginBottom" />
+
+                        <HBox class="sapUiTinyMarginBottom">
+                            <Label text="Total:" class="sapUiTinyMarginEnd"/>
+                            <Text text="173.25 AED" class="sapUiSmallMarginBegin"/>
+                        </HBox>
+
+                        <HBox class="sapUiTinyMarginBottom">
+                            <Label text="Vat:" class="sapUiTinyMarginEnd"/>
+                            <Text text="8.25 AED" class="sapUiSmallMarginBegin"/>
+                        </HBox>
+                    </VBox>
+
+                    <VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
+                        <Title text="Status" class="sapUiTinyMarginBottom" />
+                        <MessageStrip text="MAHA File is not Updated" type="Warning" showIcon="true" showCloseButton="false" class="">
+                        </MessageStrip>
+                    </VBox>
+                </FlexBox>
+
+            </uxap:headerContent>
+
+            <uxap:sections >
+
+                <uxap:ObjectPageSection titleUppercase="false" id="orderDetailsSection" title="Items">
+                    <!-- <HBox width="100%" class="sapUiSmallMarginBottom" justifyContent="SpaceBetween">
+                        <Input value="" placeholder="Enter Mobile No" width="50%" class="sapUiSmallMarginBegin"/>
+                        <Button icon="sap-icon://search" type="Transparent" press="onSearch"/>
+                    </HBox> -->
+                    <uxap:ObjectPageSubSection showTitle="false">
+                        <HBox width="100%" justifyContent="SpaceBetween">
+                            <VBox width="48%" class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
+                                <HBox class="sapUiTinyMarginBottom">
+                                    <Label text="Order No:" class="sapUiTinyMarginEnd"/>
+                                    <Text text="2790000291" class="sapUiSmallMarginBegin"/>
+                                </HBox>
+
+                                <HBox class="sapUiTinyMarginBottom">
+                                    <Label text="Test Type:" class="sapUiTinyMarginEnd"/>
+                                    <Text text="Re-New" class="sapUiSmallMarginBegin"/>
+                                </HBox>
+
+                                <HBox class="sapUiTinyMarginBottom">
+                                    <Label text="Net:" class="sapUiTinyMarginEnd"/>
+                                    <Text text="160.25 AED" class="sapUiSmallMarginBegin"/>
+                                </HBox>
+
+                                <HBox class="sapUiTinyMarginBottom">
+                                    <Label text="Vat:" class="sapUiTinyMarginEnd"/>
+                                    <Text text="10.25 AED" class="sapUiSmallMarginBegin"/>
+                                </HBox>
+
+                                <HBox class="sapUiTinyMarginBottom">
+                                    <Label text="Total:" class="sapUiTinyMarginEnd"/>
+                                    <Text text="170.50 AED" class="sapUiSmallMarginBegin"/>
+                                </HBox>
+                            </VBox>
+
+                            <!-- Right Section - 50% Width -->
+                            <VBox width="48%" class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
+                                <HBox class="sapUiTinyMarginBottom">
+                                    <Label text="Item:" class="sapUiTinyMarginEnd"/>
+                                    <Text text="10" class="sapUiSmallMarginBegin"/>
+                                </HBox>
+                                <HBox class="sapUiTinyMarginBottom">
+                                    <Button icon="sap-icon://delete" width="25px" visible="true" press="" class="sapUiSmallMarginBegin sapUiTinyMarginEnd"/>
+                                </HBox>
+                            </VBox>
+
+                        </HBox>
+                    </uxap:ObjectPageSubSection>
+                </uxap:ObjectPageSection>
+            </uxap:sections>
+        </uxap:ObjectPageLayout>
+
+        <footer>
+            <Toolbar class="d-flex justify-content-center" design="Transparent">
+                <ToolbarSpacer/>
+                <Button type="Emphasized" text="Save" press="onSavePress" />
+                <Button type="Emphasized" text="Exit" press="onExitPress" />
+                <ToolbarSpacer/>
+            </Toolbar>
+        </footer>
+
+    </Page>
+
+</mvc:View>

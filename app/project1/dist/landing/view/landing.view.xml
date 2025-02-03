@@ -1,0 +1,105 @@
+<mvc:View controllerName="landingcontroller.landing"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:f="sap.f"
+    xmlns:core="sap.ui.core"
+    xmlns:uxap="sap.uxap"
+    xmlns:tnt="sap.tnt" height="100%">
+    <tnt:ToolPage id="toolPage" sideExpanded="true">
+        <tnt:header>
+
+        </tnt:header>
+        <tnt:mainContents>
+            <uxap:ObjectPageLayout showHeaderContent="false" showTitleInHeaderContent="false" alwaysShowContentHeader="false" preserveHeaderStateOnScroll="false" headerContentPinnable="false" isChildPage="false" upperCaseAnchorBar="false">
+                <uxap:sections>
+                    <uxap:ObjectPageSection titleUppercase="false" id="goalsSection" title="Search Vehicle">
+                        <uxap:subSections>
+
+                            <uxap:ObjectPageSubSection id="goalsSectionSS1">
+                                <uxap:blocks>
+                                    <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Search Vehicle" subheader="" press="onPressADMobility" url="https://www.sap.com/">
+                                        <TileContent>
+                                            <ImageContent src="sap-icon://search" />
+                                        </TileContent>
+                                    </GenericTile>
+
+                                </uxap:blocks>
+                            </uxap:ObjectPageSubSection>
+
+                        </uxap:subSections>
+                    </uxap:ObjectPageSection>
+
+                    <uxap:ObjectPageSection titleUppercase="false" id="goalsSection1" title="Open Service Request">
+                        
+                        <uxap:subSections>
+                            <uxap:ObjectPageSubSection id="goalsSectionSS11">
+                                <uxap:blocks>
+                                    <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Open Service Request" subheader="" press="" url="https://www.sap.com/">
+                                        <TileContent>
+                                            <ImageContent src="sap-icon://detail-view" />
+                                        </TileContent>
+                                    </GenericTile>
+
+                                </uxap:blocks>
+                            </uxap:ObjectPageSubSection>
+                        </uxap:subSections>
+
+                    </uxap:ObjectPageSection>
+                    
+                    <uxap:ObjectPageSection titleUppercase="false" id="goalsSection111111" title="Visual Test">
+                        
+                        <uxap:subSections>
+                            <uxap:ObjectPageSubSection id="goalsSectionSS111">
+                                <uxap:blocks>
+                                    <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Visual Test" subheader="" press="onPressVisualTest" url="https://www.sap.com/">
+                                        <TileContent>
+                                            <ImageContent src="sap-icon://inspection" />
+                                        </TileContent>
+                                    </GenericTile>
+
+                                </uxap:blocks>
+                            </uxap:ObjectPageSubSection>
+                        </uxap:subSections>
+
+                    </uxap:ObjectPageSection>
+                    <uxap:ObjectPageSection titleUppercase="false" id="goalsSection111" title="Customer Creation">
+                        
+                        <uxap:subSections>
+                            <uxap:ObjectPageSubSection id="goalsSectionSS1111">
+                                <uxap:blocks>
+                                    <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Customer Creation" subheader="" press="onPressCustomerCreation" url="https://www.sap.com/">
+                                        <TileContent>
+                                            <ImageContent src="sap-icon://customer" />
+                                        </TileContent>
+                                    </GenericTile>
+
+                                </uxap:blocks>
+                            </uxap:ObjectPageSubSection>
+                        </uxap:subSections>
+
+                    </uxap:ObjectPageSection>
+
+                    <uxap:ObjectPageSection titleUppercase="false" id="personalSection" title="Sales Order" importance="Medium">
+                        
+                        <uxap:subSections>
+                            <uxap:ObjectPageSubSection id="personalSectionSS1" title="Sales Order" titleUppercase="false">
+                                <uxap:blocks>
+                                    <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Sales Order" subheader="" press="onPressSalesOrder" url="https://www.sap.com/">
+                                        <TileContent>
+                                            <ImageContent src="sap-icon://customer" />
+                                        </TileContent>
+                                    </GenericTile>
+                                </uxap:blocks>
+                            </uxap:ObjectPageSubSection>
+
+                        </uxap:subSections>
+
+                    </uxap:ObjectPageSection>
+                </uxap:sections>
+            </uxap:ObjectPageLayout>
+
+
+        </tnt:mainContents>
+    </tnt:ToolPage>
+
+</mvc:View>

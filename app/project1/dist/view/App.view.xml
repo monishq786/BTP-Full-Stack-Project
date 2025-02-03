@@ -1,0 +1,34 @@
+<mvc:View controllerName="project1.controller.App"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:f="sap.f"
+    xmlns:cor="sap.ui.core"
+    xmlns:tnt="sap.tnt">
+    <tnt:ToolPage id="appNew" class="sapUiDemoToolPage" sideExpanded="false">        <!-- ShellBar at the top -->
+        <tnt:header>
+            <f:ShellBar homeIcon="./images/adnoclogo.jpg" id="appShellBar" title="ADNOC" secondTitle="Welcome to Vehical Inspection" showMenuButton="true" showNotifications="false" notificationsPressed="false" visible="true" notificationsNumber="2" menuButtonPressed="onMenuButtonPress">
+                <f:profile>
+                    <Avatar src="sap-icon://log" press="" visible="true" />
+                </f:profile>
+            </f:ShellBar>
+        </tnt:header>
+        <tnt:sideContent>
+            <tnt:SideNavigation id="sideNavigation" selectedKey="home" itemSelect=".onNavItemSelect" expanded="false">
+                <tnt:NavigationList>
+                    <tnt:NavigationListItem text="Home" icon="sap-icon://home" key="Home"/>
+                    <tnt:NavigationListItem text="Search" icon="sap-icon://search" key="Search"/>
+                    <tnt:NavigationListItem text="Service Tests" icon="sap-icon://inspection" >
+                        <tnt:NavigationListItem text="Visual Test" key="Visual"/>
+                    </tnt:NavigationListItem>
+                    <tnt:NavigationListItem text="Open Service Request" icon="sap-icon://detail-view" key="Open Service Request"/>
+                    <tnt:NavigationListItem text="Sales Order" icon="sap-icon://simple-payment" key="Sales Order"/>
+                    <tnt:NavigationListItem text="Pending payment" icon="sap-icon://simple-payment" key="Pending payment"/>
+                </tnt:NavigationList>
+            </tnt:SideNavigation>
+        </tnt:sideContent>
+        <tnt:mainContents>
+            <App id="app" />
+        </tnt:mainContents>
+    </tnt:ToolPage>
+</mvc:View>

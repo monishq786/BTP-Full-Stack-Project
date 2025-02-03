@@ -1,0 +1,33 @@
+<mvc:XMLView controllerName="project1.controller.employeeMasterAddEdit"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core" class="d-flex justify-content-center">
+    <Page id="menumasterf" title="{i18n>employeeAdd}" showNavButton="true" navButtonPress="onNavBack">
+        <VBox>
+            <f:SimpleForm editable="true" layout="ResponsiveGridLayout" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0">
+                <f:content>
+                    <Label id="idlbl" text="{i18n>id}" required="true" />
+                    <Input id="idInput" value="{EmployeeMasterModel>/ID}" required="true" enabled="true" type="Number"/>
+                    
+                    <Label id="namelbl" text="{i18n>name}" />
+                    <Input id="name" value="{EmployeeMasterModel>/Name}" enabled="true" type="Text"/>
+
+                    <Label id="agelbl" text="{i18n>age}" />
+                    <Input id="age" value="{EmployeeMasterModel>/Age}"  enabled="true" type="Number"/>
+                    
+                    <Label id="salarylbl" text="{i18n>salary}" />
+                    <Input id="salary" value="{EmployeeMasterModel>/Salary}" enabled="true" type="Number"/>
+                </f:content>
+            </f:SimpleForm>
+        </VBox>
+        <footer>
+            <Toolbar class="d-flex justify-content-center">
+                <ToolbarSpacer />
+                <Button id="btnSave" type="Emphasized" text="{i18n>save}" press="onSave" />
+                <Button id="btnUpdate" type="Emphasized" text="{i18n>update}" press="onSave" />
+                <Button id="btnCancel" type="Reject" text="{i18n>cancel}" press="onNavBack" />
+            </Toolbar>
+        </footer>
+    </Page>
+</mvc:XMLView>
