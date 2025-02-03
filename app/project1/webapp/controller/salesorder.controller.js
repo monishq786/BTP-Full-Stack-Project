@@ -8,6 +8,9 @@ sap.ui.define(["sap/ui/core/mvc/Controller"], (Controller) => {
         backToLanding: function () {
             const oRouter = this.getOwnerComponent().getRouter();
             oRouter.navTo("RouteLanding", {}, true);
+        },
+        getFullWidth: function () {
+            return new sap.m.FlexItemData({ growFactor: 1 });
         }
     })
 }) 

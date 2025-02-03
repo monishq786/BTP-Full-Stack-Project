@@ -6,46 +6,105 @@
     xmlns:w="sap.ui.integration.widgets"
     xmlns="sap.m">
     <Page id="salesOrderPage" title="Sales Order" showNavButton="true" navButtonPress="backToLanding">
-        <HBox justifyContent="Center" width="100%">
-            <VBox width="100%" class="sapUiMediumMargin">
-                <f:Card >
-                    <f:header>
-                        <card:Header title="Mohammad Azar" subtitle="" />
-                    </f:header>
-                    <f:content>
-                        <VBox class="sapUiTinyMargin">
-                            <HBox justifyContent="SpaceBetween">
-                                <Text id="plateDetailLbl" text="Plate Detail:" />
+        <VBox width="100%" class="sapUiTinyMargin sapUiSmallMarginEnd">
+            <f:Card >
+                <f:header>
+                    <card:Header title="Mohammad Azar" subtitle="" />
+                </f:header>
+                <f:content>
+                    <HBox class="sapUiTinyMargin" width="100%">
+                        <VBox width="50%">
+                            <HBox >
+                                <Label text="Plate Detail:" design="Bold"/>
                                 <ToolbarSpacer />
-                                <Text id="plateDetail" text="54321/S" />
+                                <Text text="54321/S" />
                             </HBox>
 
-                            <HBox class="sapUiSmallMarginBegin">
-                                <Text text="Emirates:" />
+                            <HBox >
+                                <Label text="Emirates:" design="Bold"/>
                                 <ToolbarSpacer />
                                 <Text text="Abu Dhabi" />
                             </HBox>
 
-                            <HBox class="sapUiSmallMarginBegin">
-                                <Text text="Model:" />
+                            <HBox>
+                                <Label text="Model:" design="Bold"/>
                                 <ToolbarSpacer />
                                 <Text text="BMW X5" />
                             </HBox>
-                            <ToolbarSpacer />
-                            <VBox>
-                                <MessageStrip text="Maha File not Updated" type="Warning" showIcon="true" showCloseButton="false" class="sapUiMediumMarginBottom">
+                            <VBox width="50%">
+                                <MessageStrip text="MAHA File is not Updated" type="Warning" showIcon="true" showCloseButton="false" class="">
                                 </MessageStrip>
                             </VBox>
+                        </VBox>
+                        <VBox width="50%">
+                            <HBox justifyContent="End" class="sapUiTinyMargin">
+                                <Label text="Total:" design="Bold"/>
+                                <ToolbarSpacer />
+                                <Text text="173.25 AED" />
+                            </HBox>
+
+                            <HBox justifyContent="End" class="sapUiTinyMargin">
+                                <Label text="Vat:" design="Bold"/>
+                                <ToolbarSpacer />
+                                <Text text="8.25 AED" />
+                            </HBox>
 
                         </VBox>
 
-                    </f:content>
-                </f:Card>
+                    </HBox>
+                </f:content>
+            </f:Card>
+        </VBox>
+        <HBox width="100%">
+            <VBox width="48%" class="sapUiTinyMargin" justifyContent="Start">
+                <Label text="Items" design="Bold"/>
             </VBox>
-            <!-- <VBox width="48%">
+            <VBox width="48%">
+                <HBox width="100%" justifyContent="End">
+                    <Input value="" enabled="true" type="Text" placeholder="Enter Mobile No" class=""/>
+                    <Button icon="sap-icon://add-equipment" width="25px" visible="true" press="" class="sapUiSmallMarginBegin"/>
+                </HBox>
 
-            </VBox> -->
+            </VBox>
         </HBox>
+
+        <VBox width="45%" class="sapUiTinyMargin">
+            <f:Card >
+                <f:content>
+                    <HBox class="sapUiTinyMargin" width="100%">
+                        <VBox width="50%">
+                            <HBox >
+                                <Text text="279000291"/>
+
+                            </HBox>
+                            <HBox>
+                                <Text text="Re-New"/>
+                            </HBox>
+                            <HBox>
+                                <Label text="Net:" design="Bold"/>
+                                <Text text="165" />
+                                <Label text="Vat:" design="Bold" class="sapUiSmallMarginBegin"/>
+                                <Text text="15" />
+                                <Label text="Total:" design="Bold"  class="sapUiSmallMarginBegin"/>
+                                <Text text="185" />
+                            </HBox>
+                            <HBox>
+                                <Text text="Quantity"/>
+                            </HBox>
+                        </VBox>
+                        <VBox width="50%">
+                            <HBox justifyContent="End">
+                                <Label text="Item:" design="Bold"/>
+                                <ToolbarSpacer />
+                                <Text text="10" />
+                            </HBox>
+                        </VBox>
+
+                    </HBox>
+                </f:content>
+            </f:Card>
+        </VBox>
+
 
         <footer>
             <Toolbar class="d-flex justify-content-center">
