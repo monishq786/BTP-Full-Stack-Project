@@ -7,60 +7,58 @@
 
     <Page id="cameraPage" title="Camera Recognition">
         <content>
-            <VBox fitContainer="true" alignItems="Center">
-                <f:Card class="sapUiMediumMargin" width="auto">
+            <VBox fitContainer="true" alignItems="Center" width="100%" class="sapUiResponsiveMargin">
+
+                <!-- Number Plate Detail Card -->
+                <f:Card class="sapUiSmallMargin" width="90%">
                     <f:header>
-                        <card:Header title="Number Plate Detail" subtitle="" />
+                        <card:Header title="Number Plate Detail" />
                     </f:header>
                     <f:content>
                         <List class="sapUiSmallMarginBottom" showSeparators="None">
                             <CustomListItem>
-                                <HBox alignItems="Center" justifyContent="SpaceBetween">
-                                    <VBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom">
-                                        <Title level="H3" text="Plate Number" />
-                                        <Input id="plateNum" editable="false"/>
-                                    </VBox>
-                                    <VBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom">
-                                        <Title level="H3" text="Plate Color" />
-                                        <Input id="plateColor" editable="false" />
-                                    </VBox>
-                                    <VBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom">
-                                        <Title level="H3" text="Model Name" />
-                                        <Input id="modleName" editable="false" />
-                                    </VBox>
-                                    <VBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom">
-                                        <Title level="H3" text="Region" />
-                                        <Input id="plateRegion"  editable="false"/>
-                                    </VBox>
-
-                                </HBox>
+                                <FlexBox direction="Column" alignItems="Stretch" class="sapUiSmallMargin">
+                                    <HBox alignItems="Center" justifyContent="SpaceBetween" wrap="Wrap">
+                                        <VBox class="sapUiSmallMargin">
+                                            <Title level="H3" text="Plate Number" />
+                                            <Input id="plateNum" editable="false" width="100%"/>
+                                        </VBox>
+                                        <VBox class="sapUiSmallMargin">
+                                            <Title level="H3" text="Plate Color" />
+                                            <Input id="plateColor" editable="false" width="100%" />
+                                        </VBox>
+                                        <VBox class="sapUiSmallMargin">
+                                            <Title level="H3" text="Model Name" />
+                                            <Input id="modleName" editable="false" width="100%" />
+                                        </VBox>
+                                        <VBox class="sapUiSmallMargin">
+                                            <Title level="H3" text="Region" />
+                                            <Input id="plateRegion" editable="false" width="100%" />
+                                        </VBox>
+                                    </HBox>
+                                </FlexBox>
                             </CustomListItem>
                         </List>
                     </f:content>
                 </f:Card>
-                <!-- Recognized Text Output -->
-                <!-- <TextArea id="recognizedText" width="100%" rows="2" placeholder="Vehicle number will appear here" editable="false"/>
-                <TextArea id="plateColor" width="100%" rows="2" placeholder="Vehicle number will appear here" editable="false"/>
-                <TextArea id="modelName" width="100%" rows="2" placeholder="Vehicle number will appear here" editable="false"/> -->
 
                 <!-- Camera Controls (Buttons) -->
-                <HBox justifyContent="Center" width="100%">
-                    <Button text="Open Camera" press="onOpenCamera"/>
-                    <Button text="Switch Camera" press="onOpenCamera" visible="false" id="toggleCameraButton" class="sapUiTinyMarginBeginEnd"/>
-                    <Button text="Capture Image" press="onCaptureImage" visible="false" id="captureButton" class="sapUiTinyMarginBeginEnd"/>
+                <HBox justifyContent="Center" width="100%" wrap="Wrap" class="sapUiSmallMargin">
+                    <Button text="Open Camera" press="onOpenCamera" width="auto" />
+                    <Button text="Switch Camera" press="onSwitchCamera" visible="false" id="toggleCameraButton" class="sapUiTinyMarginBeginEnd" width="auto"/>
+                    <Button text="Capture Image" press="onCaptureImage" visible="false" id="captureButton" class="sapUiTinyMarginBeginEnd" width="auto"/>
                 </HBox>
 
                 <!-- Video Stream Container -->
-                <HBox justifyContent="Center" width="100%">
+                <HBox justifyContent="Center" width="100%" class="sapUiResponsiveMargin">
                     <core:HTML id="videoContainer"/>
                 </HBox>
 
                 <!-- Captured Image -->
-                <Image id="capturedImage" width="100%" visible="false"/>
+                <Image id="capturedImage" width="90%" visible="false" class="sapUiMediumMargin"/>
 
             </VBox>
         </content>
-
     </Page>
 
 </mvc:View>
