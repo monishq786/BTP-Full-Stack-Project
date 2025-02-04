@@ -2,70 +2,49 @@
     xmlns:mvc="sap.ui.core.mvc"
     xmlns:core="sap.ui.core"
     xmlns:f="sap.ui.layout.form"
-    xmlns="sap.m">
+    xmlns:m="sap.m"
+    xmlns:u="sap.ui.unified"
+    xmlns:grid="sap.ui.layout.Grid"
+    xmlns:layout="sap.ui.layout"
+    xmlns="sap.uxap">
 
-    <Page id="customerPage" title="Customer Creation" showNavButton="true" navButtonPress="backToLanding">
-        <HBox justifyContent="Center" width="100%">
-            <VBox width="48%">
-                <f:SimpleForm editable="true" layout="ResponsiveGridLayout" columnsXL="2" columnsL="2" columnsM="2" singleContainerFullSize="false" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="5" adjustLabelSpan="false" emptySpanXL="1" emptySpanL="1" emptySpanM="1" emptySpanS="0">
-                   
-                    <f:content>
-                        <!-- First Column -->
-                        <Label id="firstNameLbl" text="First Name" />
-                        <Input id="firstName" value="" enabled="true" type="Text"/>
+     <m:Page id="useref" title="Customer Creation" showNavButton="true" navButtonPress="backToLanding">
+        <!-- <m:headerContent>
+            <m:Label text="{view>/myName}" class="lblText boldTxt" />
+            <m:Button icon="sap-icon://log" press=".onPressLogout" />
+        </m:headerContent> -->
 
-                        <Label id="lastNamelbl" text="Last Name" />
-                        <Input id="lastName" value="" enabled="true" type="Text"/>
+        <ObjectPageLayout upperCaseAnchorBar="false">
+            <sections>
+                <ObjectPageSection titleUppercase="false" title="Customer">
+                    <ObjectPageSubSection title="Customer" titleUppercase="false">
+                        <m:VBox id="customerSection" class="section">
+                            <core:Fragment fragmentName="project1.fragment.vehicalinspection.customer" type="XML">
+                            </core:Fragment>
+                        </m:VBox>
+                    </ObjectPageSubSection>
+                </ObjectPageSection>
 
-                        <Label id="searchTLbl" text="Search Team" />
-                        <Input id="searchTeam" value="" enabled="true" type="Text"/>
+                <ObjectPageSection titleUppercase="false" title="VEHICLE">
+                    <ObjectPageSubSection title="VEHICLE" titleUppercase="false">
+                        <m:VBox id="Sectvehicalion" class="section">
+                            <core:Fragment fragmentName="project1.fragment.vehicalinspection.vehical" type="XML">
+                            </core:Fragment>
+                        </m:VBox>
+                    </ObjectPageSubSection>
+                </ObjectPageSection>
+                
 
-                        <!-- Second Column -->
-                        <Label id="empIDlbl" text="Employee ID" />
-                        <Input id="empID" value="" enabled="true" type="Text"/>
-
-                        <Label id="mobNolbl" text="Mobile No" />
-                        <Input id="mobNo" value="" enabled="true" type="Number"/>
-
-                    </f:content>
-
-
-                </f:SimpleForm>
-            </VBox>
-            <VBox width="48%">
-                <f:SimpleForm editable="true" layout="ResponsiveGridLayout" columnsXL="2" columnsL="2" columnsM="2" singleContainerFullSize="false" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="5" adjustLabelSpan="false" emptySpanXL="1" emptySpanL="1" emptySpanM="1" emptySpanS="0">
-                    <f:content>
-                        <!-- First Column -->
-                        <Label id="emailLbl" text="Email" />
-                        <Input id="email" value="" enabled="true" type="Text"/>
-                        
-                        <Label id="emirateLbl" text="Emirates" />
-                        <Input id="emirate" value="" enabled="true" type="Text"/>
-                        
-                        <Label id="addressLbl" text="Address" />
-                        <TextArea id="address" value="" enabled="true" rows="2"/>
-
-                        <Label id="cityLbl" text="City" />
-                        <Input id="city" value="" enabled="true" type="Text"/>
-
-                         <Label id="countryLbl" text="Country" />
-                        <Input id="country" value="" enabled="true" type="Text"/>
-
-                    </f:content>
-
-
-                </f:SimpleForm>
-            </VBox>
-        </HBox>
-
-        <footer>
-            <Toolbar class="d-flex justify-content-center">
-                <ToolbarSpacer />
-                <Button id="btnCreate" type="Default" text="Create" press="" />
-                <Button id="btnReset" type="Emphasized" text="Reset" press="" />
-                <Button id="btnExit" type="Reject" text="Exit" press="" />
-            </Toolbar>
-        </footer>
-    </Page>
+            </sections>
+        </ObjectPageLayout>
+        <m:footer>
+            <m:Toolbar>
+                <m:ToolbarSpacer />
+                <m:FlexBox justifyContent="End">
+                    <m:Button type="Emphasized" id="user_btnSubmit" text="{i18n>submit}" press="onSave"/>
+                </m:FlexBox>
+            </m:Toolbar>
+        </m:footer>
+    </m:Page>
 
 </mvc:View>

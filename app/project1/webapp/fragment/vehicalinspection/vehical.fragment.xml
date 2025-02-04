@@ -1,0 +1,107 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form">
+    <f:SimpleForm id="customer1" editable="true" layout="ColumnLayout" columnsM="3" columnsL="4" columnsXL="5">
+        <f:content>
+            <core:Title text="" />
+            <Label text="Plate No" />
+            <Input value="{plateNo}" type="Email" />
+            <Label text="Chasis No" />
+            <Input value="{Chasis}" type="Email" />
+            <Label text="Engine No" />
+            <Input value="{Engineno}" type="Email" />
+            <Label text="Manufacturer" />
+            <Input value="{Manufacturer}" type="Email" />
+            <Label text="Model" />
+            <Input value="{Model}" type="Email" />
+            <Label text="Plate Type" />
+            <Input value="{paletype}" type="Email" />
+            <Label text="Kind" />
+            <Input value="{Kind}" type="Email" />
+            <Label text="Type" />
+            <Input value="{paletype}" type="Email" />
+
+            <core:Title text="" />
+            <Label text="SteeringSide/WeightKind" />
+            <Input value="{Street}" />
+            <Input value="{HouseNumber}">
+                <layoutData>
+                    <l:GridData span="XL4 L4 M6 S4" />
+                </layoutData>
+            </Input>
+
+            <Label text="In It Reg Year/Reg ExpDate" />
+            <!-- <Input value="{Street}">
+				</Input> -->
+            <DatePicker id="DP3" displayFormat="short" change="handleChange" class="sapUiSmallMarginBottom" />
+            <DatePicker id="DP4" displayFormat="short" change="handleChange" class="sapUiSmallMarginBottom">
+
+                <layoutData>
+                    <l:GridData span="XL4 L4 M6 S4" />
+                </layoutData>
+            </DatePicker>
+            <Label text="MFG Year/Mielage" />
+            <DatePicker id="DP5" displayFormat="short" change="handleChange" class="sapUiSmallMarginBottom" />
+            <!-- <Input value="{Street}" /> -->
+
+            <Input value="{HouseNumber}">
+                <layoutData>
+                    <l:GridData span="XL4 L4 M6 S4" />
+                </layoutData>
+            </Input>
+            <Label text="Horse Power/No.Of.Axies" />
+            <Input value="{Street}" />
+            <Input value="{HouseNumber}">
+                <layoutData>
+                    <l:GridData span="XL4 L4 M6 S4" />
+                </layoutData>
+            </Input>
+            <Label text="No.Of Cylinders/Wheels" />
+            <Input value="{Street}" />
+            <Input value="{HouseNumber}">
+                <layoutData>
+                    <l:GridData span="XL4 L4 M6 S4" />
+                </layoutData>
+            </Input>
+            <Label text="No.Of Doors/Passenger" />
+            <Input value="{Street}" />
+            <Input value="{HouseNumber}">
+                <layoutData>
+                    <l:GridData span="XL4 L4 M6 S4" />
+                </layoutData>
+            </Input>
+            <Label text="Empty/Full Weight" />
+            <Input value="{Street}" />
+            <Input value="{HouseNumber}">
+                <layoutData>
+                    <l:GridData span="XL4 L4 M6 S4" />
+                </layoutData>
+            </Input>
+            <Label text="Cubic CapCity" />
+            <Input value="{Street}" />
+            <Input value="{HouseNumber}">
+                <layoutData>
+                    <l:GridData span="XL4 L4 M6 S4" />
+                </layoutData>
+            </Input>
+            <Label text="HandyCap Vah" />
+            <CheckBox text="" valueState="Information" enabled="true" selected="true">
+                <layoutData>
+                    <l:GridData span="XL4 L4 M4 S4" />
+                </layoutData>
+            </CheckBox>
+
+            <Label text="Modify Vah" />
+            <CheckBox text="" valueState="Information" enabled="true" selected="true">
+                <layoutData>
+                    <l:GridData span="XL4 L4 M4 S4" />
+                </layoutData>
+            </CheckBox>
+
+            <!-- <Label text="HandyCap Vah" />
+				<CheckBox text="" valueState="Information" enabled="true" selected="true" /> -->
+
+        </f:content>
+    </f:SimpleForm>
+</core:FragmentDefinition>
