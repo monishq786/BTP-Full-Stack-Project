@@ -146,14 +146,19 @@ sap.ui.define([
             .then(response => response.json())
             .then(data => {
                 if (data.results && data.results.length > 0) {
-                    const recognizedText = data.results[0].plate.toUpperCase();
-                    const platNo = 'Plate No : ' + recognizedText
-                    this.byId("recognizedText").setValue(platNo);
+                    const plateNum = data.results[0].plate;
+                    const plateColor = data.results[0].color.reduce((max, item) => (item.score > max.score ? item : max));
+                    const plateRegion = data.results[0].region;
+
+                    this.byId("plateNum").setValue(plateNum);
+                    this.byId("plateColor").setValue(plateColor.color);
+                    this.byId("plateRegion").setValue(plateRegion.code);
+
                     sap.ui.core.BusyIndicator.hide();
                     MessageToast.show("Number plate recognized successfully!");
                 } else {
                     sap.ui.core.BusyIndicator.hide();
-                    this.byId("recognizedText").setValue("No plate detected.");
+                    this.byId("plateNum").setValue("No plate detected.");
                     MessageToast.show("Failed to recognize number plate.");
                 }
             })
