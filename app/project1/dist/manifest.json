@@ -166,9 +166,16 @@
         
         {
           "name": "RouteLanding",
-          "pattern": "",
+          "pattern": "RouteLanding",
           "target": [
             "TargetLanding"
+          ]
+        },
+        {
+          "name": "RouteLogin",
+          "pattern": "",
+          "target": [
+            "TargetLogin"
           ]
         },
         {
@@ -252,6 +259,14 @@
           "transition": "slide",
           "clearControlAggregation": false,
           "viewPath": "landingview"
+        },
+        "TargetLogin": {
+          "viewId": "login",
+          "viewName": "login",
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewPath": "loginview"
         },
         "TargetDashBoard": {
           "viewId": "dashboard",

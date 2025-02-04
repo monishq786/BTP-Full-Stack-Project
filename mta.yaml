@@ -43,6 +43,11 @@ modules:
           url: ~{srv-url}
           forwardAuthToken: true
       - name: FullStackProject-html5-runtime
+    provides:
+      - name: app-api
+        properties:
+          app-protocol: ${protocol}
+          app-uri: ${default-uri}
 
   - name: FullStackProject-db-deployer
     type: hdb
@@ -51,18 +56,6 @@ modules:
       buildpack: nodejs_buildpack
     requires:
       - name: FullStackProject-db
-
-  - name: FullStackProjectproject1
-    type: html5
-    path: app/project1
-    build-parameters:
-      build-result: dist
-      builder: custom
-      commands:
-        - npm ci
-        - npm run build
-      supported-platforms:
-        []
 
   - name: FullStackProject-app-deployer
     type: com.sap.application.content
@@ -78,6 +71,18 @@ modules:
           artifacts:
             - project1.zip
           target-path: app/
+
+  - name: FullStackProjectproject1
+    type: html5
+    path: app/project1
+    build-parameters:
+      build-result: dist
+      builder: custom
+      commands:
+        - npm ci
+        - npm run build
+      supported-platforms:
+        []
 
 resources:
   - name: FullStackProject-db

@@ -1,0 +1,2 @@
+sap.ui.define(["sap/ui/model/json/JSONModel","sap/ui/core/mvc/Controller"],function(n,o){"use strict";return o.extend("logincontroller.login",{onInit:function(){},onBeforeShow:function(){this.initialize()},initialize:function(){},onPressLogin:async function(){const n=this.getOwnerComponent().getRouter();n.navTo("RouteLanding")}})});
+//# sourceMappingURL=login.controller.js.map

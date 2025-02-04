@@ -9,6 +9,7 @@
         <tnt:header>
 
         </tnt:header>
+        
         <tnt:mainContents>
             <uxap:ObjectPageLayout showHeaderContent="false" showTitleInHeaderContent="false" alwaysShowContentHeader="false" preserveHeaderStateOnScroll="false" headerContentPinnable="false" isChildPage="false" upperCaseAnchorBar="false">
                 <uxap:sections>
