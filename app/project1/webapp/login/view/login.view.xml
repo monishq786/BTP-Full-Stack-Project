@@ -11,15 +11,15 @@
                     <VBox width="100%" class="sapUiSmallMargin">
                         <!-- Logo -->
                         <HBox alignItems="Center" justifyContent="Center" class="sapUiSmallMargin">
-                            <Image src="./images/loginLogo.jpg" id="imgLogoctrl" width="120px" height="80px" />
+                            <Image src="./images/loginLogo.jpg" id="imgLogoctrl" width="8rem" height="5rem" />
                         </HBox>
 
                         <!-- Title -->
                         <Title text="Sign in with your email address" class="sapUiSmallMargin" textAlign="Center" />
                         
                         <VBox class="sapUiSmallMargin">
-                            <Input id="usernameInput" type="Email" value="" liveChange=".onUsernameChange" placeholder="Email Address" width="100%"  />
-                            <Input id="passwordInput" type="Password" value="" liveChange=".onPasswordChange" placeholder="Password" width="100%" />
+                            <Input id="usernameInput" type="Email" value="" liveChange=".onUsernameChange" placeholder="Email Address" />
+                            <Input id="passwordInput" type="Password" value="" liveChange=".onPasswordChange" placeholder="Password" />
                         </VBox>
 
                         <!-- Forgot Password -->
