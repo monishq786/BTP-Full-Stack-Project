@@ -162,6 +162,14 @@ sap.ui.define([
 
                         sap.ui.core.BusyIndicator.hide();
                         MessageToast.show("Number plate recognized successfully!");
+                        var oPage = this.getView().byId("cameraPage");
+
+                        // Scroll to the top
+                        if (oPage) {
+                            oPage.getScrollDelegate().scrollTo(0, 0, 500); // 500ms animation
+
+                        }
+
                     } else {
                         sap.ui.core.BusyIndicator.hide();
                         this.byId("plateNum").setValue("No plate detected.");
