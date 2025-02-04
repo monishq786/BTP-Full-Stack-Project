@@ -186,6 +186,13 @@
           ]
         },
         {
+          "name": "RouteCamera",
+          "pattern": "RouteCamera",
+          "target": [
+            "TargetCamera"
+          ]
+        },
+        {
           "name": "RouteServiceTest",
           "pattern": "RouteServiceTest",
           "target": [
@@ -278,6 +285,13 @@
         "TargetADMobility": {
           "viewId": "admobility",
           "viewName": "admobility",
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false
+        },
+        "TargetCamera": {
+          "viewId": "cameraimage",
+          "viewName": "cameraimage",
           "viewType": "XML",
           "transition": "slide",
           "clearControlAggregation": false

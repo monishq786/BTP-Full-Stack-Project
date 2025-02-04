@@ -84,6 +84,11 @@ sap.ui.define([
         onPressSalesOrder: function () {
             const oRouter = this.getOwnerComponent().getRouter();
             oRouter.navTo("RouteSalesOrder", {}, true);
+        },
+
+        onPressCamera: function () {
+            const oRouter = this.getOwnerComponent().getRouter();
+            oRouter.navTo("RouteCamera", {}, true);
         }
 
 

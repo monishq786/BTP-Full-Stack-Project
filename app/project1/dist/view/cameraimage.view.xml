@@ -1,14 +1,47 @@
 <mvc:View controllerName="project1.controller.cameraimage"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns:core="sap.ui.core"
+    xmlns:f="sap.f"
+    xmlns:card="sap.f.cards"
     xmlns="sap.m">
 
-    <Page id="cameraPage" title="{i18n>title}">
+    <Page id="cameraPage" title="Camera Recognition">
         <content>
             <VBox fitContainer="true" alignItems="Center">
+                <f:Card class="sapUiMediumMargin" width="auto">
+                    <f:header>
+                        <card:Header title="Number Plate Detail" subtitle="" />
+                    </f:header>
+                    <f:content>
+                        <List class="sapUiSmallMarginBottom" showSeparators="None">
+                            <CustomListItem>
+                                <HBox alignItems="Center" justifyContent="SpaceBetween">
+                                    <VBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom">
+                                        <Title level="H3" text="Plate Number" />
+                                        <Input id="plateNum" editable="false"/>
+                                    </VBox>
+                                    <VBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom">
+                                        <Title level="H3" text="Plate Color" />
+                                        <Input id="plateColor" editable="false" />
+                                    </VBox>
+                                    <VBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom">
+                                        <Title level="H3" text="Model Name" />
+                                        <Input id="modleName" editable="false" />
+                                    </VBox>
+                                    <VBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom">
+                                        <Title level="H3" text="Region" />
+                                        <Input id="plateRegion"  editable="false"/>
+                                    </VBox>
 
+                                </HBox>
+                            </CustomListItem>
+                        </List>
+                    </f:content>
+                </f:Card>
                 <!-- Recognized Text Output -->
-                <TextArea id="recognizedText" width="100%" rows="2" placeholder="Vehicle number will appear here" editable="false"/>
+                <!-- <TextArea id="recognizedText" width="100%" rows="2" placeholder="Vehicle number will appear here" editable="false"/>
+                <TextArea id="plateColor" width="100%" rows="2" placeholder="Vehicle number will appear here" editable="false"/>
+                <TextArea id="modelName" width="100%" rows="2" placeholder="Vehicle number will appear here" editable="false"/> -->
 
                 <!-- Camera Controls (Buttons) -->
                 <HBox justifyContent="Center" width="100%">
