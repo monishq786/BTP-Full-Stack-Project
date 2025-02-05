@@ -5,7 +5,7 @@
     xmlns:card="sap.f.cards"
     xmlns="sap.m">
 
-    <Page id="cameraPage" title="Camera Recognition">
+    <Page id="cameraPage" title="Camera Recognition" showNavButton="true" navButtonPress="backToLanding">
         <content>
             <VBox fitContainer="true" alignItems="Center" width="100%" class="sapUiResponsiveMargin">
 

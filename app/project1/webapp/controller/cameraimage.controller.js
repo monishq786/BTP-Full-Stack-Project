@@ -181,6 +181,10 @@ sap.ui.define([
                     MessageToast.show("Failed to recognize number plate.");
                 })
 
+        },
+        backToLanding: function () {
+            const oRouter = this.getOwnerComponent().getRouter();
+            oRouter.navTo("RouteLanding", {}, true);
         }
 
     });
