@@ -12,8 +12,8 @@
             <Label id="searchTerm" text="Search Term"/>
             <Input id="search" editable="true" value="" description="" fieldWidth="100%" />
             
-            <Label id="emeratesidLbl" text="Emirates Id"/>
-            <Input id="emerstes" editable="false"  value="" description="" fieldWidth="100%" />
+            <!-- <Label id="emeratesidLbl" text="Emirates Id"/>
+            <Input id="emerstes" editable="false"  value="" description="" fieldWidth="100%" /> -->
 
             <!-- <Label id="emailIdLbl" labelFor="emailId" required="true" text="Emaid Id" />
             <Input id="emailId" editable="true" liveChange="onLiveChange" valueState="None" value="{path: 'EntryFormDataSourceModel>/EmailId', type: 'sap.ui.model.type.String', formatOptions: {pattern: '^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$'}}" description="" fieldWidth="100%" /> -->
@@ -24,7 +24,7 @@
             <Label id="emailLbl" text="Email Id"/>
             <Input id="email" editable="true"  value="" description="" fieldWidth="100%" />
             
-            <Label id="emeratesLbl" labelFor="Emirates" required="true" text="{i18n>Emerates}" />
+            <Label id="emeratesLbl" labelFor="Emirates" required="true" text="Emirates" />
             <Input id="emerates" fieldWidth="100%" value=""  valueHelpRequest="" />
             
             <Label id="addressLbl" text="{i18n>Address}" />

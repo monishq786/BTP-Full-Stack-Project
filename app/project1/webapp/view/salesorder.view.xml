@@ -6,7 +6,7 @@
     xmlns:forms="sap.ui.layout.form"
     xmlns:core="sap.ui.core" controllerName="project1.controller.salesorder" height="100%">
 
-    <Page id="salesOrderPage" title="Sales Order" showNavButton="true" navButtonPress="backToLanding">
+    <Page id="salesOrderPage" title="{i18n>salesorder}" showNavButton="true" navButtonPress="backToLanding">
 
         <uxap:ObjectPageLayout id="ObjectPageLayout" showTitleInHeaderContent="true" upperCaseAnchorBar="false">
             <uxap:headerTitle>
@@ -40,37 +40,37 @@
 
                     <HBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
                         <VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
-                            <Title text="Plate Detail" class="sapUiTinyMarginBottom" />
+                            <Title text="{i18n>PlateDetail}" class="sapUiTinyMarginBottom" />
                             <ObjectStatus text="54321/S" icon="sap-icon://car-rental" class="sapMObjectStatusLarge"/>
                         </VBox>
 
                         <VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
-                            <Title text="Emirates" class="sapUiTinyMarginBottom" />
+                            <Title text="{i18n>emirates}" class="sapUiTinyMarginBottom" />
                             <ObjectStatus text="Abu Dhabi" state="Success" class="sapMObjectStatusLarge"/>
                         </VBox>
 
                         <VBox class="sapUiLargeMarginEnd">
-                            <Title text="Model" class="sapUiTinyMarginBottom" />
+                            <Title text="{i18n>model}" class="sapUiTinyMarginBottom" />
                             <ObjectStatus text="BMW X5" class="sapMObjectStatusLarge"/>
                         </VBox>
                     </HBox>
 
                     <VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
-                        <Title text="Payment Information" class="sapUiTinyMarginBottom" />
+                        <Title text="{i18n>PaymentInformation}" class="sapUiTinyMarginBottom" />
 
                         <HBox class="sapUiTinyMarginBottom">
-                            <Label text="Total:" class="sapUiTinyMarginEnd"/>
+                            <Label text="{i18n>total}:" class="sapUiTinyMarginEnd"/>
                             <Text text="173.25 AED" class="sapUiSmallMarginBegin"/>
                         </HBox>
 
                         <HBox class="sapUiTinyMarginBottom">
-                            <Label text="Vat:" class="sapUiTinyMarginEnd"/>
+                            <Label text="{i18n>vat}:" class="sapUiTinyMarginEnd"/>
                             <Text text="8.25 AED" class="sapUiSmallMarginBegin"/>
                         </HBox>
                     </VBox>
 
                     <VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
-                        <Title text="Status" class="sapUiTinyMarginBottom" />
+                        <Title text="{i18n>status}" class="sapUiTinyMarginBottom" />
                         <MessageStrip text="MAHA File is not Updated" type="Warning" showIcon="true" showCloseButton="false" class="">
                         </MessageStrip>
                     </VBox>
@@ -85,34 +85,34 @@
                         <HBox justifyContent="SpaceBetween">
                             <VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
                                 <HBox class="sapUiTinyMarginBottom">
-                                    <Label text="Order No:" class="sapUiTinyMarginEnd"/>
+                                    <Label text="{i18n>OrderNo}:" class="sapUiTinyMarginEnd"/>
                                     <Text text="2790000291" class="sapUiSmallMarginBegin"/>
                                 </HBox>
 
                                 <HBox class="sapUiTinyMarginBottom">
-                                    <Label text="Test Type:" class="sapUiTinyMarginEnd"/>
+                                    <Label text="{i18n>TestType}:" class="sapUiTinyMarginEnd"/>
                                     <Text text="Re-New" class="sapUiSmallMarginBegin"/>
                                 </HBox>
 
                                 <HBox class="sapUiTinyMarginBottom">
-                                    <Label text="Net:" class="sapUiTinyMarginEnd"/>
+                                    <Label text="{i18n>net}:" class="sapUiTinyMarginEnd"/>
                                     <Text text="160.25 AED" class="sapUiSmallMarginBegin"/>
                                 </HBox>
 
                                 <HBox class="sapUiTinyMarginBottom">
-                                    <Label text="Vat:" class="sapUiTinyMarginEnd"/>
+                                    <Label text="{i18n>vat}:" class="sapUiTinyMarginEnd"/>
                                     <Text text="10.25 AED" class="sapUiSmallMarginBegin"/>
                                 </HBox>
 
                                 <HBox class="sapUiTinyMarginBottom">
-                                    <Label text="Total:" class="sapUiTinyMarginEnd"/>
+                                    <Label text="{i18n>total}:" class="sapUiTinyMarginEnd"/>
                                     <Text text="170.50 AED" class="sapUiSmallMarginBegin"/>
                                 </HBox>
                             </VBox>
 
                             <VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
                                 <HBox class="sapUiTinyMarginBottom">
-                                    <Label text="Item:" class="sapUiTinyMarginEnd"/>
+                                    <Label text="{i18n>item}:" class="sapUiTinyMarginEnd"/>
                                     <Text text="10" class="sapUiSmallMarginBegin"/>
                                 </HBox>
                                 <HBox class="sapUiTinyMarginBottom">
@@ -129,8 +129,8 @@
         <footer>
             <Toolbar class="d-flex justify-content-center" design="Transparent">
                 <ToolbarSpacer/>
-                <Button type="Emphasized" text="Save" press="onSavePress" />
-                <Button type="Emphasized" text="Exit" press="onSavePress" />
+                <Button type="Emphasized" text="{i18n>save}" press="onSavePress" />
+                <Button type="Emphasized" text="{i18n>exit}" press="onSavePress" />
                 <ToolbarSpacer/>
             </Toolbar>
         </footer>

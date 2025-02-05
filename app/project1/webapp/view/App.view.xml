@@ -7,7 +7,7 @@
     xmlns:tnt="sap.tnt">
     <tnt:ToolPage id="appNew" class="sapUiDemoToolPage" sideExpanded="false">        <!-- ShellBar at the top -->
         <tnt:header>
-            <f:ShellBar homeIcon="./images/adnoclogo.jpg" id="appShellBar" title="ADNOC" secondTitle="Welcome to Vehicle Inspection" showMenuButton="{= ${shellBarModel>/menu} === true}" showNotifications="false" notificationsPressed="false" visible="true" notificationsNumber="2" menuButtonPressed="onMenuButtonPress">
+            <f:ShellBar homeIcon="./images/adnoclogo.jpg" id="appShellBar" title="{i18n>adnoc}" secondTitle="{i18n>welcome}" showMenuButton="{= ${shellBarModel>/menu} === true}" showNotifications="false" notificationsPressed="false" visible="true" notificationsNumber="2" menuButtonPressed="onMenuButtonPress">
                 <f:profile>
                     <Avatar src="sap-icon://log" press="onPressLogOut" visible="{= ${shellBarModel>/logout} === true}" />
                 </f:profile>
@@ -16,14 +16,14 @@
         <tnt:sideContent >
             <tnt:SideNavigation visible="{= ${shellBarModel>/logout} === true}" id="sideNavigation" selectedKey="home" itemSelect=".onNavItemSelect" expanded="false">
                 <tnt:NavigationList>
-                    <tnt:NavigationListItem text="Home" icon="sap-icon://home" key="Home"/>
-                    <tnt:NavigationListItem text="Search" icon="sap-icon://search" key="Search"/>
-                    <tnt:NavigationListItem text="Service Tests" icon="sap-icon://inspection" >
-                        <tnt:NavigationListItem text="Visual Test" key="Visual"/>
+                    <tnt:NavigationListItem text="{i18n>home}" icon="sap-icon://home" key="Home"/>
+                    <tnt:NavigationListItem text="{i18n>search}" icon="sap-icon://search" key="Search"/>
+                    <tnt:NavigationListItem text="{i18n>servicTest}" icon="sap-icon://inspection">
+                        <tnt:NavigationListItem text="{i18n>visualTest}" key="Visual"/>
                     </tnt:NavigationListItem>
-                    <tnt:NavigationListItem text="Open Service Request" icon="sap-icon://detail-view" key="Open Service Request"/>
-                    <tnt:NavigationListItem text="Sales Order" icon="sap-icon://customer-order-entry" key="Sales Order"/>
-                    <tnt:NavigationListItem text="Pending payment" icon="sap-icon://simple-payment" key="Pending payment"/>
+                    <tnt:NavigationListItem text="{i18n>openServiceTest}" icon="sap-icon://detail-view" key="Open Service Request"/>
+                    <tnt:NavigationListItem text="{i18n>salesorder}" icon="sap-icon://customer-order-entry" key="Sales Order"/>
+                    <tnt:NavigationListItem text="{i18n>Pendingpayment}" icon="sap-icon://simple-payment" key="Pending payment"/>
                 </tnt:NavigationList>
             </tnt:SideNavigation>
         </tnt:sideContent>

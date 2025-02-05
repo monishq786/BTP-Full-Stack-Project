@@ -13,12 +13,12 @@
         <tnt:mainContents>
             <uxap:ObjectPageLayout showHeaderContent="false" showTitleInHeaderContent="false" alwaysShowContentHeader="false" preserveHeaderStateOnScroll="false" headerContentPinnable="false" isChildPage="false" upperCaseAnchorBar="false">
                 <uxap:sections>
-                    <uxap:ObjectPageSection titleUppercase="false" id="goalsSection" title="Search Vehicle">
+                    <uxap:ObjectPageSection titleUppercase="false" id="goalsSection" title="{i18n>SearchVehicle}">
                         <uxap:subSections>
 
                             <uxap:ObjectPageSubSection id="goalsSectionSS1">
                                 <uxap:blocks>
-                                    <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Search Vehicle" subheader="" press="onPressADMobility" url="https://www.sap.com/">
+                                    <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="{i18n>SearchVehicle}" subheader="" press="onPressADMobility" url="https://www.sap.com/">
                                         <TileContent>
                                             <ImageContent src="sap-icon://search" />
                                         </TileContent>
@@ -30,12 +30,12 @@
                         </uxap:subSections>
                     </uxap:ObjectPageSection>
 
-                    <uxap:ObjectPageSection titleUppercase="false" id="goalsSection1" title="Open Service Request">
+                    <uxap:ObjectPageSection titleUppercase="false" id="goalsSection1" title="{i18n>openServiceTest}">
                         
                         <uxap:subSections>
                             <uxap:ObjectPageSubSection id="goalsSectionSS11">
                                 <uxap:blocks>
-                                    <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Open Service Request" subheader="" press="onPressOpenService" url="https://www.sap.com/">
+                                    <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="{i18n>openServiceTest}" subheader="" press="onPressOpenService" url="https://www.sap.com/">
                                         <TileContent>
                                             <ImageContent src="sap-icon://detail-view" />
                                         </TileContent>
@@ -47,12 +47,12 @@
 
                     </uxap:ObjectPageSection>
                     
-                    <uxap:ObjectPageSection titleUppercase="false" id="goalsSection111111" title="Visual Test">
+                    <uxap:ObjectPageSection titleUppercase="false" id="goalsSection111111" title="{i18n>visualTest}">
                         
                         <uxap:subSections>
                             <uxap:ObjectPageSubSection id="goalsSectionSS111">
                                 <uxap:blocks>
-                                    <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Visual Test" subheader="" press="onPressVisualTest" url="https://www.sap.com/">
+                                    <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="{i18n>visualTest}" subheader="" press="onPressVisualTest" url="https://www.sap.com/">
                                         <TileContent>
                                             <ImageContent src="sap-icon://inspection" />
                                         </TileContent>
@@ -81,12 +81,12 @@
 
                     </uxap:ObjectPageSection> -->
 
-                    <uxap:ObjectPageSection titleUppercase="false" id="personalSection" title="Sales Order" importance="Medium">
+                    <uxap:ObjectPageSection titleUppercase="false" id="personalSection" title="{i18n>salesorder}" importance="Medium">
                         
                         <uxap:subSections>
-                            <uxap:ObjectPageSubSection id="personalSectionSS1" title="Sales Order" titleUppercase="false">
+                            <uxap:ObjectPageSubSection id="personalSectionSS1" title="{i18n>salesorder}" titleUppercase="false">
                                 <uxap:blocks>
-                                    <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Sales Order" subheader="" press="onPressSalesOrder" url="https://www.sap.com/">
+                                    <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="{i18n>salesorder}" subheader="" press="onPressSalesOrder" url="https://www.sap.com/">
                                         <TileContent>
                                             <ImageContent src="sap-icon://customer" />
                                         </TileContent>
@@ -98,12 +98,12 @@
 
                     </uxap:ObjectPageSection>
 
-                    <uxap:ObjectPageSection titleUppercase="false" id="personalSection11" title="Sales Order" importance="Medium">
+                    <uxap:ObjectPageSection titleUppercase="false" id="personalSection11" title="{i18n>CameraRecognition}" importance="Medium">
                         
                         <uxap:subSections>
-                            <uxap:ObjectPageSubSection id="personalSectionSS111" title="Camera Recognition" titleUppercase="false">
+                            <uxap:ObjectPageSubSection id="personalSectionSS111" title="{i18n>CameraRecognition}" titleUppercase="false">
                                 <uxap:blocks>
-                                    <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Camera Recognition" subheader="" press="onPressCamera" url="https://www.sap.com/">
+                                    <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="{i18n>CameraRecognition}" subheader="" press="onPressCamera" url="https://www.sap.com/">
                                         <TileContent>
                                             <ImageContent src="sap-icon://camera" />
                                         </TileContent>
