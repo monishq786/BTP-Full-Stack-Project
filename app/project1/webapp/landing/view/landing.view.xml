@@ -35,7 +35,7 @@
                         <uxap:subSections>
                             <uxap:ObjectPageSubSection id="goalsSectionSS11">
                                 <uxap:blocks>
-                                    <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Open Service Request" subheader="" press="" url="https://www.sap.com/">
+                                    <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Open Service Request" subheader="" press="onPressOpenService" url="https://www.sap.com/">
                                         <TileContent>
                                             <ImageContent src="sap-icon://detail-view" />
                                         </TileContent>
@@ -63,7 +63,8 @@
                         </uxap:subSections>
 
                     </uxap:ObjectPageSection>
-                    <uxap:ObjectPageSection titleUppercase="false" id="goalsSection111" title="Customer Creation">
+                    
+                    <!-- <uxap:ObjectPageSection titleUppercase="false" id="goalsSection111" title="Customer Creation">
                         
                         <uxap:subSections>
                             <uxap:ObjectPageSubSection id="goalsSectionSS1111">
@@ -78,7 +79,7 @@
                             </uxap:ObjectPageSubSection>
                         </uxap:subSections>
 
-                    </uxap:ObjectPageSection>
+                    </uxap:ObjectPageSection> -->
 
                     <uxap:ObjectPageSection titleUppercase="false" id="personalSection" title="Sales Order" importance="Medium">
                         

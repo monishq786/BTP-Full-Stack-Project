@@ -28,7 +28,7 @@ sap.ui.define([
         { key: "Home", menuPath: "RouteLanding" },
         { key: "Search", menuPath: "RouteADMobility" },
         { key: "Visual", menuPath: "RouteServiceTest" },
-        { key: "Open Service Request", menuPath: "RouteCustomerCreate" },
+        { key: "Open Service Request", menuPath: "RouteOpenService" },
         { key: "PendingPayment", menuPath: "path3" },
         { key: "Sales Order", menuPath: "RouteSalesOrder" }
       ];

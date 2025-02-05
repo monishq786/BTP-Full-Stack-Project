@@ -8,6 +8,10 @@ sap.ui.define(["sap/ui/core/mvc/Controller"], (Controller) => {
         backToLanding: function () {
             const oRouter = this.getOwnerComponent().getRouter();
             oRouter.navTo("RouteLanding", {}, true);
+        },
+        goToCreateVeh:function(){
+            const oRouter = this.getOwnerComponent().getRouter();
+            oRouter.navTo("RouteCustomerCreate", {}, true);
         }
     })
 }) 

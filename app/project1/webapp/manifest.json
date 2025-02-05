@@ -212,6 +212,13 @@
           "target": [
             "TargetSalesOrder"
           ]
+        },
+        {
+          "name": "RouteOpenService",
+          "pattern": "RouteOpenService",
+          "target": [
+            "TargetOpenService"
+          ]
         }
         
       ],
@@ -320,6 +327,13 @@
         "TargetSalesOrder": {
           "viewId": "salesorder",
           "viewName": "salesorder",
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false
+        },
+        "TargetOpenService": {
+          "viewId": "openservicerequest",
+          "viewName": "openservicerequest",
           "viewType": "XML",
           "transition": "slide",
           "clearControlAggregation": false
