@@ -103,7 +103,7 @@
                         <uxap:subSections>
                             <uxap:ObjectPageSubSection id="personalSectionSS111" title="Camera Recognition" titleUppercase="false">
                                 <uxap:blocks>
-                                    <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Camera Recognitiosn" subheader="" press="onPressCamera" url="https://www.sap.com/">
+                                    <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Camera Recognition" subheader="" press="onPressCamera" url="https://www.sap.com/">
                                         <TileContent>
                                             <ImageContent src="sap-icon://camera" />
                                         </TileContent>

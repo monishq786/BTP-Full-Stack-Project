@@ -5,7 +5,7 @@
     "type": "application",
     "i18n": "i18n/i18n.properties",
     "applicationVersion": {
-      "version": "0.0.1"
+      "version": "0.0.2"
     },
     "title": "{{appTitle}}",
     "description": "{{appDescription}}",
@@ -212,6 +212,13 @@
           "target": [
             "TargetSalesOrder"
           ]
+        },
+        {
+          "name": "RouteOpenService",
+          "pattern": "RouteOpenService",
+          "target": [
+            "TargetOpenService"
+          ]
         }
         
       ],
@@ -320,6 +327,13 @@
         "TargetSalesOrder": {
           "viewId": "salesorder",
           "viewName": "salesorder",
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false
+        },
+        "TargetOpenService": {
+          "viewId": "openservicerequest",
+          "viewName": "openservicerequest",
           "viewType": "XML",
           "transition": "slide",
           "clearControlAggregation": false

@@ -12,6 +12,10 @@ sap.ui.define(["sap/ui/core/mvc/Controller"], (Controller) => {
         goToCreateVeh:function(){
             const oRouter = this.getOwnerComponent().getRouter();
             oRouter.navTo("RouteCustomerCreate", {}, true);
+        },
+        onSaveSO:function(){
+            const oRouter = this.getOwnerComponent().getRouter();
+            oRouter.navTo("RouteSalesOrder", {}, true);
         }
     })
 }) 

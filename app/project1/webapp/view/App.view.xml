@@ -7,7 +7,7 @@
     xmlns:tnt="sap.tnt">
     <tnt:ToolPage id="appNew" class="sapUiDemoToolPage" sideExpanded="false">        <!-- ShellBar at the top -->
         <tnt:header>
-            <f:ShellBar homeIcon="./images/adnoclogo.jpg" id="appShellBar" title="ADNOC" secondTitle="Welcome to Vehical Inspection" showMenuButton="{= ${shellBarModel>/menu} === true}" showNotifications="false" notificationsPressed="false" visible="true" notificationsNumber="2" menuButtonPressed="onMenuButtonPress">
+            <f:ShellBar homeIcon="./images/adnoclogo.jpg" id="appShellBar" title="ADNOC" secondTitle="Welcome to Vehicle Inspection" showMenuButton="{= ${shellBarModel>/menu} === true}" showNotifications="false" notificationsPressed="false" visible="true" notificationsNumber="2" menuButtonPressed="onMenuButtonPress">
                 <f:profile>
                     <Avatar src="sap-icon://log" press="onPressLogOut" visible="{= ${shellBarModel>/logout} === true}" />
                 </f:profile>
@@ -22,7 +22,7 @@
                         <tnt:NavigationListItem text="Visual Test" key="Visual"/>
                     </tnt:NavigationListItem>
                     <tnt:NavigationListItem text="Open Service Request" icon="sap-icon://detail-view" key="Open Service Request"/>
-                    <tnt:NavigationListItem text="Sales Order" icon="sap-icon://simple-payment" key="Sales Order"/>
+                    <tnt:NavigationListItem text="Sales Order" icon="sap-icon://customer-order-entry" key="Sales Order"/>
                     <tnt:NavigationListItem text="Pending payment" icon="sap-icon://simple-payment" key="Pending payment"/>
                 </tnt:NavigationList>
             </tnt:SideNavigation>

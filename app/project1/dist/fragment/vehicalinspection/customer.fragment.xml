@@ -9,22 +9,22 @@
             <Label  labelFor="Last Name" required="true" text="{i18n>Last Name}" />
             <Input id="lastn" editable="true" type="Text" value="" description="" fieldWidth="100%" showValueHelp="true" valueHelpRequest="cflForUser" />
 
-            <Label id="searchTerm" text="Search Term"/>
+            <Label id="searchTerm" text="{i18n>Search Tearm}"/>
             <Input id="search" editable="true" value="" description="" fieldWidth="100%" />
             
-            <Label id="emeratesidLbl" text="Emirates Id"/>
+            <Label id="emeratesidLbl" text="{i18n>EmeratesId}"/>
             <Input id="emerstes" editable="false"  value="" description="" fieldWidth="100%" />
 
-            <!-- <Label id="emailIdLbl" labelFor="emailId" required="true" text="Emaid Id" />
-            <Input id="emailId" editable="true" liveChange="onLiveChange" valueState="None" value="{path: 'EntryFormDataSourceModel>/EmailId', type: 'sap.ui.model.type.String', formatOptions: {pattern: '^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$'}}" description="" fieldWidth="100%" /> -->
+            <Label id="emailIdLbl" labelFor="emailId" required="true" text="{i18n>emaid}" />
+            <Input id="emailId" editable="true" liveChange="onLiveChange" valueState="None" value="{path: 'EntryFormDataSourceModel>/EmailId', type: 'sap.ui.model.type.String', formatOptions: {pattern: '^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$'}}" description="" fieldWidth="100%" />
             
-            <Label id="mobileLbl" labelFor="mobilenum" required="true" text="{i18n>Mobile Number}"/>
+            <Label id="mobileLbl" labelFor="mobilenum" required="true" text="{i18n>MobileNumber}"/>
             <Input id="mobile" editable="true" type="Text" enabled="true" value="" description="" fieldWidth="100%" />
 
-            <Label id="emailLbl" text="Email Id"/>
+            <Label id="emailLbl" text="{i18n>Email Id}"/>
             <Input id="email" editable="true"  value="" description="" fieldWidth="100%" />
             
-            <Label id="emeratesLbl" labelFor="Emirates" required="true" text="{i18n>Emerates}" />
+            <Label id="emeratesLbl" labelFor="Emerates" required="true" text="{i18n>Emerates}" />
             <Input id="emerates" fieldWidth="100%" value=""  valueHelpRequest="" />
             
             <Label id="addressLbl" text="{i18n>Address}" />
@@ -38,7 +38,7 @@
             
             
             <Label id="margin" text="" class="sapUiSmallMarginBottom"/>
-            <CheckBox id="noActive"  text="Is Active" select="onSelect" selected="{= ${EntryFormDataSourceModel>/IsActive} === 'Y' }" />
+            <CheckBox id="noActive"  text="{i18n>isActive}" select="onSelect" selected="{= ${EntryFormDataSourceModel>/IsActive} === 'Y' }" />
          
         </f:content>
     </f:SimpleForm>

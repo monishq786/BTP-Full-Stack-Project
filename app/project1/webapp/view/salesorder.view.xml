@@ -18,7 +18,7 @@
                     <uxap:snappedHeading>
                         <HBox>
                             <VBox>
-                                <Avatar src="./images/adnoclogo.jpg" class="sapUiSmallMarginEnd" />
+                                <Avatar src="https://ui5.sap.com/test-resources/sap/ui/integration/demokit/sample/CardsLayout/images/Avatar_1.png" class="sapUiSmallMarginEnd" />
                             </VBox>
 
                             <VBox>
@@ -36,7 +36,7 @@
 
             <uxap:headerContent>
                 <FlexBox wrap="Wrap" fitContainer="true">
-                    <Avatar src="./images/adnoclogo.jpg" class="sapUiMediumMarginEnd" displaySize="L"/>
+                    <Avatar src="https://ui5.sap.com/test-resources/sap/ui/integration/demokit/sample/CardsLayout/images/Avatar_1.png" class="sapUiMediumMarginEnd" displaySize="L"/>
 
                     <HBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
                         <VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
@@ -130,7 +130,7 @@
             <Toolbar class="d-flex justify-content-center" design="Transparent">
                 <ToolbarSpacer/>
                 <Button type="Emphasized" text="Save" press="onSavePress" />
-                <Button type="Emphasized" text="Exit" press="onExitPress" />
+                <Button type="Emphasized" text="Exit" press="onSavePress" />
                 <ToolbarSpacer/>
             </Toolbar>
         </footer>

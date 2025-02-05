@@ -13,13 +13,13 @@
 	xmlns:commons="sap.suite.ui.commons" class="d-flex justify-content-center" height="94%">
 	<Page id="enableadisableef" title="Customer Search" showNavButton="true" navButtonPress="backToLanding">
 		<VBox class="sapUiSmallMargin">
-			<f:SimpleForm id="SimpleFormChangeColumn_threeGroups234" editable="true" layout="ColumnLayout" title="Customer Search" columnsM="2" columnsL="3" columnsXL="4">
+			<f:SimpleForm id="SimpleFormChangeColumn_threeGroups234" editable="true" layout="ColumnLayout" title="Customer Search" columnsM="3" columnsL="3" columnsXL="4">
 				<Toolbar>
 
 					<Title text="Vehicle and Customer Details" />
 					<ToolbarSpacer />
-					<Button icon="sap-icon://camera" />
-					<ObjectStatus text="5 Sec" state="Information" />
+					<!-- <Button icon="sap-icon://camera" />
+					<ObjectStatus text="5 Sec" state="Information" /> -->
 					<Button type="Emphasized" text="Add Mobility" press="onPress" />
 					<Button type="Reject" text="Reset" press="onPress" />
 
@@ -27,8 +27,9 @@
 				<f:content>
 
 					<Label text="Plate Number" />
-					<Input id="name1" />
-
+					<Input id="name1" width="7rem"/>
+					<Button icon="sap-icon://camera" width="5rem"/>
+					<ObjectStatus text="5 Sec" state="Information" />
 					<Label text="Plate Color/Code" />
 					<Input value="{ZIPCode}">
 						<layoutData>
@@ -46,15 +47,19 @@
 							<core:Item text="" key=""/>
 							<core:Item text="Re_New" key="RENEW"/>
 							<core:Item text="Fresh Test" key="FRESHTEST"/>
-                            <core:Item text="ESMA Test" key="FRESHTEST"/>
+							<core:Item text="ESMA Test" key="FRESHTEST"/>
 							<core:Item text="Traffic Test" key="FRESHTEST"/>
 							<core:Item text="Comprehensive Test" key="FRESHTEST"/>
 							<core:Item text="Re-Test" key="FRESHTEST"/>
-							
+
 						</items>
 					</Select>
 					<Label text="Main Purpose" />
-                    <Input />
+					<Select id="MainPurpose" selectedKey="{Country}">
+						<items>
+							<core:Item text="" key=""/>
+						</items>
+					</Select>
 					<!-- <Select id="MainPurpose" selectedKey="{Country}">
 						<items>
 							<core:Item text="" key=""/>
@@ -63,11 +68,10 @@
 							
 						</items>
 					</Select> -->
-
 					<Label text="" />
 					<CheckBox text="Un-Registered" />
 
-					<RadioButton text="Indivisual" selected="true" />
+					<RadioButton text="Individual" selected="true" />
 					<RadioButton text="Corporate" />
 				</f:content>
 			</f:SimpleForm>
@@ -76,7 +80,7 @@
 			<FlexBox>
 				<f1:Card class="sapUiMediumMargin" width="300px" height="auto">
 					<f1:header>
-						<card:Header title="Vehicle Detail" iconSrc="sap-icon://car-rental" />
+						<card:Header title="Vehicle Details" iconSrc="sap-icon://car-rental" />
 
 					</f1:header>
 					<f1:content>
@@ -91,7 +95,7 @@
 
 								<HBox alignItems="Center" class="sapUiSmallMarginBottom">
 
-									<Text text="Enging No: " />
+									<Text text="Engine No: " />
 									<ObjectStatus text="  1GR5709102" state="Information" />
 
 								</HBox>
@@ -106,7 +110,7 @@
 
 								<HBox alignItems="Center" class="sapUiSmallMarginBottom">
 
-									<Text text="Manufacture:" />
+									<Text text="Manufacturer:" />
 									<ObjectStatus text="BMD" state="Information" />
 
 
@@ -145,7 +149,7 @@
 								<HBox alignItems="Center" class="sapUiSmallMarginBottom">
 
 									<Text text="Fuel Type:" />
-									<ObjectStatus text="Patrol" state="Information" />
+									<ObjectStatus text="Petrol" state="Information" />
 
 
 								</HBox>
@@ -153,7 +157,7 @@
 								<HBox alignItems="Center" class="sapUiSmallMarginBottom">
 
 									<Text text="Steering Side:" />
-									<ObjectStatus text="Patrol" state="Information" />
+									<ObjectStatus text="Petrol" state="Information" />
 
 
 								</HBox>
@@ -163,30 +167,6 @@
 									<Text text="Weight Kind:" />
 									<!-- <Text text="AUTOMATIC" /> -->
 									<ObjectStatus text="K" state="Information" />
-
-
-								</HBox>
-
-								<HBox alignItems="Center" class="sapUiSmallMarginBottom">
-
-									<Text text="Full Weight:" />
-									<ObjectStatus text="1500" state="Information" />
-
-
-								</HBox>
-
-								<HBox alignItems="Center" class="sapUiSmallMarginBottom">
-
-									<Text text="Mialage:" />
-									<ObjectStatus text="18" state="Information" />
-
-
-								</HBox>
-
-								<HBox alignItems="Center" class="sapUiSmallMarginBottom">
-
-									<Text text="Cubic Capacity:" />
-									<ObjectStatus text="1400" state="Information" />
 
 
 								</HBox>
@@ -210,7 +190,7 @@
 
 								<HBox alignItems="Center" class="sapUiSmallMarginBottom">
 
-									<Text text="Reg Exp Date:" />
+									<Text text="Reg Exp. Date:" />
 									<ObjectStatus text="01/05/2025" state="Information" />
 
 
@@ -219,7 +199,7 @@
 
 								<HBox alignItems="Center" class="sapUiSmallMarginBottom">
 
-									<Text text="Plate Type" />
+									<Text text="Plate Type: " />
 									<ObjectStatus text="Private" state="Information" />
 
 								</HBox>
@@ -234,7 +214,7 @@
 
 								<HBox alignItems="Center" class="sapUiSmallMarginBottom">
 
-									<Text text="Hourse Power:" />
+									<Text text="Horse Power:" />
 									<ObjectStatus text="1800" state="Information" />
 
 
@@ -242,28 +222,28 @@
 
 								<HBox alignItems="Center" class="sapUiSmallMarginBottom">
 
-									<Text text="No.Of.Axios:" />
+									<Text text="No. of Axles:" />
 									<ObjectStatus text="3" state="Information" />
 
 								</HBox>
 
 								<HBox alignItems="Center" class="sapUiSmallMarginBottom">
 
-									<Text text="No.Of.Cylinders:" />
+									<Text text="No. of Cylinders:" />
 									<ObjectStatus text="4" state="Information" />
 
 								</HBox>
 
 								<HBox alignItems="Center" class="sapUiSmallMarginBottom">
 
-									<Text text="No.Of.Wheels:" />
+									<Text text="No. of Wheels:" />
 									<ObjectStatus text="4" state="Information" />
 
 								</HBox>
 
 								<HBox alignItems="Center" class="sapUiSmallMarginBottom">
 
-									<Text text="No.Of.Passengers:" />
+									<Text text="No. of Passengers:" />
 									<ObjectStatus text="Five" state="Information" />
 
 
@@ -286,7 +266,7 @@
 
 								<HBox alignItems="Center" class="sapUiSmallMarginBottom">
 
-									<Text text="Mialage:" />
+									<Text text="Mileage:" />
 									<ObjectStatus text="18" state="Information" />
 
 
@@ -313,7 +293,7 @@
 				<f1:Card class="sapUiMediumMargin" width="300px" height="auto">
 					<f1:header>
 
-						<card:Header title="Customer Details" iconSrc="sap-icon://add-employee" />
+						<card:Header title="Customer Details" iconSrc="https://ui5.sap.com/test-resources/sap/ui/integration/demokit/sample/CardsLayout/images/Avatar_1.png" />
 
 					</f1:header>
 
@@ -376,9 +356,9 @@
 			<Toolbar>
 				<ToolbarSpacer />
 				<FlexBox justifyContent="End">
-					<Button type="Default" id="CustomerCreate" text="Create Vehicle" press="goToCreateVeh" icon="sap-icon://person-placeholder"/>
+					<Button type="Default" id="CustomerCreate" text="Create Vehicle" press="goToCreateVeh" icon="sap-icon://add-employee"/>
 					<Button type="Emphasized" id="Retest" text="Reset" press="onSave" class="sapUiSmallMarginBegin"/>
-					<Button type="Emphasized" id="Proceed" text="Proceed" press="onSave" class="sapUiSmallMarginBegin"/>
+					<Button type="Emphasized" id="Proceed" text="Proceed" press="onSaveSO" class="sapUiSmallMarginBegin"/>
 				</FlexBox>
 			</Toolbar>
 		</footer>

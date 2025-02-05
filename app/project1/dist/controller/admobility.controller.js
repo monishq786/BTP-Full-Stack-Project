@@ -1,2 +1,2 @@
-sap.ui.define(["sap/ui/core/mvc/Controller"],e=>{"user strict";return e.extend("project1.controller.cameraimage",{onInit(){},backToLanding:function(){const e=this.getOwnerComponent().getRouter();e.navTo("RouteLanding",{},true)}})});
+sap.ui.define(["sap/ui/core/mvc/Controller"],e=>{"user strict";return e.extend("project1.controller.cameraimage",{onInit(){},backToLanding:function(){const e=this.getOwnerComponent().getRouter();e.navTo("RouteLanding",{},true)},goToCreateVeh:function(){const e=this.getOwnerComponent().getRouter();e.navTo("RouteCustomerCreate",{},true)}})});
 //# sourceMappingURL=admobility.controller.js.map

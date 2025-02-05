@@ -81,13 +81,9 @@
             <uxap:sections >
 
                 <uxap:ObjectPageSection titleUppercase="false" id="orderDetailsSection" title="Items">
-                    <!-- <HBox width="100%" class="sapUiSmallMarginBottom" justifyContent="SpaceBetween">
-                        <Input value="" placeholder="Enter Mobile No" width="50%" class="sapUiSmallMarginBegin"/>
-                        <Button icon="sap-icon://search" type="Transparent" press="onSearch"/>
-                    </HBox> -->
                     <uxap:ObjectPageSubSection showTitle="false">
-                        <HBox width="100%" justifyContent="SpaceBetween">
-                            <VBox width="48%" class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
+                        <HBox justifyContent="SpaceBetween">
+                            <VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
                                 <HBox class="sapUiTinyMarginBottom">
                                     <Label text="Order No:" class="sapUiTinyMarginEnd"/>
                                     <Text text="2790000291" class="sapUiSmallMarginBegin"/>
@@ -114,14 +110,13 @@
                                 </HBox>
                             </VBox>
 
-                            <!-- Right Section - 50% Width -->
-                            <VBox width="48%" class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
+                            <VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
                                 <HBox class="sapUiTinyMarginBottom">
                                     <Label text="Item:" class="sapUiTinyMarginEnd"/>
                                     <Text text="10" class="sapUiSmallMarginBegin"/>
                                 </HBox>
                                 <HBox class="sapUiTinyMarginBottom">
-                                    <Button icon="sap-icon://delete" width="25px" visible="true" press="" class="sapUiSmallMarginBegin sapUiTinyMarginEnd"/>
+                                    <Button icon="sap-icon://delete" visible="true" press="" class="sapUiSmallMarginBegin sapUiTinyMarginEnd"/>
                                 </HBox>
                             </VBox>
 
