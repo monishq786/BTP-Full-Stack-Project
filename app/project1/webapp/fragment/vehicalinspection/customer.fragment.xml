@@ -4,7 +4,7 @@
     <f:SimpleForm id="customer" editable="true" layout="ColumnLayout" columnsM="3" columnsL="4" columnsXL="5">
         <f:content>
             <Label id="firstnameCLbl" text="{i18n>First Name}" />
-            <Input id="firstnameC" editable="false" value="" description="" fieldWidth="100%" />
+            <Input id="firstnameC" editable="true" value="" description="" fieldWidth="100%" />
             
             <Label  labelFor="Last Name" required="true" text="{i18n>Last Name}" />
             <Input id="lastn" editable="true" type="Text" value="" description="" fieldWidth="100%" showValueHelp="true" valueHelpRequest="cflForUser" />
@@ -28,13 +28,13 @@
             <Input id="emerates" fieldWidth="100%" value=""  valueHelpRequest="" />
             
             <Label id="addressLbl" text="{i18n>Address}" />
-            <Input id="address" editable="false" value="" placeholder="Enter Address" />
+            <Input id="address" editable="true" value="" placeholder="Enter Address" />
 
             <Label id="cityLbl" text="{i18n>City}" />
-            <Input id="city" editable="false" value="" description="" fieldWidth="100%"/>
+            <Input id="city" editable="true" value="" description="" fieldWidth="100%"/>
 
             <Label id="countryLbl" text="{i18n>Country}"/>
-            <Input id="country" editable="false"  value="" description="" fieldWidth="100%" />
+            <Input id="country" editable="true"  value="" description="" fieldWidth="100%" />
             
             
             <Label id="margin" text="" class="sapUiSmallMarginBottom"/>
