@@ -15,9 +15,9 @@ Content-Type: application/json
 {{auth}}
 
 {
-  "ID": 5410031,
-  "Name": "Name-5410031",
-  "Age": 7,
+  "ID": 5410032,
+  "Name": "Afshan",
+  "Age": 10,
   "Salary": 15162606.25
 }
 
