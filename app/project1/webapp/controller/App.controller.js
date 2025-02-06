@@ -95,18 +95,7 @@ sap.ui.define([
       }
     },
 
-    handleRouteLoginMenu: function () {
-      try {
-        const viewModel = this.getView().getModel('shellBarModel');
-        viewModel.setProperty(`/menu`, false);
-        viewModel.setProperty(`/notification`, false);
-        viewModel.setProperty(`/logout`, false);
-        viewModel.setProperty(`/badge`, "0");
-        viewModel.refresh();
-      } catch (error) {
-        console.log('handleRouteLoginMenu Error :', error);
-      }
-    },
+    
 
     handleRouteLandingMenu: async function () {
       try {

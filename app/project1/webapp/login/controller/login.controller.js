@@ -6,7 +6,14 @@ sap.ui.define([
 
     return Controller.extend('logincontroller.login', {
         onInit: function () {
-
+            // var oImage = new sap.m.Image({
+            //     src: "./images/bg.jpg",
+            //     width: "100%",
+            //     height: "100%",
+            //     opacity: "0.5",
+            //     decorative: false
+            // });
+            // oImage.placeAt("content");
         },
 
         onBeforeShow: function () {
