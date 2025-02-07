@@ -12,6 +12,10 @@ sap.ui.define(["sap/ui/core/mvc/Controller"], (Controller) => {
         onSaveCustomerCreate: function () {
             const oRouter = this.getOwnerComponent().getRouter();
             oRouter.navTo("RouteADMobility", {}, true);
+        },
+        onCancel:function(){
+            const oRouter = this.getOwnerComponent().getRouter();
+            oRouter.navTo("RouteADMobility", {}, true);
         }
     })
 }) 

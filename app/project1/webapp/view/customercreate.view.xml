@@ -41,7 +41,8 @@
             <m:Toolbar>
                 <m:ToolbarSpacer />
                 <m:FlexBox justifyContent="End">
-                    <m:Button type="Emphasized" id="user_btnSubmit" text="Submit" press="onSaveCustomerCreate"/>
+                    <m:Button type="Default" id="cancel" text="Cancel" press="onCancel" />
+                    <m:Button type="Emphasized" id="user_btnSubmit" text="Submit" press="onSaveCustomerCreate" class="sapUiSmallMarginBegin"/>
                 </m:FlexBox>
             </m:Toolbar>
         </m:footer>

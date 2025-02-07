@@ -1,0 +1,31 @@
+{
+    "freshTestPinned": [
+        {
+            "title": "New Registration Fresh-Test",
+            "desc": "",
+            "info": "150 AED",
+            "pinned": true
+        },
+        {
+            "title": "Re-New Fresh-Test",
+            "desc": "",
+            "info": "450 AED",
+            "pinned": true
+        }
+    ],
+    "freshTestUnPinned": [
+        
+        {
+            "title": "Transfer to Other Emirates-Fresh Test",
+            "desc": "",
+            "info": "10 AED",
+            "pinned": false
+        },
+        {
+            "title": "Transfer From Public to Private",
+            "desc": "",
+            "info": "340 AED",
+            "pinned": false
+        }
+    ]
+}

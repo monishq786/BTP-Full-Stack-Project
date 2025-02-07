@@ -32,17 +32,10 @@
             </Input>
 
             <Label text="In. It Reg Year/Reg Exp. Date" />
-            <!-- <Input value="{Street}">
-				</Input> -->
-            <DatePicker id="DP3" displayFormat="short" change="handleChange" class="sapUiSmallMarginBottom" />
-            <DatePicker id="DP4" displayFormat="short" change="handleChange" class="sapUiSmallMarginBottom">
-
-                <layoutData>
-                    <l:GridData span="XL4 L4 M6 S4" />
-                </layoutData>
-            </DatePicker>
+            <DatePicker id="DP3" displayFormat="short" change="handleChange" />
+            <DatePicker id="DP4" displayFormat="short" change="handleChange"/>
             <Label text="Mfg. Year/Mileage" />
-            <DatePicker id="DP5" displayFormat="short" change="handleChange" class="sapUiSmallMarginBottom" />
+            <DatePicker id="DP5" displayFormat="short" change="handleChange"/>
             <!-- <Input value="{Street}" /> -->
 
             <Input value="{HouseNumber}">

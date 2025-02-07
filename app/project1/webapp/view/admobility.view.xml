@@ -13,7 +13,7 @@
 	xmlns:commons="sap.suite.ui.commons" class="d-flex justify-content-center" height="94%">
 	<Page id="enableadisableef" title="Customer Search" showNavButton="true" navButtonPress="backToLanding">
 		<VBox class="sapUiSmallMargin">
-			<f:SimpleForm id="SimpleFormChangeColumn_threeGroups234" editable="true" layout="ColumnLayout" title="Customer Search" columnsM="3" columnsL="3" columnsXL="4">
+			<f:SimpleForm id="SimpleFormChangeColumn_threeGroups234" editable="true" layout="ColumnLayout" columnsM="3" columnsL="3" columnsXL="4">
 				<Toolbar>
 
 					<Title text="Vehicle and Customer Details" />
@@ -26,10 +26,10 @@
 				</Toolbar>
 				<f:content>
 
-					<Label text="Plate Number" />
-					<Input id="name1" width="7rem"/>
-					<Button icon="sap-icon://camera" width="5rem"/>
-					<ObjectStatus text="5 Sec" state="Information" />
+					<Label text="Plate Number" width="10rem" />
+					<Input id="name1" width="12rem"/>
+					<!-- <Button icon="sap-icon://camera" width="5rem"/> -->
+					<ObjectStatus text="5 Sec" state="Information" class="sapUiSmallMarginBegin" />
 					<Label text="Plate Color/Code" />
 					<Input value="{ZIPCode}">
 						<layoutData>
@@ -76,7 +76,7 @@
 				</f:content>
 			</f:SimpleForm>
 		</VBox>
-		<HBox class="sapUiMediumMargin">
+		<HBox class="sapUiSmallMargin">
 			<FlexBox>
 				<f1:Card class="sapUiMediumMargin" width="300px" height="auto">
 					<f1:header>
@@ -357,7 +357,7 @@
 				<ToolbarSpacer />
 				<FlexBox justifyContent="End">
 					<Button type="Default" id="CustomerCreate" text="Create Vehicle" press="goToCreateVeh" icon="sap-icon://add-employee"/>
-					<Button type="Emphasized" id="Retest" text="Reset" press="onSave" class="sapUiSmallMarginBegin"/>
+					<Button type="Emphasized" id="Retest" text="Retest" press="onSave" class="sapUiSmallMarginBegin"/>
 					<Button type="Emphasized" id="Proceed" text="Proceed" press="onSaveSO" class="sapUiSmallMarginBegin"/>
 				</FlexBox>
 			</Toolbar>
