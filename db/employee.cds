@@ -23,3 +23,4 @@ entity UserDepartment : managed {
 }
 
 
+

@@ -114,6 +114,23 @@
                         </uxap:subSections>
 
                     </uxap:ObjectPageSection>
+
+                      <uxap:ObjectPageSection titleUppercase="false" id="personalSection12" title="{i18n>changeVehicleInfo}" importance="Medium">
+                        
+                        <uxap:subSections>
+                            <uxap:ObjectPageSubSection id="personalSectionSS112" title="{i18n>changeVehicleInfo}" titleUppercase="false">
+                                <uxap:blocks>
+                                    <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="{i18n>changeVehicleInfo}" subheader="" press="onPressChangeVehicle" url="https://www.sap.com/">
+                                        <TileContent>
+                                            <ImageContent src="sap-icon://camera" />
+                                        </TileContent>
+                                    </GenericTile>
+                                </uxap:blocks>
+                            </uxap:ObjectPageSubSection>
+
+                        </uxap:subSections>
+
+                    </uxap:ObjectPageSection>
                 </uxap:sections>
             </uxap:ObjectPageLayout>
 
