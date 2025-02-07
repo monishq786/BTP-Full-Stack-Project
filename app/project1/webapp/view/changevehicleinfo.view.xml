@@ -1,0 +1,76 @@
+<mvc:View controllerName="project1.controller.changevehicleinfo"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:core="sap.ui.core">
+    
+    <Page title="Change Vehicle Info">
+        <content>
+            <VBox class="sapUiSmallMargin" width="100%">
+                <l:Grid defaultSpan="L6 M6 S12" hSpacing="2" vSpacing="1" width="80%" class="sapUiContentPadding">
+
+                    <!-- Row 1 -->
+                    <l:content>
+                        <Label text="Chassis No:" labelFor="chasisNo"/>
+                        <Input id="chasisNo" value="{vehicleModel>/vehicleDetails/ChasisNo}" width="48%"/>
+                        
+                        <Label text="Engine No:" labelFor="engineNo"/>
+                        <Input id="engineNo" value="{vehicleModel>/vehicleDetails/EngineNo}" width="48%"/>
+                    </l:content>
+
+                    <!-- Row 2 -->
+                    <l:content>
+                        <Label text="Country:" labelFor="country"/>
+                        <Select id="country11" selectedKey="{vehicleModel>/vehicleDetails/Country}" width="100%">
+                            <items>
+                                <core:Item text="England" key="England"/>
+                                <core:Item text="Germany" key="Germany"/>
+                                <core:Item text="USA" key="USA"/>
+                            </items>
+                        </Select>
+
+                        <Label text="Manufacturer:" labelFor="manufacturer"/>
+                        <Input id="manufacturer" value="{vehicleModel>/vehicleDetails/Manufacturer}" width="100%"/>
+                    </l:content>
+
+                    <!-- Row 3 -->
+                    <l:content>
+                        <Label text="Model:" labelFor="model"/>
+                        <Input id="model" value="{vehicleModel>/vehicleDetails/Model}" width="100%"/>
+                        
+                        <Label text="Plate Type:" labelFor="plateType"/>
+                        <Input id="plateType" value="{vehicleModel>/vehicleDetails/PlateType}" width="100%"/>
+                    </l:content>
+
+                    <!-- Row 4 -->
+                    <l:content>
+                        <Label text="Kind:" labelFor="kind"/>
+                        <Input id="kind" value="{vehicleModel>/vehicleDetails/Kind}" width="100%"/>
+                        
+                        <Label text="Type:" labelFor="type"/>
+                        <Input id="type" value="{vehicleModel>/vehicleDetails/Type}" width="100%"/>
+                    </l:content>
+
+                    <!-- Row 5 -->
+                    <l:content>
+                        <Label text="Body Color:" labelFor="bodyColor"/>
+                        <Input id="bodyColor" value="{vehicleModel>/vehicleDetails/BodyColor}" width="100%"/>
+
+                        <Label text="Gear Type:" labelFor="gearType"/>
+                        <Input id="gearType" value="{vehicleModel>/vehicleDetails/GearType}" width="100%"/>
+                    </l:content>
+
+                    <!-- Button Row -->
+                    <l:content>
+                        <HBox justifyContent="End" width="100%">
+                            <Button text="Cancel" type="Emphasized" press="onCancel"/>
+                            <Button text="Submit" type="Emphasized" press="onSubmit"/>
+                        </HBox>
+                    </l:content>
+
+                </l:Grid>
+            </VBox>
+        </content>
+    </Page>
+
+</mvc:View>
