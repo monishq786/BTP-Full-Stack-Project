@@ -130,6 +130,35 @@ Content-Type: application/json
 
 ### MDepartment
 # @name MDepartment_DELETE
-DELETE {{server}}/odata/v4/employee/MDepartment/31469712-55e0-45ee-a406-049340a0b938
+POST {{server}}/odata/v4/vehicle/Vehicle
 Content-Type: application/json
 {{auth}}
+
+{
+  "ChasisNo": "12",
+  "EngineNo": "",
+  "Country": "",
+  "Manufacturer": "",
+  "Model": "",
+  "PlateType": "",
+  "Kind": "",
+  "Type": "",
+  "BodyColor": "",
+  "GearType": "",
+  "FuelType": "",
+  "SteeringSide": "",
+  "WeightKind": "",
+  "InitRegYear": "",
+  "MfgYear": "",
+  "HorsePower": "",
+  "NoOfAxies": "",
+  "NoOfCylinders": "",
+  "NoOfWheels": "",
+  "NoOfDoors": "",
+  "NoOfPassengers": "",
+  "EmptyWeight": "",
+  "FullWeight": "",
+  "Mileage": "",
+  "CubicCapacity": ""
+}
+
