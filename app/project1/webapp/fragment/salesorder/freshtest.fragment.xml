@@ -1,49 +1,38 @@
 <core:FragmentDefinition xmlns="sap.m"
     xmlns:core="sap.ui.core"
-    xmlns:f="sap.ui.layout.form">
+    xmlns:f="sap.f"
+    xmlns:form="sap.ui.layout.form">
+
 
     <HBox justifyContent="SpaceBetween">
-        <!-- First Column -->
+
         <VBox width="48%">
-            <List id="freshtestList" mode="MultiSelect" headerText="Most Frequent Test" selectionChange="onSelectionChange" items="{
-                path: '/freshTestPinned',
-                filters: [{ path: 'pinned', operator: 'EQ', value1: true }]
-            }">
+            <List id="freshtestList" mode="MultiSelect" headerText="Most Frequent Test" selectionChange="onSelectionChange" items="{                path: '/freshTestPinned',                filters: [{ path: 'pinned', operator: 'EQ', value1: true }]            }">
                 <items>
                     <StandardListItem title="{title}" description="{desc}" info="{info}" infoStateInverted="true"/>
                 </items>
             </List>
-
-            <List id="mainFreshList" mode="MultiSelect" headerText="Other Tests" selectionChange="onSelectionChange" items="{
-                path: '/freshTestUnPinned',
-                filters: [{ path: 'pinned', operator: 'NE', value1: true }]
-            }">
+            <List id="mainFreshList" mode="MultiSelect" headerText="Other Tests" selectionChange="onSelectionChange" items="{                path: '/freshTestUnPinned',                filters: [{ path: 'pinned', operator: 'NE', value1: true }]            }">
                 <items>
                     <StandardListItem title="{title}" description="{desc}" info="{info}" infoStateInverted="true"/>
                 </items>
             </List>
-        </VBox>
+        </VBox>        <!-- Second Column -->
 
-        <!-- Second Column -->
-        <VBox width="50%">
-            <List id="freshtestList1" mode="MultiSelect" headerText=" " selectionChange="onSelectionChange" items="{
-                path: '/freshTestPinned',
-                filters: [{ path: 'pinned', operator: 'EQ', value1: true }]
-            }">
+        <VBox width="48%">
+            <HBox justifyContent="End">
+                <SearchField/>
+            </HBox>
+            <List id="freshtestList1" mode="MultiSelect" headerText=" " selectionChange="onSelectionChange" items="{                path: '/freshTestPinned',                filters: [{ path: 'pinned', operator: 'EQ', value1: true }]            }">
                 <items>
                     <StandardListItem title="{title}" description="{desc}" info="{info}" infoStateInverted="true"/>
                 </items>
             </List>
-
-            <List id="mainFreshList1" mode="MultiSelect" headerText=" " selectionChange="onSelectionChange" items="{
-                path: '/freshTestUnPinned',
-                filters: [{ path: 'pinned', operator: 'NE', value1: true }]
-            }">
+            <List id="mainFreshList1" mode="MultiSelect" headerText=" " selectionChange="onSelectionChange" items="{                path: '/freshTestUnPinned',                filters: [{ path: 'pinned', operator: 'NE', value1: true }]            }">
                 <items>
                     <StandardListItem title="{title}" description="{desc}" info="{info}" infoStateInverted="true"/>
                 </items>
             </List>
         </VBox>
     </HBox>
-
 </core:FragmentDefinition>

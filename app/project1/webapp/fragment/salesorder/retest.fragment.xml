@@ -5,7 +5,7 @@
     <HBox justifyContent="SpaceBetween">
         <!-- First Column -->
         <VBox width="48%">
-            <List id="pinnedList" mode="MultiSelect" headerText="Most Frequent Test" selectionChange="onSelectionChange" items="{
+            <List id="pinnedList" mode="MultiSelect" headerText="Most Frequent Re-test" selectionChange="onSelectionChange" items="{
                 path: '/freshTestPinned',
                 filters: [{ path: 'pinned', operator: 'EQ', value1: true }]
             }">
@@ -14,7 +14,7 @@
                 </items>
             </List>
 
-            <List id="mainList" mode="MultiSelect" headerText="Other Tests" selectionChange="onSelectionChange" items="{
+            <List id="mainList" mode="MultiSelect" headerText="Other Re-test" selectionChange="onSelectionChange" items="{
                 path: '/freshTestUnPinned',
                 filters: [{ path: 'pinned', operator: 'NE', value1: true }]
             }">

@@ -1,7 +1,7 @@
 {
     "freshTestPinned": [
         {
-            "title": "New Registration Fresh-Test  تسجيل جديد اختبار جديد ",
+            "title": "New Registration Fresh-Test ",
             "desc": "",
             "info": "150 AED",
             "pinned": true
@@ -16,13 +16,13 @@
     "freshTestUnPinned": [
         
         {
-            "title": "Transfer to Other Emirates-Fresh Test",
+            "title": "Tire Test Fresh-Test",
             "desc": "",
             "info": "10 AED",
             "pinned": false
         },
         {
-            "title": "Transfer From Public to Private",
+            "title": "Export Fresh-Test",
             "desc": "",
             "info": "340 AED",
             "pinned": false

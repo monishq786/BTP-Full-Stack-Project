@@ -110,7 +110,7 @@
                     <VBox class="sapUiLargeMarginEnd sapUiTinyMarginBottom">
                         <HBox class="sapUiTinyMarginBottom">
                             <Label text="Streeing Side:" class="sapUiSmallMarginEnd"/>
-                            <Text text=" Rigth Side"/>
+                            <Text text=" Right Side"/>
                         </HBox>
                         <HBox class="sapUiTinyMarginBottom">
                             <Label text="MFG. Year:" class="sapUiTinyMarginEnd"/>
@@ -161,10 +161,11 @@
             </uxap:headerContent>
 
             <uxap:sections >
+
                 <uxap:ObjectPageSection titleUppercase="false" title="Fresh Test">
                     <uxap:subSections>
                         <uxap:ObjectPageSubSection titleUppercase="false">
-                            <core:Fragment fragmentName="project1.fragment.salesorder.freshtest" type="XML">
+                             <core:Fragment fragmentName="project1.fragment.salesorder.freshtest" type="XML">
                             </core:Fragment>
                         </uxap:ObjectPageSubSection>
                     </uxap:subSections>
@@ -201,11 +202,10 @@
         </uxap:ObjectPageLayout>
 
         <footer>
-            <Toolbar class="d-flex justify-content-center" design="Transparent">
+            <Toolbar design="Transparent">
                 <ToolbarSpacer/>
-                <Button type="Emphasized" text="{i18n>save}" press="onSavePress" />
-                <Button type="Emphasized" text="{i18n>exit}" press="onSavePress" />
-                <ToolbarSpacer/>
+                <Button type="Emphasized" text="Processed to Payment" press="onSavePress"/>
+                <Button type="Emphasized" text="{i18n>exit}" press="onExitPress"/>
             </Toolbar>
         </footer>
 
