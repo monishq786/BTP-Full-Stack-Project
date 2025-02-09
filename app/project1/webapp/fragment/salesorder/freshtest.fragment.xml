@@ -9,7 +9,7 @@
         <VBox width="48%">
             <List id="freshtestList" mode="MultiSelect" headerText="Most Frequent Test" selectionChange="onSelectionChange" items="{                path: '/freshTestPinned',                filters: [{ path: 'pinned', operator: 'EQ', value1: true }]            }">
                 <items>
-                    <StandardListItem title="{title}" description="{desc}" info="{info}" infoStateInverted="true"/>
+                    <StandardListItem title="{title}" description="{desc}" info="{info}" infoStateInverted="true" wrapping="false"/>
                 </items>
             </List>
             <List id="mainFreshList" mode="MultiSelect" headerText="Other Tests" selectionChange="onSelectionChange" items="{                path: '/freshTestUnPinned',                filters: [{ path: 'pinned', operator: 'NE', value1: true }]            }">
