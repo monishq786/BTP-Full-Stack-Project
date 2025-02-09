@@ -1,7 +1,7 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
     "sap/ui/model/json/JSONModel",
-], (Controller,JSONModel) => {
+], (Controller, JSONModel) => {
     "use strict";
 
     return Controller.extend("project1.controller.changevehicleinfo", {
@@ -15,23 +15,35 @@ sap.ui.define([
                     Manufacturer: "",
                     Model: "",
                     PlateType: "",
+                    Kind: "",
+                    Type: "",
+                    BodyColor: "",
+                    GearType: "",
                     FuelType: "",
-                    Kind:"",
-                    Type:"",
-                    BodyColor:"",
-                    GearType :"",
-                    SteeringSide:"",
-                    WeightKind:""
-                    
+                    SteeringSide: "",
+                    WeightKind: "",
+                    InitRegYear: "",
+                    MfgYear: "",
+                    HorsePower: "",
+                    NoOfAxies: "",
+                    NoOfCylinders: "",
+                    NoOfWheels: "",
+                    NoOfDoors: "",
+                    NoOfPassengers: "",
+                    EmptyWeight: "",
+                    FullWeight: "",
+                    Mileage: "",
+                    CubicCapacity: ""
+
                 }
             };
-        
+
             var oModel = new sap.ui.model.json.JSONModel(oData);
             this.getView().setModel(oModel, "vehicleModel");
 
         },
         // /odata/v4/vehicle/Vehicle
-        onSubmit:function(){
+        onSubmit: function () {
 
             var oModel = this.getView().getModel("vehicleModel");
             var oData = oModel.getProperty("/vehicleDetails"); // Get user input data
@@ -46,25 +58,25 @@ sap.ui.define([
                 data: JSON.stringify(oData),
                 success: function (response) {
                     sap.m.MessageToast.show("Data submitted successfully!");
-                    if(response == 200)
-                    {
-                        const oRouter = this.getOwnerComponent().getRouter();
-                        oRouter.navTo("RouteLanding", {}, true);
+                    this.onNavBack();
+                  
 
-                    }
-                    
                 },
                 error: function (error) {
                     sap.m.MessageToast.show("Error submitting data!");
                 }
-            });        
+            });
 
 
         },
-        onCancel:function(){
+        onCancel: function () {
 
             const oRouter = this.getOwnerComponent().getRouter();
             oRouter.navTo("RouteLanding", {}, true);
+        },
+        onNavBack: function () {
+            const oRouter = this.getOwnerComponent().getRouter();
+            oRouter.navTo("RouteChangeVehicleInfo", {}, true);
         }
 
     });
