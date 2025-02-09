@@ -7,12 +7,12 @@
     <HBox justifyContent="SpaceBetween">
 
         <VBox width="48%">
-            <List id="freshtestList" mode="MultiSelect" headerText="Most Frequent Test" selectionChange="onSelectionChange" items="{                path: '/freshTestPinned',                filters: [{ path: 'pinned', operator: 'EQ', value1: true }]            }">
+            <List id="freshtestList" mode="MultiSelect" headerText="Most Frequent Test" selectionChange="onSelectionChange" items="{                path: '/freshTestPinned_One',                filters: [{ path: 'pinned', operator: 'EQ', value1: true }]            }">
                 <items>
                     <StandardListItem title="{title}" description="{desc}" info="{info}" infoStateInverted="true" wrapping="false"/>
                 </items>
             </List>
-            <List id="mainFreshList" mode="MultiSelect" headerText="Other Tests" selectionChange="onSelectionChange" items="{                path: '/freshTestUnPinned',                filters: [{ path: 'pinned', operator: 'NE', value1: true }]            }">
+            <List id="mainFreshList" mode="MultiSelect" headerText="Other Tests" selectionChange="onSelectionChange" items="{                path: '/freshTestUnPinned_One',                filters: [{ path: 'pinned', operator: 'NE', value1: true }]            }">
                 <items>
                     <StandardListItem title="{title}" description="{desc}" info="{info}" infoStateInverted="true"/>
                 </items>
@@ -23,12 +23,12 @@
             <HBox justifyContent="End">
                 <SearchField/>
             </HBox>
-            <List id="freshtestList1" mode="MultiSelect" headerText=" " selectionChange="onSelectionChange" items="{                path: '/freshTestPinned',                filters: [{ path: 'pinned', operator: 'EQ', value1: true }]            }">
+            <List id="freshtestList1" mode="MultiSelect" headerText=" " selectionChange="onSelectionChange" items="{                path: '/freshTestPinned_Two',                filters: [{ path: 'pinned', operator: 'EQ', value1: true }]            }">
                 <items>
                     <StandardListItem title="{title}" description="{desc}" info="{info}" infoStateInverted="true"/>
                 </items>
             </List>
-            <List id="mainFreshList1" mode="MultiSelect" headerText=" " selectionChange="onSelectionChange" items="{                path: '/freshTestUnPinned',                filters: [{ path: 'pinned', operator: 'NE', value1: true }]            }">
+            <List id="mainFreshList1" mode="MultiSelect" headerText=" " selectionChange="onSelectionChange" items="{                path: '/freshTestUnPinned_Two',                filters: [{ path: 'pinned', operator: 'NE', value1: true }]            }">
                 <items>
                     <StandardListItem title="{title}" description="{desc}" info="{info}" infoStateInverted="true"/>
                 </items>

@@ -6,7 +6,7 @@
         <!-- First Column -->
         <VBox width="48%">
             <List id="accessList" mode="MultiSelect" headerText="Most Frequent Accessories" selectionChange="onSelectionChange" items="{
-                path: '/freshTestPinned',
+                path: '/AccessPinned_One',
                 filters: [{ path: 'pinned', operator: 'EQ', value1: true }]
             }">
                 <items>
@@ -15,7 +15,7 @@
             </List>
 
             <List id="mainAccessList" mode="MultiSelect" headerText="Other Accessories" selectionChange="onSelectionChange" items="{
-                path: '/freshTestUnPinned',
+                path: '/AccessPinned_Two',
                 filters: [{ path: 'pinned', operator: 'NE', value1: true }]
             }">
                 <items>
@@ -27,7 +27,7 @@
         <!-- Second Column -->
         <VBox width="50%">
             <List id="accessList1" mode="MultiSelect" headerText=" " selectionChange="onSelectionChange" items="{
-                path: '/freshTestPinned',
+                path: '/AccessPinned_Two',
                 filters: [{ path: 'pinned', operator: 'EQ', value1: true }]
             }">
                 <items>
@@ -36,7 +36,7 @@
             </List>
 
             <List id="mainAccessList1" mode="MultiSelect" headerText=" " selectionChange="onSelectionChange" items="{
-                path: '/freshTestUnPinned',
+                path: '/AccessUnPinned_Two',
                 filters: [{ path: 'pinned', operator: 'NE', value1: true }]
             }">
                 <items>
