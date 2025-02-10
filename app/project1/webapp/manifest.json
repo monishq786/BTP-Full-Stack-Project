@@ -228,6 +228,13 @@
           "target": [
             "TargetRouteChangeVehicleInfo"
           ]
+        },
+        {
+          "name": "RouteSalesOrderPayment",
+          "pattern": "RouteSalesOrderPayment",
+          "target": [
+            "TargetRouteSalesOrderPayment"
+          ]
         }
         
       ],
@@ -350,6 +357,13 @@
         "TargetRouteChangeVehicleInfo": {
           "viewId": "changevehicleinfo",
           "viewName": "changevehicleinfo",
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false
+        },
+        "TargetRouteSalesOrderPayment": {
+          "viewId": "salesorderpayment",
+          "viewName": "salesorderpayment",
           "viewType": "XML",
           "transition": "slide",
           "clearControlAggregation": false

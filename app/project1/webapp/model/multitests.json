@@ -94,5 +94,21 @@
             "info": "40 AED",
             "pinned": false
         }
+    ],
+    "soPayment": [
+        {
+            "title": "New Registration Fresh-Test ",
+            "desc": "تسجيل جديد اختبار جديد",
+            "info": "150 AED",
+            "pinned": true,
+            "selected": true
+        },
+        {
+            "title": "Re-New Fresh-Test",
+            "desc": "إعادة اختبار جديد",
+            "info": "450 AED",
+            "pinned": true,
+            "selected": true
+        }
     ]
 }

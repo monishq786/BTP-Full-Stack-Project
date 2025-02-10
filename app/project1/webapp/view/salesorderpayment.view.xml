@@ -1,0 +1,234 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc"
+    xmlns:uxap="sap.uxap"
+    xmlns="sap.m"
+    xmlns:card="sap.f.cards"
+    xmlns:f="sap.f"
+    xmlns:forms="sap.ui.layout.form"
+    xmlns:p13n="sap.m.p13n"
+    xmlns:ce="sap.ui.codeeditor"
+    xmlns:core="sap.ui.core" controllerName="project1.controller.salesorderpayment" height="100%">
+
+    <Page id="salesOrderPaymentPage" title="{i18n>salesorder}" showNavButton="true" navButtonPress="backToLanding">
+
+        <uxap:ObjectPageLayout showTitleInHeaderContent="true" upperCaseAnchorBar="false">
+            <uxap:headerTitle>
+                <uxap:ObjectPageDynamicHeaderTitle>
+                    <uxap:expandedHeading>
+                        <Title text="Mohammed Azar" wrapping="true" />
+                    </uxap:expandedHeading>
+
+                    <uxap:snappedHeading>
+                        <HBox>
+                            <VBox>
+                                <Avatar src="https://ui5.sap.com/test-resources/sap/ui/integration/demokit/sample/CardsLayout/images/Avatar_1.png" class="sapUiSmallMarginEnd" />
+                            </VBox>
+
+                            <VBox>
+                                <Title text="Mohammed Azar" wrapping="true"/>
+                            </VBox>
+                        </HBox>
+                    </uxap:snappedHeading>
+
+                    <uxap:snappedTitleOnMobile>
+                        <Title text="Mohammed Azar"/>
+                    </uxap:snappedTitleOnMobile>
+
+                </uxap:ObjectPageDynamicHeaderTitle>
+            </uxap:headerTitle>
+
+            <uxap:headerContent>
+                <FlexBox wrap="Wrap" fitContainer="true">
+                    <Avatar src="https://ui5.sap.com/test-resources/sap/ui/integration/demokit/sample/CardsLayout/images/Avatar_1.png" class="sapUiMediumMarginEnd" displaySize="L"/>
+
+                    <HBox class="sapUiLargeMarginEnd sapUiTinyMarginBottom">
+                        <VBox class="sapUiLargeMarginEnd sapUiTinyMarginBottom">
+                            <Title text="{i18n>PlateDetail}" class="sapUiTinyMarginBottom" />
+                            <ObjectStatus text="54321/S" icon="sap-icon://car-rental" class="sapMObjectStatusLarge"/>
+                        </VBox>
+
+                        <VBox class="sapUiLargeMarginEnd sapUiTinyMarginBottom">
+                            <Title text="{i18n>emirates}" class="sapUiTinyMarginBottom" />
+                            <ObjectStatus text="Abu Dhabi" state="Success" class="sapMObjectStatusLarge"/>
+                        </VBox>
+
+                        <VBox class="sapUiLargeMarginEnd">
+                            <Title text="{i18n>model}" class="sapUiTinyMarginBottom" />
+                            <ObjectStatus text="BMW X5" class="sapMObjectStatusLarge"/>
+                        </VBox>
+                    </HBox>
+
+                    <VBox class="sapUiLargeMarginEnd sapUiTinyMarginBottom">
+                        <Title text="{i18n>PaymentInformation}" class="sapUiTinyMarginBottom" />
+
+                        <HBox class="sapUiTinyMarginBottom">
+                            <Label text="{i18n>total}:" class="sapUiTinyMarginEnd"/>
+                            <Text text="173.25 AED" class="sapUiSmallMarginBegin"/>
+                        </HBox>
+
+                        <HBox class="sapUiTinyMarginBottom">
+                            <Label text="{i18n>vat}:" class="sapUiTinyMarginEnd"/>
+                            <Text text="8.25 AED" class="sapUiSmallMarginBegin"/>
+                        </HBox>
+                    </VBox>
+
+                    <VBox class="sapUiLargeMarginEnd sapUiTinyMarginBottom">
+                        <Title text="{i18n>status}" class="sapUiTinyMarginBottom" />
+                        <MessageStrip text="MAHA File is not Updated" type="Warning" showIcon="true" showCloseButton="false" class="">
+                        </MessageStrip>
+                    </VBox>
+                    <VBox class="sapUiLargeMarginEnd sapUiTinyMarginBottom">
+                        <Title text="Vehicle Info"/>
+
+                        <HBox class="sapUiTinyMarginBottom" renderType="Bare">
+                            <Label text="Chassis No:" class="sapUiTinyMarginEnd"/>
+                            <Text text=" JBTH000711"/>
+                        </HBox>
+
+                        <HBox class="sapUiTinyMarginBottom" renderType="Bare">
+                            <Label text="Engine No:" class="sapUiTinyMarginEnd"/>
+                            <Text text=" 1RG12111"/>
+                        </HBox>
+
+
+                    </VBox>
+
+                    <VBox class="sapUiLargeMarginEnd sapUiTinyMarginBottom">
+                        <HBox class="sapUiTinyMarginBottom">
+                            <Label text="Body Color:" class="sapUiTinyMarginEnd"/>
+                            <Text text="White"/>
+                        </HBox>
+
+                        <HBox class="sapUiTinyMarginBottom" renderType="Bare">
+                            <Label text="Gear Type:" class="sapUiSmallMarginEnd"/>
+                            <Text text=" Automatic"/>
+                        </HBox>
+
+                        <HBox class="sapUiTinyMarginBottom">
+                            <Label text="Fuel Type:" class="sapUiSmallMarginEnd"/>
+                            <Text text="Petrol"/>
+                        </HBox>
+                    </VBox>
+
+                    <VBox class="sapUiLargeMarginEnd sapUiTinyMarginBottom">
+                        <HBox class="sapUiTinyMarginBottom">
+                            <Label text="Streeing Side:" class="sapUiSmallMarginEnd"/>
+                            <Text text=" Right Side"/>
+                        </HBox>
+                        <HBox class="sapUiTinyMarginBottom">
+                            <Label text="MFG. Year:" class="sapUiTinyMarginEnd"/>
+                            <Text text="2024"/>
+                        </HBox>
+
+                        <HBox class="sapUiTinyMarginBottom" renderType="Bare">
+                            <Label text="Reg. Year:" class="sapUiSmallMarginEnd"/>
+                            <Text text=" 2020"/>
+                        </HBox>
+
+
+                    </VBox>
+
+                    <VBox class="sapUiLargeMarginEnd sapUiTinyMarginBottom">
+                        <HBox class="sapUiTinyMarginBottom">
+                            <Label text="Mileage:" class="sapUiSmallMarginEnd"/>
+                            <Text text="18097"/>
+                        </HBox>
+
+                        <HBox class="sapUiTinyMarginBottom">
+                            <Label text="Reg. Exp. Year:" class="sapUiSmallMarginEnd"/>
+                            <Text text=" 2027"/>
+                        </HBox>
+                        <HBox class="sapUiTinyMarginBottom">
+                            <Label text="Horse Power:" class="sapUiTinyMarginEnd"/>
+                            <Text text="1800"/>
+                        </HBox>
+                    </VBox>
+                    <VBox class="sapUiLargeMarginEnd sapUiTinyMarginBottom">
+                        <HBox class="sapUiTinyMarginBottom">
+                            <Label text="Vehicle Type:" class="sapUiTinyMarginEnd"/>
+                            <Text text="Light Vehicle"/>
+                        </HBox>
+                        <HBox class="sapUiTinyMarginBottom">
+                            <Label text="Full Weight:" class="sapUiSmallMarginEnd"/>
+                            <Text text=" 1500"/>
+                        </HBox>
+
+                        <HBox class="sapUiTinyMarginBottom">
+                            <Label text="Cubic Capacity:" class="sapUiSmallMarginEnd"/>
+                            <Text text="1400"/>
+                        </HBox>
+                    </VBox>
+
+                </FlexBox>
+
+            </uxap:headerContent>
+
+            <uxap:sections >
+
+                <uxap:ObjectPageSection titleUppercase="false" title="Fresh Test">
+                    <uxap:subSections>
+                        <uxap:ObjectPageSubSection titleUppercase="false">
+                            <HBox>
+
+                                <VBox width="100%">
+                                    <HBox justifyContent="End">
+                                        <SearchField/>
+                                    </HBox>
+                                    <Table id="idTable" mode="MultiSelect" inset="false" items="{
+                path: '/soPayment',
+                sorter: [{ path: 'pinned', descending: true }],
+                groupHeaderFactory: '.getGroupHeader'
+                 }">
+
+                                        <columns>
+                                            <!-- Title Column -->
+                                            <Column width="20rem">
+                                                <Text text="Test Type"/>
+                                            </Column>
+
+                                            <!-- Description Column -->
+                                            <Column width="30rem">
+                                                <Text text="Test Type in Arabic"/>
+                                            </Column>
+
+                                            <!-- Info Column -->
+                                            <Column width="10rem">
+                                                <Text text="Amount"/>
+                                            </Column>
+                                        </columns>
+
+                                        <items>
+                                            <ColumnListItem vAlign="Middle" selected="{selected}">
+
+                                                <cells>
+                                                    <!-- Title -->
+                                                    <ObjectIdentifier title="{title}" />
+
+                                                    <!-- Description -->
+                                                    <Text text="{desc}" />
+
+                                                    <!-- Info -->
+                                                    <ObjectNumber number="{info}" />
+                                                </cells>
+                                            </ColumnListItem>
+                                        </items>
+                                    </Table>
+
+                                </VBox>
+
+                            </HBox>
+                        </uxap:ObjectPageSubSection>
+                    </uxap:subSections>
+                </uxap:ObjectPageSection>
+
+            </uxap:sections>
+        </uxap:ObjectPageLayout>
+
+        <footer>
+            <Toolbar design="Transparent">
+                <ToolbarSpacer/>
+                <Button type="Emphasized" text="{i18n>exit}" press="onExitPress"/>
+            </Toolbar>
+        </footer>
+    </Page>
+
+</mvc:View>

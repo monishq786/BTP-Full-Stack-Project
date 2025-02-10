@@ -71,7 +71,10 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 
 		onClose: function(oEvt) {
 			const sReason = oEvt.getParameter("reason");
-			MessageToast.show("Dialog close reason: " + sReason);
+			MessageToast.show("Payment Successfully: " + sReason);
+			const oRouter = this.getOwnerComponent().getRouter();
+            oRouter.navTo("RouteSalesOrderPayment", {}, true);
+
 		},
 
 		
