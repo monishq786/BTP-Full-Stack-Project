@@ -4,25 +4,65 @@
     xmlns:form="sap.ui.layout.form">
 
 
-    <HBox justifyContent="SpaceBetween">
+    <HBox>
 
-        <VBox width="48%">
-            <List id="freshtestList" mode="MultiSelect" headerText="Most Frequent Test" selectionChange="onSelectionChange" items="{                path: '/freshTestPinned_One',                filters: [{ path: 'pinned', operator: 'EQ', value1: true }]            }">
+        <VBox width="100%">
+            <HBox justifyContent="End">
+                <SearchField/>
+            </HBox>
+            <Table id="idTestTable" mode="MultiSelect" inset="false" items="{
+                path: '/freshTestPinned_One',
+                sorter: [{ path: 'pinned', descending: true }],
+                groupHeaderFactory: '.getGroupHeader'
+                 }">
+
+                <columns>
+                     <!-- Title Column -->
+                    <Column width="20rem">
+                    <Text text="Test Type"/>
+                    </Column>
+
+                    <!-- Description Column -->
+                    <Column width="30rem">
+                    <Text text="Test Type in Arabic"/>
+                    </Column>
+
+                    <!-- Info Column -->
+                    <Column width="10rem">
+                    <Text text="Amount"/>
+                    </Column>
+                </columns>
+
                 <items>
-                    <StandardListItem title="{title}" description="{desc}" info="{info}" infoStateInverted="true" wrapping="false"/>
+                    <ColumnListItem vAlign="Middle">
+                    
+                        <cells>
+                        <!-- Title -->
+                            <ObjectIdentifier title="{title}" />
+
+                            <!-- Description -->
+                            <Text text="{desc}" />
+
+                            <!-- Info -->
+                            <ObjectNumber number="{info}" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+            <!-- <List id="freshtestList" mode="MultiSelect" headerText="Most Frequent Test" selectionChange="onSelectionChange" items="{                path: '/freshTestPinned_One',                filters: [{ path: 'pinned', operator: 'EQ', value1: true }]            }">
+                <items>
+                    <StandardListItem title="{title}" description="{desc} - Additional Text" info="{info}" infoStateInverted="true" wrapping="false"/>
                 </items>
             </List>
             <List id="mainFreshList" mode="MultiSelect" headerText="Other Tests" selectionChange="onSelectionChange" items="{                path: '/freshTestUnPinned_One',                filters: [{ path: 'pinned', operator: 'NE', value1: true }]            }">
                 <items>
                     <StandardListItem title="{title}" description="{desc}" info="{info}" infoStateInverted="true"/>
                 </items>
-            </List>
-        </VBox>        <!-- Second Column -->
+            </List> -->
+        </VBox>
 
-        <VBox width="48%">
-            <HBox justifyContent="End">
-                <SearchField/>
-            </HBox>
+        <!-- <VBox >
+
             <List id="freshtestList1" mode="MultiSelect" headerText=" " selectionChange="onSelectionChange" items="{                path: '/freshTestPinned_Two',                filters: [{ path: 'pinned', operator: 'EQ', value1: true }]            }">
                 <items>
                     <StandardListItem title="{title}" description="{desc}" info="{info}" infoStateInverted="true"/>
@@ -33,6 +73,6 @@
                     <StandardListItem title="{title}" description="{desc}" info="{info}" infoStateInverted="true"/>
                 </items>
             </List>
-        </VBox>
+        </VBox> -->
     </HBox>
 </core:FragmentDefinition>

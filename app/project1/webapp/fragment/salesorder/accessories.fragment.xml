@@ -2,10 +2,54 @@
     xmlns:core="sap.ui.core"
     xmlns:f="sap.ui.layout.form">
 
-    <HBox justifyContent="SpaceBetween">
+    <HBox>
         <!-- First Column -->
-        <VBox width="48%">
-            <List id="accessList" mode="MultiSelect" headerText="Most Frequent Accessories" selectionChange="onSelectionChange" items="{
+        <VBox width="100%">
+            <Table id="idAccessTable" mode="MultiSelect" inset="false" items="{
+                path: '/AccessPinned_One',
+                sorter: [{ path: 'pinned', descending: true }],
+                groupHeaderFactory: '.getGroupHeader'
+                 }">
+
+                <columns>
+                    <!-- Title Column -->
+                    <Column width="10rem">
+                        <Text text="Accessories No"/>
+                    </Column>
+                    <Column width="10rem">
+                        <Text text="Accessories Type"/>
+                    </Column>
+
+                    <!-- Description Column -->
+                    <Column width="10rem">
+                        <Text text="Accessories Type in Arabic"/>
+                    </Column>
+
+                    <!-- Info Column -->
+                    <Column width="10rem">
+                        <Text text="Amount"/>
+                    </Column>
+                </columns>
+
+                <items>
+                    <ColumnListItem vAlign="Middle">
+
+                        <cells>
+                            <!-- Title -->
+                            <Text text="{accesNo}" />
+                            
+                            <ObjectIdentifier title="{title}" />
+
+                            <!-- Description -->
+                            <Text text="{desc}" />
+
+                            <!-- Info -->
+                            <ObjectNumber number="{info}" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+            <!-- <List id="accessList" mode="MultiSelect" headerText="Most Frequent Accessories" selectionChange="onSelectionChange" items="{
                 path: '/AccessPinned_One',
                 filters: [{ path: 'pinned', operator: 'EQ', value1: true }]
             }">
@@ -21,11 +65,11 @@
                 <items>
                     <StandardListItem title="{title}" description="{desc}" info="{info}" infoStateInverted="true"/>
                 </items>
-            </List>
+            </List> -->
         </VBox>
 
         <!-- Second Column -->
-        <VBox width="50%">
+        <!-- <VBox width="50%">
             <List id="accessList1" mode="MultiSelect" headerText=" " selectionChange="onSelectionChange" items="{
                 path: '/AccessPinned_Two',
                 filters: [{ path: 'pinned', operator: 'EQ', value1: true }]
@@ -43,7 +87,7 @@
                     <StandardListItem title="{title}" description="{desc}" info="{info}" infoStateInverted="true"/>
                 </items>
             </List>
-        </VBox>
+        </VBox> -->
     </HBox>
 
 </core:FragmentDefinition>

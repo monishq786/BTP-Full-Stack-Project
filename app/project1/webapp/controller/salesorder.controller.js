@@ -11,13 +11,14 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
             );
             var oModel = new sap.ui.model.json.JSONModel(oPath);
             this.getView().setModel(oModel);
-            // this.getView().setModel(oModel);
-            // var oData = {
-                
-            // };
-            // // set explored app's demo model on this sample
-            // var oModel = new JSONModel(oData);
-            // this.getView().setModel(oModel);
+            this.getGroupHeader();
+        },
+        getGroupHeader: function (oGroup) {
+            let sTitle = (oGroup && oGroup.key === true) ? "Most Frequent Fresh-Test" : "Other Fresh Tests";
+            return new sap.m.GroupHeaderListItem({
+                title: sTitle,
+                upperCase: true
+            });
         },
         backToLanding: function () {
             const oRouter = this.getOwnerComponent().getRouter();

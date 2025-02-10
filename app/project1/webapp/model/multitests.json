@@ -2,119 +2,96 @@
     "freshTestPinned_One": [
         {
             "title": "New Registration Fresh-Test ",
-            "desc": "",
+            "desc": "تسجيل جديد اختبار جديد",
             "info": "150 AED",
             "pinned": true
         },
         {
             "title": "Re-New Fresh-Test",
-            "desc": "",
+            "desc": "إعادة اختبار جديد",
             "info": "450 AED",
             "pinned": true
-        }
-    ],
-    "freshTestPinned_Two": [
-        {
-            "title": "Smoke Free-Test",
-            "desc": "",
-            "info": "150 AED",
-            "pinned": true
         },
         {
-            "title": "Transfer from Public to Private",
-            "desc": "",
-            "info": "450 AED",
-            "pinned": true
-        }
-    ],
-
-    "freshTestUnPinned_One": [
-        
-        {
-            "title": "Tire Test Fresh-Test",
-            "desc": "",
-            "info": "10 AED",
+            "title": "Smoke Test",
+            "desc": "اختبار الدخان",
+            "info": "15 AED",
             "pinned": false
         },
         {
-            "title": "Export Fresh-Test",
-            "desc": "",
-            "info": "340 AED",
+            "title": "Tire Fresh-Test",
+            "desc": "اختبار الإطارات الطازجة",
+            "info": "25 AED",
             "pinned": false
         }
     ],
-    "freshTestUnPinned_Two": [
-        
-        {
-            "title": "Export Fresh-Test",
-            "desc": "",
-            "info": "10 AED",
-            "pinned": false
-        },
-        {
-            "title": "Engine Test Fresh-Test",
-            "desc": "",
-            "info": "340 AED",
-            "pinned": false
-        }
-    ],
+    
     "AccessPinned_One": [
-        
         {
             "title": "Break",
-            "desc": "",
+            "accesNo": "27000190",
+            "desc": "استراحة",
             "info": "10 AED",
-            "pinned": false
+            "pinned": true
         },
         {
             "title": "Mirror",
-            "desc": "",
-            "info": "340 AED",
-            "pinned": false
-        }
-    ],
-    "AccessPinned_Two": [
-        
+            "accesNo": "27000180",
+            "desc": "مرآة",
+            "info": "40.10 AED",
+            "pinned": true
+        },
         {
             "title": "Tire",
-            "desc": "",
-            "info": "10 AED",
+            "accesNo": "27000160",
+            "desc": "صور",
+            "info": "10.80 AED",
             "pinned": false
         },
         {
-            "title": "Body",
-            "desc": "",
-            "info": "340 AED",
+            "title": "Car Cleaner Box",
+            "accesNo": "27000140",
+            "desc": "صندوق منظف السيارة",
+            "info": "40.50 AED",
             "pinned": false
         }
     ],
-    "AccessUnPinned_One": [
-        
+    "Permits": [
         {
-            "title": "Handle",
-            "desc": "",
+            "title": "Re-Print",
+            "permitNo": "1000121",
+            "desc": "إعادة الطباعة",
             "info": "10 AED",
+            "pinned": true
+        },
+        {
+            "title": "Change Color",
+            "permitNo": "1000122",
+            "desc": "تغيير اللون",
+            "info": "140 AED",
             "pinned": false
         },
         {
-            "title": "Music System",
-            "desc": "",
-            "info": "340 AED",
+            "title": "Change Chassis",
+            "permitNo": "1000123",
+            "desc": "تغيير الهيكل",
+            "info": "34 AED",
             "pinned": false
         }
     ],
-    "AccessUnPinned_Two": [
-        
+    "ReTest": [
         {
-            "title": "Seat Cover",
-            "desc": "",
-            "info": "10 AED",
-            "pinned": false
+            "title": "Smoke Test",
+            "ReTestNo": "278000012",
+            "desc": "اختبار الدخان",
+            "info": "10.50 AED",
+            "pinned": true
         },
         {
-            "title": "Steering",
-            "desc": "",
-            "info": "340 AED",
+            "title": "Re-Print",
+            "ReTestNo": "278000034",
+            "desc": "إعادة الطباعة",
+            "info": "40 AED",
             "pinned": false
         }
     ]

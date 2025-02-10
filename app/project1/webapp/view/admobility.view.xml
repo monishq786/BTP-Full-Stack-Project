@@ -26,8 +26,8 @@
 				</Toolbar>
 				<f:content>
 
-					<Label text="Plate Number" width="10rem" />
-					<Input id="name1" width="12rem"/>
+					<Label text="Plate Number"/>
+					<Input id="name1"/>
 					<!-- <Button icon="sap-icon://camera" width="5rem"/> -->
 					<ObjectStatus text="5 Sec" state="Information" class="sapUiSmallMarginBegin" />
 					<Label text="Plate Color/Code" />
