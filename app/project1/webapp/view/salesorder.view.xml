@@ -4,6 +4,8 @@
     xmlns:card="sap.f.cards"
     xmlns:f="sap.f"
     xmlns:forms="sap.ui.layout.form"
+    xmlns:p13n="sap.m.p13n"
+    xmlns:ce="sap.ui.codeeditor"
     xmlns:core="sap.ui.core" controllerName="project1.controller.salesorder" height="100%">
 
     <Page id="salesOrderPage" title="{i18n>salesorder}" showNavButton="true" navButtonPress="backToLanding">
@@ -165,7 +167,7 @@
                 <uxap:ObjectPageSection titleUppercase="false" title="Fresh Test">
                     <uxap:subSections>
                         <uxap:ObjectPageSubSection titleUppercase="false">
-                             <core:Fragment fragmentName="project1.fragment.salesorder.freshtest" type="XML">
+                            <core:Fragment fragmentName="project1.fragment.salesorder.freshtest" type="XML">
                             </core:Fragment>
                         </uxap:ObjectPageSubSection>
                     </uxap:subSections>
@@ -204,10 +206,17 @@
         <footer>
             <Toolbar design="Transparent">
                 <ToolbarSpacer/>
-                <Button type="Emphasized" text="Processed to Payment" press="onSavePress"/>
+                <Button type="Emphasized" text="Processed to Payment" press="onPaymentDialogOpen"/>
                 <Button type="Emphasized" text="{i18n>exit}" press="onExitPress"/>
             </Toolbar>
         </footer>
+
+        <p13n:Popup id="p13nPopup" title="Select a Payment Modes" close="onClose" warningText="Are you sure?">
+            <p13n:panels>
+                <p13n:SelectionPanel id="columnsPanel" title="Modes" enableCount="false" showHeader="false" />
+
+            </p13n:panels>
+        </p13n:Popup>
 
     </Page>
 
