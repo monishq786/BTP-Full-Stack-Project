@@ -8,7 +8,7 @@
     xmlns:layout="sap.ui.layout"
     xmlns="sap.uxap">
 
-     <m:Page id="useref" title="Customer Creation" showNavButton="true" navButtonPress="backToLanding">
+     <m:Page id="useref" title="Customer and Vehicle Creation" showNavButton="true" navButtonPress="backToLanding">
         <!-- <m:headerContent>
             <m:Label text="{view>/myName}" class="lblText boldTxt" />
             <m:Button icon="sap-icon://log" press=".onPressLogout" />
@@ -25,8 +25,8 @@
                     </ObjectPageSubSection>
                 </ObjectPageSection>
 
-                <ObjectPageSection titleUppercase="false" title="VEHICLE">
-                    <ObjectPageSubSection title="VEHICLE" titleUppercase="false">
+                <ObjectPageSection titleUppercase="false" title="Vehicle">
+                    <ObjectPageSubSection title="Vehicle" titleUppercase="false">
                         <m:VBox id="Sectvehicalion" class="section">
                             <core:Fragment fragmentName="project1.fragment.vehicalinspection.vehical" type="XML">
                             </core:Fragment>
@@ -41,7 +41,7 @@
             <m:Toolbar>
                 <m:ToolbarSpacer />
                 <m:FlexBox justifyContent="End">
-                    <m:Button type="Emphasized" id="user_btnSubmit" text="{i18n>submit}" press="onSave"/>
+                    <m:Button type="Emphasized" id="user_btnSubmit" text="Submit" press="onSaveCustomerCreate"/>
                 </m:FlexBox>
             </m:Toolbar>
         </m:footer>

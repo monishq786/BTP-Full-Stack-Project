@@ -3,11 +3,10 @@ sap.ui.define([
     "sap/ui/model/json/JSONModel",
 ], (Controller, JSONModel) => {
     "use strict";
-    let that=this;
+
     return Controller.extend("project1.controller.changevehicleinfo", {
-        
         onInit() {
-            
+
             var oData = {
                 vehicleDetails: {
                     ChasisNo: "",
@@ -36,7 +35,7 @@ sap.ui.define([
                     Mileage: "",
                     CubicCapacity: ""
 
-                }     
+                }
             };
 
             var oModel = new sap.ui.model.json.JSONModel(oData);
@@ -57,26 +56,16 @@ sap.ui.define([
                 type: "POST",
                 contentType: "application/json",
                 data: JSON.stringify(oData),
-                timeout: 5000, // Timeout set to 5 seconds
-                success: (response) => {
+                success: function (response) {
                     sap.m.MessageToast.show("Data submitted successfully!");
-                    jQuery.sap.delayedCall(2000, this, function() { // Delay for 2 seconds
-                        this.onCancel();
-                    });
+                    this.onNavBack();
+                  
+
                 },
-                error: (error) => {
-                    if (error.statusText === "timeout") {
-                        sap.m.MessageToast.show("Request timed out!");
-                    } else {
-                        sap.m.MessageToast.show("Error submitting data!");
-                    }
-                    jQuery.sap.delayedCall(2000, this, function() { // Delay for 2 seconds
-                        this.onCancel();
-                    });
+                error: function (error) {
+                    sap.m.MessageToast.show("Error submitting data!");
                 }
             });
-            
-            
 
 
         },
@@ -87,7 +76,7 @@ sap.ui.define([
         },
         onNavBack: function () {
             const oRouter = this.getOwnerComponent().getRouter();
-            oRouter.navTo("RouteLanding", {}, true);
+            oRouter.navTo("RouteChangeVehicleInfo", {}, true);
         }
 
     });

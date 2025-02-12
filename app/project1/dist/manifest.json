@@ -56,7 +56,9 @@
         "sap.ui.table": {},
         "sap.ushell": {},
         "sap.uxap": {},
-        "sap.viz": {}
+        "sap.viz": {},
+        "sap.ui.layout": {}
+       
       }
     },
     "contentDensities": {
@@ -219,6 +221,13 @@
           "target": [
             "TargetOpenService"
           ]
+        },
+        {
+          "name": "RouteChangeVehicleInfo",
+          "pattern": "RouteChangeVehicleInfo",
+          "target": [
+            "TargetRouteChangeVehicleInfo"
+          ]
         }
         
       ],
@@ -334,6 +343,13 @@
         "TargetOpenService": {
           "viewId": "openservicerequest",
           "viewName": "openservicerequest",
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false
+        },
+        "TargetRouteChangeVehicleInfo": {
+          "viewId": "changevehicleinfo",
+          "viewName": "changevehicleinfo",
           "viewType": "XML",
           "transition": "slide",
           "clearControlAggregation": false

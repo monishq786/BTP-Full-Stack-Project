@@ -4,19 +4,15 @@
 	xmlns:grid="sap.ui.layout.cssgrid"
 	xmlns:f="sap.f"
 	xmlns:t="sap.tnt">
-	<Page id="operServiceReq" title="Open Service Request" showNavButton="true" navButtonPress="backToLanding">
-	<!-- <Panel id="panelForGridList" backgroundDesign="Transparent">
+	<!-- <Page id="operServiceReq" title="Open Service Request" showNavButton="true" navButtonPress="backToLanding"> -->
+	<Panel id="panelForGridList" backgroundDesign="Transparent">
 		<headerToolbar>
 			<Toolbar height="3rem">
 				<Title text="Open Service Request" />
 			</Toolbar>
-		</headerToolbar> -->
+		</headerToolbar>
 
-		<f:GridList
-			id="gridList"
-			
-			growing="true"
-			growingThreshold="9">
+		<f:GridList id="gridList" growing="true" growingThreshold="9">
 			<f:headerToolbar>
 				<Toolbar>
 					<DatePicker width="200px" placeholder="Choose Date ..." />
@@ -31,15 +27,15 @@
 
 			<f:GridListItem>
 				<VBox>
-					
-						<layoutData>
-							<FlexItemData growFactor="1" shrinkFactor="0" />
-						</layoutData>
-						<VBox class="sapUiSmallMargin">
-						    	<HBox justifyContent="SpaceBetween">
-									<Title text="985445757 Lane : 1" wrapping="true" />
-									<t:InfoLabel text="Traffic : Completed" colorScheme="8" />
-								</HBox>
+
+					<layoutData>
+						<FlexItemData growFactor="1" shrinkFactor="0" />
+					</layoutData>
+					<VBox class="sapUiSmallMargin">
+						<HBox justifyContent="SpaceBetween">
+							<Title text="985445757 Lane : 1" wrapping="true" />
+							<t:InfoLabel text="Traffic : Completed" colorScheme="8" />
+						</HBox>
 						<Title text="{title}" wrapping="true" />
 						<Label text="{subtitle}" wrapping="true" />
 						<HBox justifyContent="SpaceBetween">
@@ -47,30 +43,30 @@
 							<!-- <t:InfoLabel text="" colorScheme="4" /> -->
 						</HBox>
 						<Label text="{subtitle}" wrapping="true" />
-							<HBox>
-								<Title text="MAHA File Received:" wrapping="true" />
-								<ObjectStatus text="Yes" state="Success" />
-							</HBox>
-						</VBox>
-						</VBox>
-					<OverflowToolbar design="Solid">
-						<ToolbarSpacer />
-						<Button text="Service test" icon="sap-icon://car-rental" type="Transparent"/>
-						<Button text="On Hold" icon="sap-icon://activity-assigned-to-goal" type="Transparent" />
-					</OverflowToolbar>
-				
+						<HBox justifyContent="SpaceBetween">
+							<Title text="MAHA File Received:" wrapping="true" />
+							<ObjectStatus text="Yes" state="Success" />
+						</HBox>
+					</VBox>
+				</VBox>
+				<OverflowToolbar design="Solid">
+					<ToolbarSpacer />
+					<Button text="Service test" icon="sap-icon://car-rental" type="Transparent"/>
+					<Button text="On Hold" icon="sap-icon://activity-assigned-to-goal" type="Transparent" />
+				</OverflowToolbar>
+
 			</f:GridListItem>
 			<f:GridListItem>
 				<VBox>
-					
-						<layoutData>
-							<FlexItemData growFactor="1" shrinkFactor="0" />
-						</layoutData>
-						<VBox class="sapUiSmallMargin">
-						    	<HBox justifyContent="SpaceBetween">
-									<Title text="984765869 Lane : 2" wrapping="true" />
-									<t:InfoLabel text="Traffic : Completed" colorScheme="8" />
-								</HBox>
+
+					<layoutData>
+						<FlexItemData growFactor="1" shrinkFactor="0" />
+					</layoutData>
+					<VBox class="sapUiSmallMargin">
+						<HBox justifyContent="SpaceBetween">
+							<Title text="984765869 Lane : 2" wrapping="true" />
+							<t:InfoLabel text="Traffic : Completed" colorScheme="8" />
+						</HBox>
 						<Title text="{title}" wrapping="true" />
 						<Label text="{subtitle}" wrapping="true" />
 						<HBox justifyContent="SpaceBetween">
@@ -78,30 +74,30 @@
 							<!-- <t:InfoLabel text="" colorScheme="4" /> -->
 						</HBox>
 						<Label text="{subtitle}" wrapping="true" />
-							<HBox>
-								<Title text="MAHA File Received:" wrapping="true" />
-								<ObjectStatus text="No" state="Success" />
-							</HBox>
-						</VBox>
-						</VBox>
-					<OverflowToolbar design="Solid">
-						<ToolbarSpacer />
-						<Button text="Service test" icon="sap-icon://car-rental" type="Transparent"/>
-						<Button text="On Hold" icon="sap-icon://activity-assigned-to-goal" type="Transparent" />
-					</OverflowToolbar>
-				
+						<HBox justifyContent="SpaceBetween">
+							<Title text="MAHA File Received:" wrapping="true" />
+							<ObjectStatus text="No" state="Success" />
+						</HBox>
+					</VBox>
+				</VBox>
+				<OverflowToolbar design="Solid">
+					<ToolbarSpacer />
+					<Button text="Service test" icon="sap-icon://car-rental" type="Transparent"/>
+					<Button text="On Hold" icon="sap-icon://activity-assigned-to-goal" type="Transparent" />
+				</OverflowToolbar>
+
 			</f:GridListItem>
 			<f:GridListItem>
 				<VBox>
-					
-						<layoutData>
-							<FlexItemData growFactor="1" shrinkFactor="0" />
-						</layoutData>
-						<VBox class="sapUiSmallMargin">
-						    	<HBox justifyContent="SpaceBetween">
-									<Title text="985445757 Lane : 3" wrapping="true" />
-									<t:InfoLabel text="Traffic : Completed" colorScheme="8" />
-								</HBox>
+
+					<layoutData>
+						<FlexItemData growFactor="1" shrinkFactor="0" />
+					</layoutData>
+					<VBox class="sapUiSmallMargin">
+						<HBox justifyContent="SpaceBetween">
+							<Title text="985445757 Lane : 3" wrapping="true" />
+							<t:InfoLabel text="Traffic : Completed" colorScheme="8" />
+						</HBox>
 						<Title text="{title}" wrapping="true" />
 						<Label text="{subtitle}" wrapping="true" />
 						<HBox justifyContent="SpaceBetween">
@@ -109,25 +105,25 @@
 							<t:InfoLabel text="Comprehensive : Pending" colorScheme="1" />
 						</HBox>
 						<Label text="{subtitle}" wrapping="true" />
-							<HBox justifyContent="SpaceBetween">
-								<Title text="MAHA File Received:" wrapping="true" />
-								<ObjectStatus text="Yes" state="Success" />
+						<HBox justifyContent="SpaceBetween">
+							<Title text="MAHA File Received:" wrapping="true" />
+							<ObjectStatus text="Yes" state="Success" />
 							<t:InfoLabel text="ESMA : Completed" colorScheme="4" />
 
-							</HBox>
-						</VBox>
-						</VBox>
-					<OverflowToolbar design="Solid">
-						<ToolbarSpacer />
-						<Button text="Service test" icon="sap-icon://car-rental" type="Transparent"/>
-						<Button text="On Hold" icon="sap-icon://activity-assigned-to-goal" type="Transparent" />
-					</OverflowToolbar>
-				
+						</HBox>
+					</VBox>
+				</VBox>
+				<OverflowToolbar design="Solid">
+					<ToolbarSpacer />
+					<Button text="Service test" icon="sap-icon://car-rental" type="Transparent"/>
+					<Button text="On Hold" icon="sap-icon://activity-assigned-to-goal" type="Transparent" />
+				</OverflowToolbar>
+
 			</f:GridListItem>
 		</f:GridList>
-	<!-- </Panel> -->
-	</Page>
-	
+	</Panel>
+	<!-- </Page> -->
+
 
 
 </mvc:View>

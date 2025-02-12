@@ -1,0 +1,93 @@
+<mvc:View controllerName="project1.controller.changevehicleinfo"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m">
+    <ScrollContainer height="100%" width="100%" vertical="true" focusable="true">
+        <VBox class="sapUiSmallMargin" height="100%">
+            <f:SimpleForm 
+            id="header" 
+            editable="true" 
+            layout="ColumnLayout" 
+            columnsM="3" 
+            columnsL="4" 
+            columnsXL="5">
+                <f:toolbar>
+                    <Toolbar id="TB1">
+                        <Title id="Title1" text="Change Vehicle Info"/>
+                        <ToolbarSpacer />
+                    </Toolbar>
+                </f:toolbar>
+                <f:content>
+                       <Label text="Chasis No" />
+                    <Input value="{vehicleModel>/vehicleDetails/ChasisNo}" />
+                     <Label text="Engine No" />
+                    <Input value="{vehicleModel>/vehicleDetails/EngineNo}" />
+                  <Label text="Country" />
+                    <Select id="country1" selectedKey="{vehicleModel>/vehicleDetails/Country}">
+                        <items>
+                            <core:Item text="England" key="England"/>
+                            <core:Item text="Germany" key="Germany"/>
+                            <core:Item text="USA" key="USA"/>
+                        </items>
+                    </Select>
+                    <Label text="Manufacturer" />
+                    <Input value="{vehicleModel>/vehicleDetails/Manufacturer}" />
+                    <Label text="Model" />
+                    <Input value="{vehicleModel>/vehicleDetails/Model}" />
+                    <Label text="Plate Type" />
+                    <Input value="{vehicleModel>/vehicleDetails/PlateType}" />
+                    <Label text="Kind" />
+                    <Input value="{vehicleModel>/vehicleDetails/Kind}" />
+                    <Label text="Type" />
+                    <Input value="{vehicleModel>/vehicleDetails/Type}" />
+                    <Label text="Body Color" />
+                    <Input value="{vehicleModel>/vehicleDetails/BodyColor}" />
+                    <Label text="Gear Type" />
+                    <Input value="{vehicleModel>/vehicleDetails/GearType}" />
+                    <Label text="Fuel Type" />
+                    <Input value="{vehicleModel>/vehicleDetails/FuelType}" />
+                    <Label text="Steering Side" />
+                    <Input value="{vehicleModel>/vehicleDetails/SteeringSide}" />
+                    <Label text="Weight Kind" />
+                    <Input value="{vehicleModel>/vehicleDetails/WeightKind}" />
+                    <Label text="Init Reg Year/ Reg Exp Date" />
+                    <DatePicker value="{path: '/date', type: 'sap.ui.model.type.Date'}" />
+                    <Label text="MFG Year" />
+                    <Input value="{vehicleModel>/vehicleDetails/MfgYear}" />
+                    <Label text="Horse Power" />
+                    <Input value="{vehicleModel>/vehicleDetails/HorsePower}" />
+                    <Label text="No.of.Axies" />
+                    <Input value="{vehicleModel>/vehicleDetails/NoOfAxies}" />
+                    <Label text="No.of.Cylinders" />
+                    <Input value="{vehicleModel>/vehicleDetails/NoOfCylinders}" />
+                    <Label text="No.of.Wheels" />
+                    <Input value="{vehicleModel>/vehicleDetails/NoOfWheels}" />
+                    <Label text="No.of.Doors" />
+                    <Input value="{vehicleModel>/vehicleDetails/NoOfDoors}" />
+                    <Label text="No.of.Passengers" />
+                    <Input value="{vehicleModel>/vehicleDetails/NoOfPassengers}" />
+                    <Label text="Empty Weight" />
+                    <Input value="{vehicleModel>/vehicleDetails/EmptyWeight}" />
+                    <Label text="Full Weight" />
+                    <Input value="{vehicleModel>/vehicleDetails/FullWeight}" />
+                    <Label text="Mileage" />
+                    <Input value="{vehicleModel>/vehicleDetails/Mileage}" />
+                    <Label text="Cubic Capacity" />
+                    <Input value="{vehicleModel>/vehicleDetails/CubicCapacity}" />
+                </f:content>
+            </f:SimpleForm>
+  <!-- Add the HBox for the button -->
+   <HBox justifyContent="End">
+                        <Button id="cancel" text="CANCEL" press="onCancel"/>
+                         <Button id="savebtn" text="UPDATE" press="onSubmit"/>
+                    </HBox>
+                    <HBox justifyContent="End">
+                       
+                    </HBox>
+
+            	
+        </VBox>
+    </ScrollContainer>
+</mvc:View>
