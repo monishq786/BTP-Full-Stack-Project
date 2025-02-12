@@ -16,7 +16,7 @@
 			<f:SimpleForm id="SimpleFormChangeColumn_threeGroups234" editable="true" layout="ColumnLayout" title="Customer Search" columnsM="2" columnsL="3" columnsXL="4">
 				<Toolbar>
 
-					<Title text="Vehicle and Customer Details" />
+					<Title text="ADMobility/value/AppName" />
 					<ToolbarSpacer />
 					<Button icon="sap-icon://camera" />
 					<ObjectStatus text="5 Sec" state="Information" />
@@ -84,8 +84,8 @@
 							<VBox class="sapUiSmallMarginBottom" justifyContent="SpaceAround">
 
 								<HBox alignItems="Center" class="sapUiSmallMarginBottom">
-									<Text text="Chassis No:" />
-									<ObjectStatus text="JTEBU25J9959041" state="Information" />
+									<Text text="Chassis No:567" />
+									<ObjectStatus text="ADMobility/value/AppName" state="Information" />
 								</HBox>
 
 

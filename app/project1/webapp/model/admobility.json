@@ -1,0 +1,36 @@
+{
+    "VehicleDetail": {
+        "ChassisNo": "JTEBU25J9959041",
+        "EngineNo": "1GR5709102",
+        "Country": "GERMANY",
+        "Manufacturer": "BMD",
+        "Model": "X5",
+        "Kind": "XUV",
+        "Type": "LIGHT VEHICLE",
+        "GearType": "AUTOMATIC",
+        "FuelType": "Petrol",
+        "Steeringide": "Petrol",
+        "WeightKind": "K",
+        "InitRegYear": "12/01/2020",
+        "RegExpDate": "01/05/2025",
+        "PlateType": "Private",
+        "MFGYear": "2024",
+        "HorsePower": 1800,
+        "NoofAxles": 3,
+        "NoofCylinders": 4,
+        "NoofWheels": 4,
+        "NooPassengers": "Five",
+        "EmptyWeight": 1000,
+        "Mileage": 18,
+        "FullWeight":1500,
+        "CubicCapacity": 144,
+        "CustomerData": {
+            "Name": "Mohammed Azar",
+            "Email": "m****r@***com",
+            "Mobile": " 98**********11",
+            "City": "Abu Dhabi",
+            "PastalCode": 1656,
+            "Address": "Corniche Road Abu Shabi"
+        }
+    }
+}

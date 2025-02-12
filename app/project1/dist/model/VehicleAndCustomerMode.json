@@ -1,0 +1,26 @@
+{
+    "@odata.context": null,
+    "value": 
+        {
+            "AppName": null,
+            "AppVersionNumber":null,
+            "CameraNumber":null,
+            "CapturedOn": null,
+            "SectionId":null,
+            "SiteId": null,
+            "VehPLateColor": null,
+            "VehPLateColorDesc":null,
+            "VehPLateKind": null,
+            "VehPLatePicture":null,
+            "VehPLateType": null,
+            "VehPlateKindDesc": null,
+            "VehPlateNo": null,
+            "VehPlateSource":null,
+            "VehPlateSourceDesc": null,
+            "VehPlateTypeDesc":null,
+            "ZRECTIME": null,
+            "ZUID": null,
+            "ZUSEDFLAG": false
+        }
+    
+}

@@ -1,0 +1,306 @@
+@server = http://localhost:4004
+@auth = Authorization: Basic alice:
+
+### GetVehicleDetail
+# @name GetVehicleDetail_GET
+GET {{server}}/odata/v4/employee/GetVehicleDetail
+{{auth}}
+
+
+
+### GetVehicleDetail
+# @name GetVehicleDetail_PATCH
+POST {{server}}/odata/v4/employee/GetVehicleDetail
+Content-Type: application/json
+{{auth}}
+
+{
+  "SiteId": "5521",
+  "SectionId": "5521",
+  "CapturedOn": "2018-09-27",
+  "VehPlateNo": "o-1211511",
+  "VehPlateSource": "e-1211551",
+  "VehPlateSourceDesc": "VehPlateSourceDesc-12115521",
+  "VehPLateColor": "r-12115521",
+  "VehPLateColorDesc": "VehPLateColorDesc-12115521",
+  "VehPLateKind": "d-12115521",
+  "VehPlateKindDesc": "c-12115521",
+  "VehPLateType": "e-12115521",
+  "VehPlateTypeDesc": "VehPlateTypeDesc-12115521",
+  "VehPLatePicture": "ture-12115521",
+  "CameraNumber": "eraNumber-12115521",
+  "AppVersionNumber": "r-12115521",
+  "AppName": "e-12115521",
+  "ZRECTIME": "22:59:53",
+  "ZUSEDFLAG": false
+}
+
+
+### GetVehicleDetail 
+# @name GetVehicleDetail_PATCH
+POST {{server}}/odata/v4/employee/GetVehicleDetails
+Content-Type: application/json
+{{auth}}
+
+{
+  "PlateNumber": "JBZ1494250210",
+  "PlateSource": "Solid",
+  "PLateSourceArabic": "مصدر",
+  "PlateColor": "White",
+  "PlateColorArabic": "أبيض",
+  "PlateKindCode": "XUV",
+  "PlateKindArabic": "XUV",
+  "PlateTypeCode": "19910",
+  "PlateType": "Private",
+  "PlateTypeArabic": "عسكري",
+  "PlateKind": "XUV",
+  "Kind": "XUV",
+  "ChassisNo": "JTEBU25J9959041",
+  "EngineNo": "1GR5709102",
+  "CountryCode": "+971",
+  "Country": "GERMANY",
+  "ManufacturerCode": "0019",
+  "Manufacturer": "BMD",
+  "ManufacturerArabic": "ابوظبي",
+  "ModelCode": "X5",
+  "Horsepower": "1800",
+  "NumberOfAxles": "3",
+  "NumberOfCylinders": "4",
+  "NumberOfWheels": "4",
+  "NumberOfDoors": "4",
+  "NumberOfPassengers": "5",
+  "EmptyWeight": "1000",
+  "FullWeight": "1500",
+  "Mileage": "18",
+  "CubicCapacity": "144",
+  "Customer": "Mohammed Azar",
+  "CreationDate": "01/05/2025",
+  "CreationTime": "05:03:10",
+  "CreatedBy": "Alexandar",
+  "RegistrationYear": "12/01/2020",
+  "TypeCode": null,
+  "Type": "LIGHT VEHICLE",
+  "TypeArabic": "مركبة خفيفة",
+  "BodyColorCode": "9900",
+  "BodyColor": "White",
+  "BodyColorArabic": "أبيض",
+  "GearCode": "0090",
+  "GearType": "AUTOMATIC",
+  "GearTypeArabic": "أوتوماتيكي",
+  "FuelCode": "0019",
+  "FuelType": "AUTOMATIC",
+  "FuelTypeArabic": "أوتوماتيكي",
+  "SteeringCode": "8819",
+  "SteeringSide": "Petrol",
+  "SteeringSideArabic": "بنزين",
+  "WeightCode": "9910",
+  "WeightDesc": "K",
+  "WeightDescArabic": "ك",
+  "RegistrationDate": null,
+  "RegistrationExpYear": "01/05/2025",
+  "KindArabic": null,
+  "PrimaryVin": null,
+  "SecondaryVin": null,
+  "InsuranceName": null,
+  "InsuranceExpiry": null,
+  "InsuranceKind": null,
+  "InsuranceKindArabic": null,
+  "InsurancePolicyNumber": null,
+  "MortgageDescription": null,
+  "MortgageRef": null,
+  "OwnerTcfNumber": null,
+  "OwnerTcfAEArabic": null,
+  "OwnerTcfEnglish": null,
+  "Model": null,
+  "ModelArabic": null,
+  "ManufacturerYear":null,
+  "CustomCertificateNumber": null,
+  "CertificateDate": null,
+  "CertificateCenterCode": null,
+  "CertificateCenter": null,
+  "RegistrationRemark":null,
+  "NationalityCode": null,
+  "Nationality": null,
+  "NationalityArabic": null
+}
+
+
+
+
+### GetVehicleDetail 
+# @name GetVehicleDetail_PATCH
+PATCH {{server}}/odata/v4/employee/GetVehicleDetails/9e32cf00-811b-4385-9c1b-1ec50b576d83
+Content-Type: application/json
+{{auth}}
+
+{
+  
+  "PlateNumber": "JBZ1494250",
+  "PlateSource": "Solid",
+  "PLateSourceArabic": "صلبة",
+  "PlateColor": "White",
+  "PlateColorArabic": "أبيض",
+  "PlateKindCode": "900",
+  "PlateKindArabic": "XUV",
+  "PlateTypeCode": "19910",
+  "PlateType": "Private",
+  "PlateTypeArabic": "عسكري",
+  "PlateKind": "0998",
+  "Kind": "XUV",
+  "ChassisNo": "JTEBU25J9959041",
+  "EngineNo": "1GR5709102",
+  "CountryCode": "+971",
+  "Country": "GERMANY",
+  "ManufacturerCode": "0019",
+  "Manufacturer": "BMD",
+  "ManufacturerArabic": "ابوظبي",
+  "ModelCode": "989",
+  "Horsepower": "1800",
+  "NumberOfAxles": "3",
+  "NumberOfCylinders": "4",
+  "NumberOfWheels": "4",
+  "NumberOfDoors": "4",
+  "NumberOfPassengers": "5",
+  "EmptyWeight": "1000",
+  "FullWeight": "1500",
+  "Mileage": "18",
+  "CubicCapacity": "144",
+  "Customer": "Mohammed Azar",
+  "CreationDate": "2025-01-05",
+  "CreationTime": "05:03:10",
+  "CreatedBy": "Alexandar",
+  "RegistrationYear": null,
+  "TypeCode": null,
+  "Type": "LIGHT VEHICLE",
+  "TypeArabic": "مركبة خفيفة",
+  "BodyColorCode": "9900",
+  "BodyColor": "White",
+  "BodyColorArabic": null,
+  "GearCode": "0090",
+  "GearType": "AUTOMATIC",
+  "GearTypeArabic": "أوتوماتيكي",
+  "FuelCode": "0019",
+  "FuelType": "AUTOMATIC",
+  "FuelTypeArabic": "أوتوماتيكي",
+  "SteeringCode": "8819",
+  "SteeringSide": "Petrol",
+  "SteeringSideArabic": "بنزين",
+  "WeightCode": "9910",
+  "WeightDesc": "K",
+  "WeightDescArabic": "ك",
+  "RegistrationDate": null,
+  "RegistrationExpYear": "2025-05-01"
+  
+}
+
+
+
+### GetVehicleDetail 
+# @name GetVehicleDetail_PATCH
+POST {{server}}/odata/v4/employee/GetVehicleDetails
+Content-Type: application/json
+{{auth}}
+
+
+{
+  
+  "PlateNumber": "OOL1883250",
+  "PlateSource": "Solid",
+  "PLateSourceArabic": "صلبة",
+  "PlateColor": "White",
+  "PlateColorArabic": "أبيض",
+  "PlateKindCode": "900",
+  "PlateKindArabic": "XUV",
+  "PlateTypeCode": "19910",
+  "PlateType": "Private",
+  "PlateTypeArabic": "عسكري",
+  "PlateKind": "0998",
+  "Kind": "XUV",
+  "ChassisNo": "JTEBU25J9959041",
+  "EngineNo": "1GR5709102",
+  "CountryCode": "+971",
+  "Country": "GERMANY",
+  "ManufacturerCode": "0019",
+  "Manufacturer": "BMD",
+  "ManufacturerArabic": "ابوظبي",
+  "ModelCode": "989",
+  "Horsepower": "1800",
+  "NumberOfAxles": "3",
+  "NumberOfCylinders": "4",
+  "NumberOfWheels": "4",
+  "NumberOfDoors": "4",
+  "NumberOfPassengers": "5",
+  "EmptyWeight": "1000",
+  "FullWeight": "1500",
+  "Mileage": "18",
+  "CubicCapacity": "144",
+  "Customer": "Mohammed Azar",
+  "CreationDate": "2025-01-05",
+  "CreationTime": "05:03:10",
+  "CreatedBy": "Alexandar",
+  "RegistrationYear": null,
+  "TypeCode": null,
+  "Type": "LIGHT VEHICLE",
+  "TypeArabic": "مركبة خفيفة",
+  "BodyColorCode": "9900",
+  "BodyColor": "White",
+  "BodyColorArabic": null,
+  "GearCode": "0090",
+  "GearType": "AUTOMATIC",
+  "GearTypeArabic": "أوتوماتيكي",
+  "FuelCode": "0019",
+  "FuelType": "AUTOMATIC",
+  "FuelTypeArabic": "أوتوماتيكي",
+  "SteeringCode": "8819",
+  "SteeringSide": "Petrol",
+  "SteeringSideArabic": "بنزين",
+  "WeightCode": "9910",
+  "WeightDesc": "K",
+  "WeightDescArabic": "ك",
+  "RegistrationDate": null,
+  "RegistrationExpYear": "2025-05-01"
+  
+}
+
+
+
+### GetVehicleDetail 
+# @name GetVehicleDetail_PATCH
+POST {{server}}/odata/v4/employee/MPurpose
+Content-Type: application/json
+{{auth}}
+
+{
+  "PurposeName" :"Re-Test",
+  "PurposeCode" :"Re-Test"
+}
+
+
+
+
+### GetVehicleDetail 
+# @name GetVehicleDetail_PATCH
+POST {{server}}/odata/v4/employee/AnprCaptures
+Content-Type: application/json
+{{auth}}
+
+{
+  "plant":  "0010",
+  "lane":  "3",
+  "captureDate":  "2025-02-12T14:30:00",
+  "plateNumber":  "OOP1883251",
+  "plateSource":  "Abu Dhabi",
+  "plateSourceDesc":  "Abu Dhabi",
+  "plateColor":  "white",
+  "plateColorDesc":  "white",
+  "plateKind":  "XUV",
+  "plateKindDesc":  "XUV",
+  "plateType":  "Private",
+  "plateTypeDesc":  "Private",
+  "platePicture":  null,
+  "cameraNumber":  "001",
+  "appVersionNumber":  "1.19.0",
+  "appName":  "VI",
+  "recivedTime":  "2025-02-12T14:30:11",
+  "usedFlag":  "1"
+}
